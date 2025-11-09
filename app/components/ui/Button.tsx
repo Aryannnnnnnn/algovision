@@ -25,7 +25,7 @@ export default function Button({
   className = "",
   disabled = false,
 }: ButtonProps) {
-  const baseStyles = "font-semibold rounded-xl transition-all duration-500 ease-out flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed";
+  const baseStyles = "font-semibold rounded-xl transition-all duration-500 ease-out flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed";
 
   const variants = {
     primary: "group relative bg-orange-600 text-white hover:bg-orange-700 shadow-lg shadow-orange-600/25 hover:shadow-xl hover:shadow-orange-600/40 hover:scale-[1.02] overflow-hidden",

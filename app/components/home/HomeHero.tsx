@@ -97,7 +97,7 @@ export default function HomeHero() {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-orange-50/30 to-white">
+    <section ref={heroRef} className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden bg-white">
 
       {/* Animated grid background */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
@@ -105,13 +105,6 @@ export default function HomeHero() {
           backgroundImage: `linear-gradient(to right, #94a3b8 1px, transparent 1px), linear-gradient(to bottom, #94a3b8 1px, transparent 1px)`,
           backgroundSize: '64px 64px'
         }}></div>
-      </div>
-
-      {/* Subtle ambient background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-orange-400/6 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }}></div>
-        <div className="absolute bottom-1/3 -right-40 w-[450px] h-[450px] bg-orange-500/6 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '1s' }}></div>
-        <div className="absolute top-2/3 left-1/2 w-64 h-64 bg-orange-300/5 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }}></div>
       </div>
 
 

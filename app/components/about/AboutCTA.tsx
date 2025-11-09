@@ -29,7 +29,7 @@ export default function AboutCTA() {
   }, []);
 
   return (
-    <section className="relative py-32 bg-gradient-to-b from-white via-orange-50/40 to-white">
+    <section className="relative py-32 bg-white">
       {/* Grid background */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.02]">
         <div className="absolute inset-0" style={{

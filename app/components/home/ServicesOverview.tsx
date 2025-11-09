@@ -89,12 +89,7 @@ export default function ServicesOverview() {
   ];
 
   return (
-    <section ref={sectionRef} className="relative bg-gradient-to-b from-white via-orange-50/20 to-white pt-24 pb-20 overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 right-1/4 w-64 h-64 bg-orange-400/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-orange-500/5 rounded-full blur-3xl"></div>
-      </div>
+    <section ref={sectionRef} className="relative bg-white pt-24 pb-20 overflow-hidden">
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={headingRef} className="text-center mb-16">

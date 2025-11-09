@@ -22,13 +22,7 @@ export default function AboutHero() {
   }, []);
 
   return (
-    <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-orange-50/30 to-white">
-      {/* Minimal background orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-32 w-[400px] h-[400px] bg-orange-400/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 -right-40 w-[350px] h-[350px] bg-orange-500/4 rounded-full blur-3xl"></div>
-      </div>
-
+    <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden bg-white">
       {/* Grid background */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
         <div className="absolute inset-0" style={{

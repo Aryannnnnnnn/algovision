@@ -70,7 +70,7 @@ export default function OurValues() {
   ];
 
   return (
-    <section ref={valuesRef} className="py-24 bg-gradient-to-b from-white via-orange-50/20 to-white">
+    <section ref={valuesRef} className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-orange-200/70 rounded-full mb-6 shadow-sm">

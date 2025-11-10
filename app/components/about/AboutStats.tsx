@@ -113,13 +113,13 @@ export default function AboutStats() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="stat-item group">
-              <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/60 shadow-sm hover:shadow-lg hover:border-orange-300 transition-all duration-500 hover:-translate-y-1">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-md shadow-orange-200/30">
-                  <div className="text-orange-600">
+              <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/60 shadow-sm hover:shadow-lg hover:border-[#00b5ff] transition-all duration-500 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-md shadow-[#00b5ff]/20">
+                  <div className="text-[#00b5ff]">
                     {stat.icon}
                   </div>
                 </div>
-                <div className="text-5xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors duration-500">
+                <div className="text-5xl font-bold text-gray-900 mb-2 group-hover:text-[#00b5ff] transition-colors duration-500">
                   {stat.number}{stat.suffix}
                 </div>
                 <div className="text-gray-600 font-medium text-sm">

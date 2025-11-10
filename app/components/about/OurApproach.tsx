@@ -89,18 +89,15 @@ export default function OurApproach() {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left - Heading */}
           <div className="lg:sticky lg:top-24">
-            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-orange-200/70 rounded-full mb-6 shadow-sm">
-              <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-[#00b5ff]/30 rounded-full mb-6 shadow-sm">
+              <svg className="w-4 h-4 text-[#00b5ff]" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z"/>
               </svg>
-              <span className="text-sm font-bold text-orange-700">Our Process</span>
+              <span className="text-sm font-bold text-[#0095d9]">Our Process</span>
             </div>
 
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Our <span className="relative inline-block">
-                <span className="relative z-10 bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 bg-clip-text text-transparent">Approach</span>
-                <span className="absolute bottom-2 left-0 w-0 h-3 bg-orange-400/30 -rotate-1 animate-underline-expand"></span>
-              </span>
+              Our <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">Approach</span>
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed">
               A proven methodology that combines strategic thinking, creative excellence, and technical expertise to deliver exceptional results
@@ -111,21 +108,21 @@ export default function OurApproach() {
           <div ref={approachRef} className="space-y-6">
             {steps.map((step, index) => (
               <div key={index} className="approach-step group">
-                <div className="relative bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/60 shadow-sm hover:shadow-lg hover:border-orange-300 transition-all duration-500 hover:-translate-x-2">
+                <div className="relative bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/60 shadow-sm hover:shadow-lg hover:border-[#00b5ff] transition-all duration-500 hover:-translate-x-2">
                   {/* Step number badge */}
-                  <div className="absolute -left-4 top-8 w-12 h-12 bg-gradient-to-br from-orange-600 to-orange-500 rounded-xl flex items-center justify-center shadow-lg shadow-orange-600/30 group-hover:scale-110 transition-transform duration-500">
+                  <div className="absolute -left-4 top-8 w-12 h-12 bg-gradient-to-br from-[#00b5ff] to-[#00b5ff] rounded-xl flex items-center justify-center shadow-lg shadow-[#00b5ff]/30 group-hover:scale-110 transition-transform duration-500">
                     <span className="text-white font-bold text-sm">{step.number}</span>
                   </div>
 
                   <div className="flex items-start gap-4 ml-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md shadow-orange-200/30 group-hover:scale-110 transition-transform duration-500">
-                      <div className="text-orange-600">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md shadow-[#00b5ff]/20 group-hover:scale-110 transition-transform duration-500">
+                      <div className="text-[#00b5ff]">
                         {step.icon}
                       </div>
                     </div>
 
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-500">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#00b5ff] transition-colors duration-500">
                         {step.title}
                       </h3>
                       <p className="text-gray-600 leading-relaxed">
@@ -136,7 +133,7 @@ export default function OurApproach() {
 
                   {/* Connector line */}
                   {index < steps.length - 1 && (
-                    <div className="absolute left-2 bottom-0 w-0.5 h-6 bg-gradient-to-b from-orange-300 to-transparent translate-y-6"></div>
+                    <div className="absolute left-2 bottom-0 w-0.5 h-6 bg-gradient-to-b from-[#00b5ff]/30 to-transparent translate-y-6"></div>
                   )}
                 </div>
               </div>

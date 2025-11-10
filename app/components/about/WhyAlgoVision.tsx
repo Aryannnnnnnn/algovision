@@ -91,18 +91,15 @@ export default function WhyAlgoVision() {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
-          <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-orange-200/70 rounded-full mb-6 shadow-sm">
-            <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+          <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-[#00b5ff]/30 rounded-full mb-6 shadow-sm">
+            <svg className="w-4 h-4 text-[#00b5ff]" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
             </svg>
-            <span className="text-sm font-bold text-orange-700">Why Choose Us</span>
+            <span className="text-sm font-bold text-[#0095d9]">Why Choose Us</span>
           </div>
 
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-            Why <span className="relative inline-block">
-              <span className="relative z-10 bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 bg-clip-text text-transparent">AlgoVision?</span>
-              <span className="absolute bottom-2 left-0 w-0 h-3 bg-orange-400/30 -rotate-1 animate-underline-expand"></span>
-            </span>
+            Why <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">AlgoVision?</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl">
             We combine innovation, expertise, and dedication to deliver exceptional digital solutions that drive real results
@@ -112,13 +109,13 @@ export default function WhyAlgoVision() {
         <div ref={whyRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reasons.map((reason, index) => (
             <div key={index} className="why-card group">
-              <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/60 shadow-sm hover:shadow-lg hover:border-orange-300 transition-all duration-500 hover:-translate-y-1 h-full">
-                <div className="w-14 h-14 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-md shadow-orange-200/30">
-                  <div className="text-orange-600">
+              <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/60 shadow-sm hover:shadow-lg hover:border-[#00b5ff] transition-all duration-500 hover:-translate-y-1 h-full">
+                <div className="w-14 h-14 bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-md shadow-[#00b5ff]/20">
+                  <div className="text-[#00b5ff]">
                     {reason.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-500">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#00b5ff] transition-colors duration-500">
                   {reason.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">

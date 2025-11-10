@@ -95,8 +95,8 @@ export default function ServicesOverview() {
         <div ref={headingRef} className="text-center mb-16">
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Our <span className="relative inline-block">
-              <span className="relative z-10 bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 bg-clip-text text-transparent">Services</span>
-              <span className="absolute bottom-1 left-0 w-full h-2 bg-orange-400/30 -rotate-1"></span>
+              <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">Services</span>
+              <span className="absolute bottom-1 left-0 w-full h-2 bg-[#00b5ff]/30 -rotate-1"></span>
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -112,21 +112,21 @@ export default function ServicesOverview() {
               className="group relative"
             >
               {/* Card glow effect */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-400/0 via-orange-500/0 to-orange-400/0 group-hover:from-orange-400/20 group-hover:via-orange-500/20 group-hover:to-orange-400/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-[#00b5ff]/0 via-[#00b5ff]/0 to-[#00b5ff]/0 group-hover:from-[#00b5ff]/20 group-hover:via-[#00b5ff]/20 group-hover:to-[#00b5ff]/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               {/* Card content */}
-              <div className="relative bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/60 group-hover:border-orange-300 transition-all duration-500 shadow-lg shadow-gray-200/50 group-hover:shadow-xl group-hover:shadow-orange-200/40 group-hover:-translate-y-2 h-full">
+              <div className="relative bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200/60 group-hover:border-[#00b5ff] transition-all duration-500 shadow-lg shadow-gray-200/50 group-hover:shadow-xl group-hover:shadow-[#00b5ff]/20 group-hover:-translate-y-2 h-full">
                 {/* Icon container */}
                 <div className="mb-6 relative">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-md shadow-orange-200/30">
-                    <div className="text-orange-600 group-hover:text-orange-700 transition-colors duration-500">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-md shadow-[#00b5ff]/20">
+                    <div className="text-[#00b5ff] transition-colors duration-500">
                       {service.icon}
                     </div>
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-500">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#00b5ff] transition-colors duration-500">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -134,7 +134,7 @@ export default function ServicesOverview() {
                 </p>
 
                 {/* Arrow indicator */}
-                <div className="mt-6 flex items-center text-orange-600 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                <div className="mt-6 flex items-center text-[#00b5ff] opacity-0 group-hover:opacity-100 transition-all duration-500">
                   <span className="text-sm font-semibold mr-2">Learn more</span>
                   <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />

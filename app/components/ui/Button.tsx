@@ -25,11 +25,11 @@ export default function Button({
   className = "",
   disabled = false,
 }: ButtonProps) {
-  const baseStyles = "font-semibold rounded-xl transition-all duration-500 ease-out flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed";
+  const baseStyles = "font-semibold transition-all duration-500 ease-out flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed";
 
   const variants = {
-    primary: "group relative bg-orange-600 text-white hover:bg-orange-700 shadow-lg shadow-orange-600/25 hover:shadow-xl hover:shadow-orange-600/40 hover:scale-[1.02] overflow-hidden",
-    secondary: "group bg-white border-2 border-gray-200 text-gray-900 hover:border-orange-600 hover:text-orange-600 shadow-sm hover:shadow-md",
+    primary: "group relative bg-[#00011f] text-white hover:scale-[1.02] overflow-hidden",
+    secondary: "group relative bg-white border-2 border-gray-900 text-gray-900 hover:border-[#00011f] hover:text-white overflow-hidden",
   };
 
   const sizes = {
@@ -42,8 +42,8 @@ export default function Button({
 
   const content = (
     <>
-      {variant === "primary" && (
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+      {variant === "secondary" && (
+        <div className="absolute inset-0 bg-[#00011f] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"></div>
       )}
       <span className="relative">{children}</span>
       {icon && (

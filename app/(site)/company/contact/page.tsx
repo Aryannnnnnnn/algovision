@@ -89,20 +89,17 @@ export default function ContactPage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-orange-200/70 rounded-full mb-6 shadow-lg shadow-orange-200/30">
-              <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-[#00b5ff]/30 rounded-full mb-6 shadow-lg shadow-[#00b5ff]/20">
+              <svg className="w-4 h-4 text-[#00b5ff]" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
               </svg>
-              <span className="text-sm font-bold text-orange-700">Get In Touch</span>
+              <span className="text-sm font-bold text-[#0095d9]">Get In Touch</span>
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Let's Build Something{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10 bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 bg-clip-text text-transparent">Amazing</span>
-                <span className="absolute bottom-2 left-0 w-0 h-3 bg-orange-400/30 -rotate-1 animate-underline-expand"></span>
-              </span>
+              <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">Amazing</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
               Have a project in mind? We'd love to hear about it. Fill out the form below and we'll get back to you within 24 hours.
@@ -138,7 +135,7 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 text-gray-900 bg-white border-2 border-gray-200 rounded-xl focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all duration-300 placeholder:text-gray-400"
+                    className="w-full px-4 py-3 text-gray-900 bg-white border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#00b5ff] focus:ring-4 focus:ring-[#00b5ff]/10 transition-all duration-300 placeholder:text-gray-400"
                     placeholder="John Doe"
                   />
                 </div>
@@ -153,7 +150,7 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 text-gray-900 bg-white border-2 border-gray-200 rounded-xl focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all duration-300 placeholder:text-gray-400"
+                    className="w-full px-4 py-3 text-gray-900 bg-white border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#00b5ff] focus:ring-4 focus:ring-[#00b5ff]/10 transition-all duration-300 placeholder:text-gray-400"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -171,7 +168,7 @@ export default function ContactPage() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 text-gray-900 bg-white border-2 border-gray-200 rounded-xl focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all duration-300 placeholder:text-gray-400"
+                    className="w-full px-4 py-3 text-gray-900 bg-white border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#00b5ff] focus:ring-4 focus:ring-[#00b5ff]/10 transition-all duration-300 placeholder:text-gray-400"
                     placeholder="Your Company"
                   />
                 </div>
@@ -185,7 +182,7 @@ export default function ContactPage() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 text-gray-900 bg-white border-2 border-gray-200 rounded-xl focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all duration-300 placeholder:text-gray-400"
+                    className="w-full px-4 py-3 text-gray-900 bg-white border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#00b5ff] focus:ring-4 focus:ring-[#00b5ff]/10 transition-all duration-300 placeholder:text-gray-400"
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
@@ -202,7 +199,7 @@ export default function ContactPage() {
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 text-gray-900 bg-white border-2 border-gray-200 rounded-xl focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all duration-300"
+                  className="w-full px-4 py-3 text-gray-900 bg-white border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#00b5ff] focus:ring-4 focus:ring-[#00b5ff]/10 transition-all duration-300"
                 >
                   <option value="">Select a service</option>
                   <option value="ai-solutions">AI Solutions</option>
@@ -225,7 +222,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 text-gray-900 bg-white border-2 border-gray-200 rounded-xl focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all duration-300 placeholder:text-gray-400 resize-none"
+                  className="w-full px-4 py-3 text-gray-900 bg-white border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#00b5ff] focus:ring-4 focus:ring-[#00b5ff]/10 transition-all duration-300 placeholder:text-gray-400 resize-none"
                   placeholder="Tell us about your project..."
                 />
               </div>
@@ -262,7 +259,7 @@ export default function ContactPage() {
               {/* Step 1 */}
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-600 to-orange-500 rounded-xl flex items-center justify-center shadow-lg shadow-orange-600/30">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#00b5ff] to-[#00b5ff] rounded-xl flex items-center justify-center shadow-lg shadow-[#00b5ff]/30">
                     <span className="text-white font-bold text-lg">1</span>
                   </div>
                 </div>
@@ -277,7 +274,7 @@ export default function ContactPage() {
               {/* Step 2 */}
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-600 to-orange-500 rounded-xl flex items-center justify-center shadow-lg shadow-orange-600/30">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#00b5ff] to-[#00b5ff] rounded-xl flex items-center justify-center shadow-lg shadow-[#00b5ff]/30">
                     <span className="text-white font-bold text-lg">2</span>
                   </div>
                 </div>
@@ -292,7 +289,7 @@ export default function ContactPage() {
               {/* Step 3 */}
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-600 to-orange-500 rounded-xl flex items-center justify-center shadow-lg shadow-orange-600/30">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#00b5ff] to-[#00b5ff] rounded-xl flex items-center justify-center shadow-lg shadow-[#00b5ff]/30">
                     <span className="text-white font-bold text-lg">3</span>
                   </div>
                 </div>
@@ -307,7 +304,7 @@ export default function ContactPage() {
               {/* Step 4 */}
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-600 to-orange-500 rounded-xl flex items-center justify-center shadow-lg shadow-orange-600/30">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#00b5ff] to-[#00b5ff] rounded-xl flex items-center justify-center shadow-lg shadow-[#00b5ff]/30">
                     <span className="text-white font-bold text-lg">4</span>
                   </div>
                 </div>
@@ -321,9 +318,9 @@ export default function ContactPage() {
             </div>
 
             {/* Trust Badge */}
-            <div className="mt-8 p-6 bg-orange-50/50 border border-orange-200/50 rounded-xl">
+            <div className="mt-8 p-6 bg-[#00b5ff]/10 border border-[#00b5ff]/30 rounded-xl">
               <div className="flex items-center gap-3 mb-3">
-                <svg className="w-6 h-6 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-6 h-6 text-[#00b5ff]" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
                 </svg>
                 <h5 className="font-bold text-gray-900">Trusted by 500+ Companies</h5>
@@ -350,9 +347,9 @@ export default function ContactPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {contactMethods.map((method, index) => (
-              <div key={index} className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-gray-200/60 shadow-sm hover:shadow-md hover:border-orange-300 transition-all duration-500">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl flex items-center justify-center mb-4 shadow-md shadow-orange-200/30">
-                  <div className="text-orange-600">
+              <div key={index} className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-gray-200/60 shadow-sm hover:shadow-md hover:border-[#00b5ff] transition-all duration-500">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 rounded-xl flex items-center justify-center mb-4 shadow-md shadow-[#00b5ff]/20">
+                  <div className="text-[#00b5ff]">
                     {method.icon}
                   </div>
                 </div>

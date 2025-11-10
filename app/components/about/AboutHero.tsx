@@ -35,19 +35,16 @@ export default function AboutHero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Heading */}
           <div>
-            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-orange-200/70 rounded-full mb-8 shadow-lg shadow-orange-200/30">
-              <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-[#00b5ff]/30 rounded-full mb-8 shadow-lg shadow-[#00b5ff]/20">
+              <svg className="w-4 h-4 text-[#00b5ff]" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
               </svg>
-              <span className="text-sm font-bold text-orange-700">About AlgoVision</span>
+              <span className="text-sm font-bold text-[#0095d9]">About AlgoVision</span>
             </div>
 
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.05] mb-6 tracking-tight">
               Building Digital Excellence{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10 bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 bg-clip-text text-transparent">Together</span>
-                <span className="absolute bottom-2 left-0 w-0 h-3 bg-orange-400/30 -rotate-1 animate-underline-expand"></span>
-              </span>
+              <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">Together</span>
             </h1>
           </div>
 

@@ -41,12 +41,12 @@ export default function AboutCTA() {
       <div ref={ctaRef} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Decorative badge */}
         <div className="mb-8">
-          <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-orange-200/70 rounded-full shadow-lg shadow-orange-200/30">
-            <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+          <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-[#00b5ff]/30 rounded-full shadow-lg shadow-[#00b5ff]/20">
+            <svg className="w-4 h-4 text-[#00b5ff]" fill="currentColor" viewBox="0 0 20 20">
               <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
               <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
             </svg>
-            <span className="text-sm font-bold text-orange-700">Let's Connect</span>
+            <span className="text-sm font-bold text-[#0095d9]">Let's Connect</span>
           </div>
         </div>
 
@@ -54,10 +54,7 @@ export default function AboutCTA() {
         <div className="mb-12">
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight max-w-4xl">
             Ready to Build Something{" "}
-            <span className="relative inline-block">
-              <span className="relative z-10 bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 bg-clip-text text-transparent">Amazing?</span>
-              <span className="absolute bottom-2 left-0 w-0 h-3 bg-orange-400/30 -rotate-1 animate-underline-expand"></span>
-            </span>
+            <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">Amazing?</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
             Let's transform your vision into reality. Get in touch with our team and discover how we can help your business thrive in the digital world.
@@ -89,9 +86,9 @@ export default function AboutCTA() {
 
         {/* Contact info cards */}
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl">
-          <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-gray-200/60 shadow-sm hover:shadow-md hover:border-orange-300 transition-all duration-500">
-            <div className="w-12 h-12 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl flex items-center justify-center mb-4 shadow-md shadow-orange-200/30">
-              <svg className="w-6 h-6 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-gray-200/60 shadow-sm hover:shadow-md hover:border-[#00b5ff] transition-all duration-500">
+            <div className="w-12 h-12 bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 rounded-xl flex items-center justify-center mb-4 shadow-md shadow-[#00b5ff]/20">
+              <svg className="w-6 h-6 text-[#00b5ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
@@ -99,9 +96,9 @@ export default function AboutCTA() {
             <p className="text-sm text-gray-600">Quick response within 24hrs</p>
           </div>
 
-          <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-gray-200/60 shadow-sm hover:shadow-md hover:border-orange-300 transition-all duration-500">
-            <div className="w-12 h-12 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl flex items-center justify-center mb-4 shadow-md shadow-orange-200/30">
-              <svg className="w-6 h-6 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-gray-200/60 shadow-sm hover:shadow-md hover:border-[#00b5ff] transition-all duration-500">
+            <div className="w-12 h-12 bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 rounded-xl flex items-center justify-center mb-4 shadow-md shadow-[#00b5ff]/20">
+              <svg className="w-6 h-6 text-[#00b5ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
               </svg>
             </div>
@@ -109,9 +106,9 @@ export default function AboutCTA() {
             <p className="text-sm text-gray-600">Chat with our team now</p>
           </div>
 
-          <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-gray-200/60 shadow-sm hover:shadow-md hover:border-orange-300 transition-all duration-500">
-            <div className="w-12 h-12 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl flex items-center justify-center mb-4 shadow-md shadow-orange-200/30">
-              <svg className="w-6 h-6 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-gray-200/60 shadow-sm hover:shadow-md hover:border-[#00b5ff] transition-all duration-500">
+            <div className="w-12 h-12 bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 rounded-xl flex items-center justify-center mb-4 shadow-md shadow-[#00b5ff]/20">
+              <svg className="w-6 h-6 text-[#00b5ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
             </div>

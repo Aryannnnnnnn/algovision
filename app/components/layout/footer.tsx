@@ -32,7 +32,7 @@ export default function Footer() {
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute inset-0" style={{
-          backgroundImage: `linear-gradient(to right, #f97316 1px, transparent 1px), linear-gradient(to bottom, #f97316 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(to right, #00b5ff 1px, transparent 1px), linear-gradient(to bottom, #00b5ff 1px, transparent 1px)`,
           backgroundSize: '80px 80px'
         }}></div>
       </div>
@@ -41,8 +41,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Logo & Social */}
           <div>
-            <Link href="/" className="inline-block mb-4 group">
-              <h3 className="font-display text-2xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+            <Link href="/" className="inline-flex items-center gap-3 mb-4 group">
+              <div className="relative w-9 h-9">
+                <img src="/AlgoVisionLogo.png" alt="AlgoVision Logo" className="w-full h-full object-contain" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-gray-900 group-hover:text-[#00b5ff] transition-colors duration-300">
                 {footerData.company.name}
               </h3>
             </Link>
@@ -57,7 +60,7 @@ export default function Footer() {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:bg-orange-600 hover:border-orange-600 hover:text-white shadow-sm transition-all duration-300 ease-in hover:scale-105"
+                  className="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:bg-[#00b5ff] hover:border-[#00b5ff] hover:text-white shadow-sm transition-all duration-300 ease-in hover:scale-105"
                   aria-label={social.name}
                 >
                   {socialIcons[social.name as keyof typeof socialIcons]}
@@ -74,10 +77,10 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="group relative text-gray-600 hover:text-orange-600 transition-colors duration-300 ease-in text-sm inline-block"
+                    className="group relative text-gray-600 hover:text-[#00b5ff] transition-colors duration-300 ease-in text-sm inline-block"
                   >
                     {link.name}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-600 group-hover:w-full transition-all duration-300 ease-in"></span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#00b5ff] group-hover:w-full transition-all duration-300 ease-in"></span>
                   </Link>
                 </li>
               ))}
@@ -92,10 +95,10 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="group relative text-gray-600 hover:text-orange-600 transition-colors duration-300 ease-in text-sm inline-block"
+                    className="group relative text-gray-600 hover:text-[#00b5ff] transition-colors duration-300 ease-in text-sm inline-block"
                   >
                     {link.name}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-600 group-hover:w-full transition-all duration-300 ease-in"></span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#00b5ff] group-hover:w-full transition-all duration-300 ease-in"></span>
                   </Link>
                 </li>
               ))}
@@ -110,10 +113,10 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="group relative text-gray-600 hover:text-orange-600 transition-colors duration-300 ease-in text-sm inline-block"
+                    className="group relative text-gray-600 hover:text-[#00b5ff] transition-colors duration-300 ease-in text-sm inline-block"
                   >
                     {link.name}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-600 group-hover:w-full transition-all duration-300 ease-in"></span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#00b5ff] group-hover:w-full transition-all duration-300 ease-in"></span>
                   </Link>
                 </li>
               ))}
@@ -126,27 +129,27 @@ export default function Footer() {
           <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-xs text-gray-500">
             <span>&copy; {new Date().getFullYear()} {footerData.company.name}</span>
             <span className="hidden sm:inline">|</span>
-            <Link href="/privacy-choices" className="hover:text-orange-600 transition-colors">
+            <Link href="/privacy-choices" className="hover:text-[#00b5ff] transition-colors">
               Your Privacy Choices
             </Link>
             <span className="hidden sm:inline">|</span>
-            <Link href="/cookie-policy" className="hover:text-orange-600 transition-colors">
+            <Link href="/cookie-policy" className="hover:text-[#00b5ff] transition-colors">
               Cookie Policy
             </Link>
             <span className="hidden sm:inline">|</span>
-            <Link href="/sitemap" className="hover:text-orange-600 transition-colors">
+            <Link href="/sitemap" className="hover:text-[#00b5ff] transition-colors">
               Sitemap
             </Link>
             <span className="hidden sm:inline">|</span>
-            <Link href="/terms" className="hover:text-orange-600 transition-colors">
+            <Link href="/terms" className="hover:text-[#00b5ff] transition-colors">
               Terms of Service
             </Link>
             <span className="hidden sm:inline">|</span>
-            <Link href="/privacy" className="hover:text-orange-600 transition-colors">
+            <Link href="/privacy" className="hover:text-[#00b5ff] transition-colors">
               Privacy Policy
             </Link>
             <span className="hidden sm:inline">|</span>
-            <Link href="/accessibility" className="hover:text-orange-600 transition-colors">
+            <Link href="/accessibility" className="hover:text-[#00b5ff] transition-colors">
               Accessibility Statement
             </Link>
           </div>

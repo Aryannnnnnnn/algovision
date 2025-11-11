@@ -87,7 +87,7 @@ export default function PlatformCoverage() {
   };
 
   return (
-    <section ref={sectionRef} className="relative py-24 sm:py-32 bg-white overflow-hidden">
+    <section ref={sectionRef} className="relative py-12 bg-white overflow-hidden">
       {/* Background grid */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
         <div
@@ -102,11 +102,8 @@ export default function PlatformCoverage() {
       <div className="relative xl:max-w-[95vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Header */}
         <div ref={headingRef} className="mb-16">
-          <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-[#00b5ff]/30 rounded-full mb-8 shadow-lg shadow-[#00b5ff]/20">
-            <svg className="w-4 h-4 text-[#00b5ff]" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-            </svg>
-            <span className="text-sm font-bold text-[#0095d9]">Platform Coverage</span>
+          <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full mb-8 shadow-lg">
+            <span className="text-sm font-bold text-white">Platform Coverage</span>
           </div>
 
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-2 tracking-tight">
@@ -126,9 +123,9 @@ export default function PlatformCoverage() {
         {/* Category Cards */}
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {/* Advertising Platforms Card */}
-          <div className="category-card group relative bg-white rounded-2xl shadow-[0_10px_35px_-12px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_45px_-12px_rgba(0,181,255,0.3)] transition-all duration-500 overflow-hidden border border-gray-200">
+          <div className="category-card group relative bg-white rounded-2xl hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] transition-all duration-500 overflow-hidden border-2 border-transparent hover:border-[#1e293b]">
             {/* Header */}
-            <div className="p-8 border-b border-gray-200 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60">
+            <div className="p-8">
               <div className="flex items-start justify-between mb-4">
                 <div className="w-14 h-14 rounded-xl bg-[#00b5ff] flex items-center justify-center shadow-lg">
                   <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -151,10 +148,10 @@ export default function PlatformCoverage() {
                 {platformCategories.advertising.platforms.map((platform, idx) => (
                   <div
                     key={idx}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-full border border-blue-100/50 hover:border-[#00b5ff]/40 transition-all duration-300 group/pill"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-full border border-blue-100/50 transition-all duration-300"
                   >
-                    <div className={`w-2 h-2 rounded-full ${platform.color} group-hover/pill:scale-125 transition-transform`}></div>
-                    <span className="text-sm font-semibold text-gray-700 group-hover/pill:text-[#00b5ff] transition-colors">{platform.name}</span>
+                    <div className={`w-2 h-2 rounded-full ${platform.color}`}></div>
+                    <span className="text-sm font-semibold text-gray-700">{platform.name}</span>
                   </div>
                 ))}
               </div>
@@ -162,9 +159,9 @@ export default function PlatformCoverage() {
           </div>
 
           {/* Communication Channels Card */}
-          <div className="category-card group relative bg-white rounded-2xl shadow-[0_10px_35px_-12px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_45px_-12px_rgba(0,181,255,0.3)] transition-all duration-500 overflow-hidden border border-gray-200">
+          <div className="category-card group relative bg-white rounded-2xl hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] transition-all duration-500 overflow-hidden border-2 border-transparent hover:border-[#1e293b]">
             {/* Header */}
-            <div className="p-8 border-b border-gray-200 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60">
+            <div className="p-8">
               <div className="flex items-start justify-between mb-4">
                 <div className="w-14 h-14 rounded-xl bg-[#00b5ff] flex items-center justify-center shadow-lg">
                   <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -186,10 +183,10 @@ export default function PlatformCoverage() {
                 {platformCategories.communication.platforms.map((platform, idx) => (
                   <div
                     key={idx}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-full border border-blue-100/50 hover:border-[#00b5ff]/40 transition-all duration-300 group/pill"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-full border border-blue-100/50 transition-all duration-300"
                   >
-                    <div className={`w-2 h-2 rounded-full ${platform.color} group-hover/pill:scale-125 transition-transform`}></div>
-                    <span className="text-sm font-semibold text-gray-700 group-hover/pill:text-[#00b5ff] transition-colors">{platform.name}</span>
+                    <div className={`w-2 h-2 rounded-full ${platform.color}`}></div>
+                    <span className="text-sm font-semibold text-gray-700">{platform.name}</span>
                   </div>
                 ))}
               </div>
@@ -198,7 +195,7 @@ export default function PlatformCoverage() {
         </div>
 
         {/* Bottom Stats Banner */}
-        <div className="bg-white rounded-2xl shadow-[0_10px_35px_-12px_rgba(0,0,0,0.15)] border border-gray-200 p-8 mb-12">
+        <div className="bg-white rounded-2xl p-8 mb-12">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold text-[#00b5ff] mb-2">15+</div>

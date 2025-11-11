@@ -55,7 +55,7 @@ export default function InsightsResources() {
       type: "Latest Blog",
       title: "The Future of Omnichannel Marketing",
       description: "Discover how AI-driven strategies are reshaping customer engagement across every platform.",
-      image: "/images/blog-feature.jpg",
+      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
       link: "/blog",
       badge: "5 min read",
     },
@@ -63,7 +63,7 @@ export default function InsightsResources() {
       type: "Case Study",
       title: "How DataFlow Systems Achieved 340% ROI",
       description: "See how we transformed stagnant ad spend into exponential revenue growth in just 6 months.",
-      image: "/images/case-study.jpg",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
       link: "/case-studies",
       badge: "Success Story",
     },
@@ -71,14 +71,14 @@ export default function InsightsResources() {
       type: "Resource",
       title: "Enterprise Marketing Playbook 2024",
       description: "Download our comprehensive guide to scaling marketing operations for high-growth companies.",
-      image: "/images/resource.jpg",
+      image: "https://images.unsplash.com/photo-1512314889357-e157c22f938d?w=800&q=80",
       link: "/resources",
       badge: "Free Download",
     },
   ];
 
   return (
-    <section ref={sectionRef} className="relative py-24 sm:py-32 bg-white overflow-hidden">
+    <section ref={sectionRef} className="relative py-12 bg-white overflow-hidden">
       {/* Background grid */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
         <div
@@ -93,11 +93,8 @@ export default function InsightsResources() {
       <div className="relative xl:max-w-[95vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Header */}
         <div ref={headingRef} className="mb-16">
-          <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-[#00b5ff]/30 rounded-full mb-8 shadow-lg shadow-[#00b5ff]/20">
-            <svg className="w-4 h-4 text-[#00b5ff]" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/>
-            </svg>
-            <span className="text-sm font-bold text-[#0095d9]">Insights & Resources</span>
+          <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full mb-8 shadow-lg">
+            <span className="text-sm font-bold text-white">Insights & Resources</span>
           </div>
 
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight mb-2">
@@ -112,18 +109,23 @@ export default function InsightsResources() {
         {/* Three Column Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {resources.map((resource, index) => (
-            <div
+            <a
               key={index}
-              className="resource-card group relative bg-white rounded-2xl shadow-[0_10px_35px_-12px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_45px_-12px_rgba(0,181,255,0.3)] transition-all duration-500 overflow-hidden border border-gray-200"
+              href={resource.link}
+              className="resource-card group block relative bg-white rounded-2xl  hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] transition-all duration-500 overflow-hidden border-2 border-gray-300 hover:border-[#1e293b] cursor-pointer"
             >
               {/* Image */}
-              <div className="relative h-48 bg-gradient-to-br from-[#E8F4FE] to-[#F5F3FF] overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-6xl opacity-10">{resource.type === "Latest Blog" ? "📝" : resource.type === "Case Study" ? "📊" : "📚"}</div>
-                </div>
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={resource.image}
+                  alt={resource.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
                 {/* Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="inline-flex items-center px-3 py-1 bg-white/90 backdrop-blur-sm border border-[#00b5ff]/30 rounded-full text-xs font-bold text-[#0095d9]">
+                  <span className="inline-flex items-center px-3 py-1 bg-[#1e293b] rounded-full text-xs font-bold text-white shadow-lg">
                     {resource.badge}
                   </span>
                 </div>
@@ -140,17 +142,18 @@ export default function InsightsResources() {
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
                   {resource.description}
                 </p>
-                <a
-                  href={resource.link}
-                  className="inline-flex items-center gap-2 text-sm font-bold text-[#00b5ff] hover:gap-3 transition-all duration-300"
-                >
-                  <span>Read More</span>
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </a>
+
+                {/* Read More with Arrow */}
+                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                  <span className="text-sm font-semibold text-gray-600 group-hover:text-[#00b5ff] transition-colors duration-300">Read More</span>
+                  <div className="w-10 h-10 rounded-full bg-[#1e293b] group-hover:bg-[#00b5ff] flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                    <svg className="w-5 h-5 text-white group-hover:translate-x-0.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
+                </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 

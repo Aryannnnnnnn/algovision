@@ -139,7 +139,7 @@ export default function EnterpriseTrust() {
   ];
 
   return (
-    <section ref={sectionRef} className="relative py-24 sm:py-32 bg-white overflow-hidden">
+    <section ref={sectionRef} className="relative py-12 bg-white overflow-hidden">
       {/* Background grid */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
         <div
@@ -154,11 +154,8 @@ export default function EnterpriseTrust() {
       <div className="relative xl:max-w-[95vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Header */}
         <div ref={headingRef} className="mb-16">
-          <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-[#00b5ff]/30 rounded-full mb-8 shadow-lg shadow-[#00b5ff]/20">
-            <svg className="w-4 h-4 text-[#00b5ff]" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-            </svg>
-            <span className="text-sm font-bold text-[#0095d9]">Enterprise Trust</span>
+          <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full mb-8 shadow-lg">
+            <span className="text-sm font-bold text-white">Enterprise Trust</span>
           </div>
 
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-2 tracking-tight">
@@ -181,7 +178,7 @@ export default function EnterpriseTrust() {
             {trustPillars.map((pillar, index) => (
               <div
                 key={index}
-                className="trust-pillar group relative bg-white rounded-2xl shadow-[0_10px_35px_-12px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_45px_-12px_rgba(0,181,255,0.3)] transition-all duration-500 border border-gray-200 p-6"
+                className="trust-pillar group relative bg-white rounded-2xl hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] transition-all duration-500 border-2 border-transparent hover:border-[#1e293b] p-6"
               >
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#00b5ff] flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -204,8 +201,6 @@ export default function EnterpriseTrust() {
                     </div>
                   </div>
                 </div>
-
-                <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#00b5ff]/30 rounded-2xl transition-all duration-500 pointer-events-none"></div>
               </div>
             ))}
           </div>

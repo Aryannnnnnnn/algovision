@@ -41,12 +41,8 @@ export default function AboutCTA() {
       <div ref={ctaRef} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Decorative badge */}
         <div className="mb-8">
-          <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-[#00b5ff]/30 rounded-full shadow-lg shadow-[#00b5ff]/20">
-            <svg className="w-4 h-4 text-[#00b5ff]" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-            </svg>
-            <span className="text-sm font-bold text-[#0095d9]">Let's Connect</span>
+          <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full shadow-lg">
+            <span className="text-sm font-bold text-white">Let's Connect</span>
           </div>
         </div>
 

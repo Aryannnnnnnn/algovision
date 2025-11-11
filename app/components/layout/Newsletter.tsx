@@ -28,12 +28,8 @@ export default function Newsletter() {
           <div className="relative grid lg:grid-cols-2 gap-12 items-center">
             {/* Left - Content */}
             <div>
-              <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white border border-[#00b5ff]/30 rounded-full mb-6">
-                <svg className="w-4 h-4 text-[#00b5ff]" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                </svg>
-                <span className="text-sm font-bold text-[#0095d9]">Stay Connected</span>
+              <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full mb-6 shadow-lg">
+                <span className="text-sm font-bold text-white">Stay Connected</span>
               </div>
 
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">

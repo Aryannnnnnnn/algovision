@@ -118,11 +118,8 @@ export default function HomeHero() {
           {/* Left Content */}
           <div ref={leftRef} className="space-y-8">
             <div>
-              <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-[#00b5ff]/30 rounded-full mb-6 shadow-sm">
-                <svg className="w-4 h-4 text-[#00b5ff]" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd"/>
-                </svg>
-                <span className="text-sm font-bold text-[#0095d9]">Your Digital Partner</span>
+              <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full mb-6 shadow-lg">
+                <span className="text-sm font-bold text-white">Your Digital Partner</span>
               </div>
 
               <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.05] mb-6 tracking-tight">

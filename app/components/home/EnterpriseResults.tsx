@@ -114,7 +114,7 @@ export default function EnterpriseResults() {
   const currentCase = caseStudies[activeCase];
 
   return (
-    <section ref={sectionRef} className="relative py-24 sm:py-32 bg-white overflow-hidden">
+    <section ref={sectionRef} className="relative py-12 bg-white overflow-hidden">
       {/* Background grid */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
         <div
@@ -132,15 +132,8 @@ export default function EnterpriseResults() {
           {/* Left Side - Text Content */}
           <div ref={rightRef} className="order-1 space-y-6">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-[#00b5ff]/30 rounded-full shadow-lg shadow-[#00b5ff]/20">
-              <svg className="w-4 h-4 text-[#00b5ff]" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  fillRule="evenodd"
-                  d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span className="text-sm font-bold text-[#0095d9]">Proven Performance</span>
+            <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full shadow-lg">
+              <span className="text-sm font-bold text-white">Proven Performance</span>
             </div>
 
             {/* Headline */}
@@ -178,81 +171,107 @@ export default function EnterpriseResults() {
             <div className="pt-8">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-bold text-gray-900">Featured Case Studies</h3>
-                <div className="flex gap-1">
+                <div className="flex gap-2">
                   <button
                     onClick={() => setActiveCase((prev) => (prev - 1 + caseStudies.length) % caseStudies.length)}
-                    className="w-8 h-8 rounded-lg bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors"
+                    className="w-9 h-9 rounded-full bg-[#1e293b] hover:bg-[#00b5ff] flex items-center justify-center transition-all duration-300 hover:scale-110 cursor-pointer"
                     aria-label="Previous case"
                   >
-                    <svg className="w-4 h-4 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                    <svg className="w-5 h-5 text-white rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </button>
                   <button
                     onClick={() => setActiveCase((prev) => (prev + 1) % caseStudies.length)}
-                    className="w-8 h-8 rounded-lg bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors"
+                    className="w-9 h-9 rounded-full bg-[#1e293b] hover:bg-[#00b5ff] flex items-center justify-center transition-all duration-300 hover:scale-110 cursor-pointer"
                     aria-label="Next case"
                   >
-                    <svg className="w-4 h-4 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </button>
                 </div>
               </div>
 
               {/* Case Study Card */}
-              <div className="bg-gradient-to-br from-[#E8F4FE]/80 via-[#F5F3FF]/80 to-[#E8F4FE]/80 rounded-2xl border border-blue-100/50 p-6 shadow-lg">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-white shadow-md flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#00b5ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">{currentCase.industry}</div>
-                    <div className="text-lg font-bold text-gray-900">{currentCase.company}</div>
+              <a href="/case-studies" className="block bg-white rounded-2xl border-2 border-transparent shadow-[0_8px_30px_-8px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] hover:border-[#1e293b] transition-all duration-500 overflow-hidden group cursor-pointer">
+                {/* Header with gradient background */}
+                <div className="bg-gradient-to-br from-[#f8fafc] to-white p-6 border-b border-gray-100">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#00b5ff] to-[#0099dd] shadow-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">{currentCase.industry}</div>
+                      <div className="text-xl font-bold text-gray-900 group-hover:text-[#00b5ff] transition-colors duration-300">{currentCase.company}</div>
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-[#1e293b] group-hover:bg-[#00b5ff] flex items-center justify-center transition-all duration-300 group-hover:scale-110 flex-shrink-0">
+                      <svg className="w-5 h-5 text-white group-hover:translate-x-0.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <div>
+                {/* Content */}
+                <div className="p-6 space-y-5">
+                  {/* Challenge Section */}
+                  <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-4 border border-red-100/50">
                     <div className="flex items-center gap-2 mb-2">
-                      <div className="w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center">
-                        <svg className="w-3 h-3 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <div className="w-6 h-6 rounded-lg bg-red-500 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                         </svg>
                       </div>
-                      <span className="text-xs font-bold text-red-600 uppercase tracking-wider">Challenge</span>
+                      <span className="text-xs font-bold text-red-700 uppercase tracking-wider">Challenge</span>
                     </div>
-                    <p className="text-sm text-gray-700 leading-relaxed">{currentCase.challenge}</p>
+                    <p className="text-sm text-gray-800 leading-relaxed font-medium">{currentCase.challenge}</p>
                   </div>
 
+                  {/* Results Label */}
+                  <div className="flex items-center gap-2">
+                    <div className="w-6 h-6 rounded-lg bg-green-500 flex items-center justify-center">
+                      <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <span className="text-xs font-bold text-green-700 uppercase tracking-wider">Results Delivered</span>
+                  </div>
+
+                  {/* Stats Grid */}
                   <div className="grid grid-cols-3 gap-3">
                     {currentCase.results.map((result, idx) => (
-                      <div key={idx} className="bg-white rounded-lg p-3 text-center shadow-sm">
+                      <div key={idx} className="bg-gradient-to-br from-[#E8F4FE] to-[#F5F3FF] rounded-xl p-4 text-center border border-blue-100/50 shadow-sm">
                         <div className="text-2xl font-bold text-[#00b5ff] mb-1">
                           {result.prefix}{Math.round(animatedValues[idx])}{result.suffix}
                         </div>
-                        <div className="text-[10px] text-gray-600 font-medium leading-tight">{result.label}</div>
+                        <div className="text-[10px] text-gray-600 font-semibold leading-tight uppercase tracking-wide">{result.label}</div>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* Dots indicator */}
-                <div className="flex justify-center gap-1.5 mt-5">
-                  {caseStudies.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setActiveCase(idx)}
-                      className={`h-1.5 rounded-full transition-all ${
-                        activeCase === idx ? "w-6 bg-[#00b5ff]" : "w-1.5 bg-gray-400"
-                      }`}
-                      aria-label={`Go to case ${idx + 1}`}
-                    />
-                  ))}
+                {/* Footer with dots indicator */}
+                <div className="bg-gradient-to-br from-gray-50 to-white px-6 py-4 border-t border-gray-100">
+                  <div className="flex justify-center gap-2">
+                    {caseStudies.map((_, idx) => (
+                      <button
+                        key={idx}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setActiveCase(idx);
+                        }}
+                        className={`h-2 rounded-full transition-all ${
+                          activeCase === idx ? "w-8 bg-[#00b5ff]" : "w-2 bg-gray-300 hover:bg-gray-400"
+                        }`}
+                        aria-label={`Go to case ${idx + 1}`}
+                      />
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
 
             {/* CTA */}

@@ -91,125 +91,89 @@ export default function HowWeWork() {
   ];
 
   return (
-    <section ref={sectionRef} className="relative py-24 sm:py-32 bg-white overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#00b5ff]/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#00b5ff]/5 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="relative xl:max-w-[95vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        {/* Header - Left Aligned */}
-        <div className="mb-16">
-          <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-[#00b5ff]/30 rounded-full mb-8 shadow-lg shadow-[#00b5ff]/20">
-            <svg className="w-4 h-4 text-[#00b5ff]" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-            </svg>
-            <span className="text-sm font-bold text-[#0095d9]">Our Methodology</span>
-          </div>
-
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-2 tracking-tight">
-            The AlgoVision Methodology.
-          </h2>
-          <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 tracking-tight">
-            <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">
-              Four phases, one unified system.
-            </span>
-          </h3>
-
-          <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mb-12">
-            A proven approach that transforms fragmented marketing into a unified intelligence system
-          </p>
-
-          {/* Timeline Progress Bar */}
-          <div className="max-w-4xl mb-16">
-            <div className="relative h-1 bg-gray-200 rounded-full overflow-hidden">
-              <div className="absolute inset-0 bg-[#00b5ff] w-full"></div>
-            </div>
-            <div className="flex justify-between mt-4">
-              {phases.map((phase) => (
-                <div key={phase.number} className="flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-[#00b5ff] flex items-center justify-center text-white font-bold text-sm shadow-lg mb-2">
-                    {phase.number}
+    <section ref={sectionRef} className="py-24 bg-white">
+      <div className="max-w-[90vw] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-16 xl:gap-34 items-start">
+          {/* Steps - Left on desktop, bottom on mobile/tablet */}
+          <div className="space-y-6 order-2 lg:order-1">
+            {phases.map((phase, index) => (
+              <div key={index} className="methodology-card group">
+                <div className="relative bg-white p-8 rounded-2xl border border-transparent hover:shadow-lg hover:border-[#00011f] transition-all duration-500 hover:-translate-x-2">
+                  {/* Step number badge */}
+                  <div className="absolute -left-4 top-8 w-12 h-12 bg-gradient-to-br from-[#00b5ff] to-[#00b5ff] rounded-xl flex items-center justify-center shadow-lg shadow-[#00b5ff]/30 group-hover:scale-110 transition-transform duration-500">
+                    <span className="text-white font-bold text-sm">{phase.number}</span>
                   </div>
-                  <span className="text-xs text-gray-500 hidden sm:block">{phase.timeline}</span>
+
+                  <div className="flex items-start gap-4 ml-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md shadow-[#00b5ff]/20 group-hover:scale-110 transition-transform duration-500">
+                      <div className="text-[#00b5ff]">
+                        {phase.icon}
+                      </div>
+                    </div>
+
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between mb-2">
+                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#00b5ff] transition-colors duration-500">
+                          {phase.title}
+                        </h3>
+                        <span className="text-xs font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full">{phase.timeline}</span>
+                      </div>
+                      <p className="text-sm font-semibold text-[#00b5ff] mb-3">{phase.subtitle}</p>
+                      <p className="text-gray-600 leading-relaxed mb-4">
+                        {phase.description}
+                      </p>
+
+                      {/* Deliverables */}
+                      <div className="space-y-2">
+                        {phase.deliverables.map((deliverable, idx) => (
+                          <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                            <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                            </svg>
+                            <span>{deliverable}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Connector line */}
+                  {/* {index < phases.length - 1 && (
+                    <div className="absolute left-2 bottom-0 w-0.5 h-6 bg-gradient-to-b from-[#00b5ff]/30 to-transparent translate-y-6"></div>
+                  )} */}
                 </div>
-              ))}
+              </div>
+            ))}
+          </div>
+
+          {/* Heading - Right on desktop, top on mobile/tablet */}
+          <div className="lg:sticky lg:top-24 max-w-2xl mx-auto order-1 lg:order-2">
+            <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full mb-6 shadow-lg">
+              <span className="text-sm font-bold text-white">Our Methodology</span>
+            </div>
+
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              The AlgoVision <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">Methodology</span>
+            </h2>
+            <p className="text-xl text-gray-600 leading-relaxed mb-8">
+              A proven approach that transforms fragmented marketing into a unified intelligence system. Four phases, one unified system.
+            </p>
+
+            <div className="inline-block">
+              <Button
+                href="/company/methodology"
+                variant="primary"
+                size="md"
+                icon={
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                }
+              >
+                Explore Our Methodology
+              </Button>
             </div>
           </div>
-        </div>
-
-        {/* Methodology Cards - Horizontal Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-16">
-          {phases.map((phase, index) => (
-            <div
-              key={phase.number}
-              className="methodology-card group relative bg-white rounded-2xl shadow-[0_10px_35px_-12px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_45px_-12px_rgba(0,181,255,0.3)] transition-all duration-500 overflow-hidden border border-gray-200"
-            >
-              {/* Card Header */}
-              <div className="relative bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 p-8 border-b border-gray-200">
-                {/* Phase Number - Top Right */}
-                <div className="absolute top-6 right-6 w-16 h-16 rounded-xl bg-[#00b5ff] flex items-center justify-center shadow-lg">
-                  <span className="text-2xl font-bold text-white">{phase.number}</span>
-                </div>
-
-                {/* Icon */}
-                <div className="w-16 h-16 rounded-xl bg-white flex items-center justify-center text-[#00b5ff] shadow-md border border-[#00b5ff]/20 mb-4">
-                  {phase.icon}
-                </div>
-
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{phase.title}</h3>
-                <p className="text-sm font-semibold text-[#00b5ff] mb-3">{phase.subtitle}</p>
-                <p className="text-base text-gray-600 leading-relaxed">{phase.description}</p>
-              </div>
-
-              {/* Card Body */}
-              <div className="p-8">
-                {/* Deliverables */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-bold text-gray-900 mb-3 uppercase tracking-wide">Key Deliverables</h4>
-                  <ul className="space-y-2">
-                    {phase.deliverables.map((deliverable, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                        <svg className="w-5 h-5 text-[#00b5ff] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                        </svg>
-                        <span>{deliverable}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Timeline Badge */}
-                <div className="inline-flex items-center gap-2 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-full px-4 py-2 border border-blue-100/50">
-                  <svg className="w-4 h-4 text-[#00b5ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span className="text-sm font-semibold text-[#00b5ff]">{phase.timeline}</span>
-                </div>
-              </div>
-
-              {/* Hover Effect Border */}
-              <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#00b5ff]/30 rounded-2xl transition-all duration-500 pointer-events-none"></div>
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom CTA Section */}
-        <div className="inline-block">
-          <Button
-            href="/company/methodology"
-            variant="primary"
-            size="md"
-            icon={
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            }
-          >
-            Explore Our Methodology
-          </Button>
         </div>
       </div>
     </section>

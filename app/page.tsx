@@ -6,6 +6,7 @@ import EnterpriseResults from "./components/home/EnterpriseResults";
 import HowWeWork from "./components/home/HowWeWork";
 import PlatformCoverage from "./components/home/PlatformCoverage";
 import EnterpriseTrust from "./components/home/EnterpriseTrust";
+import MethodologyOverview from "./components/home/MethodologyOverview";
 import InsightsResources from "./components/home/InsightsResources";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <HomeHero />
       <WhyAlgoVision />
+      <MethodologyOverview />
       <TransformSection />
       <CorePillars />
       <EnterpriseResults />

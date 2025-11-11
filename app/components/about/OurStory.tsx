@@ -47,11 +47,8 @@ export default function OurStory() {
 
           {/* Right - Content */}
           <div>
-            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-[#00b5ff]/10 backdrop-blur-md border border-[#00b5ff]/30 rounded-full mb-6 shadow-sm">
-              <svg className="w-4 h-4 text-[#00b5ff]" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"/>
-              </svg>
-              <span className="text-sm font-bold text-[#0095d9]">Our Journey</span>
+            <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full mb-6 shadow-lg">
+              <span className="text-sm font-bold text-white">Our Journey</span>
             </div>
 
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">

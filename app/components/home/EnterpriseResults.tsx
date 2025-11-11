@@ -14,7 +14,7 @@ const caseStudies = [
     company: "MediCore Solutions",
     challenge: "Legacy marketing unable to scale with rapid product expansion",
     results: [
-      { value: 425, label: "% ROI Increase", suffix: "%" },
+      { value: 425, label: "ROI Increase", suffix: "%" },
       { value: 2.1, label: "M Revenue Growth", suffix: "M", prefix: "$" },
       { value: 36, label: "hrs Launch Time", suffix: "hrs" },
     ],
@@ -25,8 +25,8 @@ const caseStudies = [
     company: "Quantum Capital",
     challenge: "Brand reputation crisis following regulatory scrutiny",
     results: [
-      { value: 280, label: "% Positive Sentiment", suffix: "%" },
-      { value: 94, label: "% Media Coverage", suffix: "%" },
+      { value: 280, label: "Positive Sentiment", suffix: "%" },
+      { value: 94, label: "Media Coverage", suffix: "%" },
       { value: 18, label: "hrs Response Time", suffix: "hrs" },
     ],
   },
@@ -36,7 +36,7 @@ const caseStudies = [
     company: "DataFlow Systems",
     challenge: "Stagnant growth with $800K monthly ad spend",
     results: [
-      { value: 340, label: "% ROI Improvement", suffix: "%" },
+      { value: 340, label: "ROI Improvement", suffix: "%" },
       { value: 4.2, label: "M Monthly Revenue", suffix: "M", prefix: "$" },
       { value: 52, label: "% Cost Reduction", suffix: "%" },
     ],
@@ -152,18 +152,18 @@ export default function EnterpriseResults() {
             </p>
 
             {/* Key Metrics Grid */}
-            <div className="grid grid-cols-3 gap-4 pt-4">
-              <div className="text-center p-4 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl border border-green-100">
-                <div className="text-3xl font-bold text-green-600 mb-1">312%</div>
-                <div className="text-xs text-gray-600 font-medium">Avg ROI</div>
+            <div className="grid grid-cols-3 gap-2 sm:gap-3 lg:gap-4 pt-4">
+              <div className="text-center p-2 sm:p-3 lg:p-4 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl border border-green-100">
+                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-green-600 mb-1 break-words">312%</div>
+                <div className="text-[10px] sm:text-xs text-gray-600 font-medium leading-tight">Avg ROI</div>
               </div>
-              <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl border border-blue-100">
-                <div className="text-3xl font-bold text-[#00b5ff] mb-1">$3M+</div>
-                <div className="text-xs text-gray-600 font-medium">Ad Spend</div>
+              <div className="text-center p-2 sm:p-3 lg:p-4 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl border border-blue-100">
+                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#00b5ff] mb-1 break-words">$3M+</div>
+                <div className="text-[10px] sm:text-xs text-gray-600 font-medium leading-tight">Ad Spend</div>
               </div>
-              <div className="text-center p-4 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl border border-purple-100">
-                <div className="text-3xl font-bold text-purple-600 mb-1">48hrs</div>
-                <div className="text-xs text-gray-600 font-medium">Launch</div>
+              <div className="text-center p-2 sm:p-3 lg:p-4 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl border border-purple-100">
+                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-purple-600 mb-1 break-words">48hrs</div>
+                <div className="text-[10px] sm:text-xs text-gray-600 font-medium leading-tight">Launch</div>
               </div>
             </div>
 
@@ -241,13 +241,13 @@ export default function EnterpriseResults() {
                   </div>
 
                   {/* Stats Grid */}
-                  <div className="grid grid-cols-3 gap-3">
+                  <div className="grid grid-cols-3 gap-2 sm:gap-3">
                     {currentCase.results.map((result, idx) => (
-                      <div key={idx} className="bg-gradient-to-br from-[#E8F4FE] to-[#F5F3FF] rounded-xl p-4 text-center border border-blue-100/50 shadow-sm">
-                        <div className="text-2xl font-bold text-[#00b5ff] mb-1">
+                      <div key={idx} className="bg-gradient-to-br from-[#E8F4FE] to-[#F5F3FF] rounded-xl p-2 sm:p-3 lg:p-4 text-center border border-blue-100/50 shadow-sm">
+                        <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#00b5ff] mb-1 break-words">
                           {result.prefix}{Math.round(animatedValues[idx])}{result.suffix}
                         </div>
-                        <div className="text-[10px] text-gray-600 font-semibold leading-tight uppercase tracking-wide">{result.label}</div>
+                        <div className="text-[9px] sm:text-[10px] text-gray-600 font-semibold leading-tight uppercase tracking-wide">{result.label}</div>
                       </div>
                     ))}
                   </div>

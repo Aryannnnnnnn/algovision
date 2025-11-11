@@ -218,29 +218,43 @@ export default function CorePillars() {
           </a>
 
           {/* Card 4 - Growth & Performance */}
-          <a href="/services/growth-performance" className="pillar-card group block bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-[0_10px_35px_-12px_rgba(0,0,0,0.15)] border border-gray-200 p-8 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.2)] hover:border-[#1e293b] hover:-translate-y-2 transition-all duration-500 cursor-pointer">
-            <div className="flex items-start justify-between mb-6">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                <svg className="w-7 h-7 text-[#00b5ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-              </div>
-              <span className="text-6xl font-bold text-gray-200 group-hover:text-[#00b5ff]/20 transition-colors duration-500">04</span>
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#00b5ff] transition-colors duration-300">Growth & Performance</h3>
-            <p className="text-lg font-semibold text-[#00b5ff] mb-4">Compounding growth across touchpoints</p>
-            <p className="text-base text-gray-600 leading-relaxed mb-6">
-              Email, SMS, WhatsApp, LinkedIn, Telegram
-            </p>
+          <a href="/services/growth-performance" className="pillar-card group block bg-white rounded-2xl shadow-[0_8px_30px_-10px_rgba(0,0,0,0.12)] border-2 border-gray-100 p-8 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] hover:border-[#1e293b] hover:-translate-y-2 transition-all duration-500 cursor-pointer relative overflow-hidden">
 
-            <div className="flex gap-3 pt-4 border-t border-gray-100">
-              <div className="flex-1 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-xl px-4 py-3 border border-blue-100/50">
-                <div className="text-lg font-bold text-gray-900">3.2x</div>
-                <div className="text-xs text-gray-600">ROAS</div>
+            <div className="relative z-10">
+              <div className="flex items-start justify-between mb-6">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                  <svg className="w-7 h-7 text-[#00b5ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </div>
+                <span className="text-6xl font-bold text-gray-200 group-hover:text-[#00b5ff]/20 transition-colors duration-500">04</span>
               </div>
-              <div className="flex-1 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-xl px-4 py-3 border border-blue-100/50">
-                <div className="text-lg font-bold text-[#00b5ff]">5+</div>
-                <div className="text-xs text-gray-600">Channels</div>
+
+              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#00b5ff] transition-colors duration-300">Growth & Performance</h3>
+              <p className="text-lg font-semibold text-[#00b5ff] mb-4">Compounding growth across touchpoints</p>
+              <p className="text-base text-gray-600 leading-relaxed mb-6">
+                Email, SMS, WhatsApp, LinkedIn, Telegram
+              </p>
+
+              <div className="flex gap-3 pt-4 border-t border-gray-100 mb-6">
+                <div className="flex-1 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-xl px-4 py-3 border border-blue-100/50">
+                  <div className="text-lg font-bold text-gray-900">3.2x</div>
+                  <div className="text-xs text-gray-600">ROAS</div>
+                </div>
+                <div className="flex-1 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-xl px-4 py-3 border border-blue-100/50">
+                  <div className="text-lg font-bold text-[#00b5ff]">5+</div>
+                  <div className="text-xs text-gray-600">Channels</div>
+                </div>
+              </div>
+
+              {/* Arrow Icon CTA */}
+              <div className="flex items-center justify-between pt-4">
+                <span className="text-sm font-semibold text-gray-600 group-hover:text-[#00b5ff] transition-colors duration-300">Learn More</span>
+                <div className="w-10 h-10 rounded-full bg-[#1e293b] group-hover:bg-[#00b5ff] flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                  <svg className="w-5 h-5 text-white group-hover:translate-x-0.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
               </div>
             </div>
           </a>

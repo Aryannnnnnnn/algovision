@@ -218,24 +218,24 @@ export default function EnterpriseTrust() {
               </div>
 
               {/* Interactive Metric Cards */}
-              <div className="grid grid-cols-3 gap-3 mb-6">
+              <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-6">
                 {metrics.map((metric, idx) => (
                   <button
                     key={idx}
                     onClick={() => setActiveMetric(idx)}
-                    className={`metric-card bg-white rounded-xl p-4 text-center transition-all duration-300 ${
+                    className={`metric-card bg-white rounded-xl p-2 sm:p-3 lg:p-4 text-center transition-all duration-300 ${
                       activeMetric === idx
                         ? "ring-2 ring-[#00b5ff] shadow-lg scale-105"
                         : "hover:shadow-md"
                     }`}
                   >
-                    <div className="text-2xl font-bold text-[#00b5ff] mb-1">{metric.value}</div>
-                    <div className="text-xs text-gray-600 font-medium mb-2">{metric.label}</div>
-                    <div className="inline-flex items-center gap-1 text-xs font-semibold text-green-500">
-                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                    <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#00b5ff] mb-1 break-words">{metric.value}</div>
+                    <div className="text-[10px] sm:text-xs text-gray-600 font-medium mb-1 sm:mb-2 leading-tight">{metric.label}</div>
+                    <div className="inline-flex items-center gap-0.5 sm:gap-1 text-[10px] sm:text-xs font-semibold text-green-500">
+                      <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
                       </svg>
-                      {metric.trend}
+                      <span className="whitespace-nowrap">{metric.trend}</span>
                     </div>
                   </button>
                 ))}

@@ -98,25 +98,30 @@ export default function HowWeWork() {
           <div className="space-y-6 order-2 lg:order-1">
             {phases.map((phase, index) => (
               <div key={index} className="methodology-card group">
-                <div className="relative bg-white p-8 rounded-2xl border border-transparent hover:shadow-lg hover:border-[#00011f] transition-all duration-500 hover:-translate-x-2">
-                  {/* Step number badge */}
-                  <div className="absolute -left-4 top-8 w-12 h-12 bg-gradient-to-br from-[#00b5ff] to-[#00b5ff] rounded-xl flex items-center justify-center shadow-lg shadow-[#00b5ff]/30 group-hover:scale-110 transition-transform duration-500">
+                <div className="relative bg-white p-6 sm:p-8 rounded-2xl border border-transparent hover:shadow-lg hover:border-[#00011f] transition-all duration-500 lg:hover:-translate-x-2">
+                  {/* Step number badge - hidden on mobile, shown on lg */}
+                  <div className="hidden lg:block absolute -left-4 top-8 w-12 h-12 bg-gradient-to-br from-[#00b5ff] to-[#00b5ff] rounded-xl flex items-center justify-center shadow-lg shadow-[#00b5ff]/30 group-hover:scale-110 transition-transform duration-500">
                     <span className="text-white font-bold text-sm">{phase.number}</span>
                   </div>
 
-                  <div className="flex items-start gap-4 ml-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md shadow-[#00b5ff]/20 group-hover:scale-110 transition-transform duration-500">
+                  <div className="flex items-start gap-3 sm:gap-4 lg:ml-6">
+                    {/* Number badge visible on mobile */}
+                    <div className="lg:hidden flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#00b5ff] to-[#0099dd] rounded-xl flex items-center justify-center shadow-lg">
+                      <span className="text-white font-bold text-sm">{phase.number}</span>
+                    </div>
+
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md shadow-[#00b5ff]/20 group-hover:scale-110 transition-transform duration-500">
                       <div className="text-[#00b5ff]">
                         {phase.icon}
                       </div>
                     </div>
 
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#00b5ff] transition-colors duration-500">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-[#00b5ff] transition-colors duration-500">
                           {phase.title}
                         </h3>
-                        <span className="text-xs font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full">{phase.timeline}</span>
+                        <span className="text-xs font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full w-fit">{phase.timeline}</span>
                       </div>
                       <p className="text-sm font-semibold text-[#00b5ff] mb-3">{phase.subtitle}</p>
                       <p className="text-gray-600 leading-relaxed mb-4">

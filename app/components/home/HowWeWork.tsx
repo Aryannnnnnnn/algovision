@@ -43,11 +43,6 @@ export default function HowWeWork() {
       description: "Deep analysis of your current ecosystem—channels, data, workflows, and competitive landscape.",
       deliverables: ["Data Audit Report", "Competitive Analysis", "System Architecture Map"],
       timeline: "2-3 weeks",
-      icon: (
-        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-        </svg>
-      ),
     },
     {
       number: "02",
@@ -56,11 +51,6 @@ export default function HowWeWork() {
       description: "Design a custom AI-powered growth engine tailored to your KPIs and business model.",
       deliverables: ["Strategy Blueprint", "Tech Stack Selection", "Implementation Roadmap"],
       timeline: "1-2 weeks",
-      icon: (
-        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-        </svg>
-      ),
     },
     {
       number: "03",
@@ -69,11 +59,6 @@ export default function HowWeWork() {
       description: "Rapid integration across platforms with automated systems, smart workflows, and real-time optimization.",
       deliverables: ["Live System Deployment", "Integration Testing", "Team Training"],
       timeline: "48 hours",
-      icon: (
-        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
     },
     {
       number: "04",
@@ -82,11 +67,6 @@ export default function HowWeWork() {
       description: "Ongoing AI-driven optimization, A/B testing, and performance scaling based on live data feedback.",
       deliverables: ["Performance Reports", "Monthly Optimization", "Quarterly Strategy Review"],
       timeline: "Ongoing",
-      icon: (
-        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-        </svg>
-      ),
     },
   ];
 
@@ -100,23 +80,17 @@ export default function HowWeWork() {
               <div key={index} className="methodology-card group">
                 <div className="relative bg-white p-6 sm:p-8 rounded-2xl border border-transparent hover:shadow-lg hover:border-[#00011f] transition-all duration-500 lg:hover:-translate-x-2">
                   {/* Step number badge - hidden on mobile, shown on lg */}
-                  <div className="hidden lg:block absolute -left-4 top-8 w-12 h-12 bg-gradient-to-br from-[#00b5ff] to-[#00b5ff] rounded-xl flex items-center justify-center shadow-lg shadow-[#00b5ff]/30 group-hover:scale-110 transition-transform duration-500">
+                  <div className="hidden lg:flex absolute -left-4 top-8 w-12 h-12 bg-gradient-to-br from-[#00b5ff] to-[#00b5ff] rounded-xl items-center justify-center shadow-lg shadow-[#00b5ff]/30 group-hover:scale-110 transition-transform duration-500">
                     <span className="text-white font-bold text-sm">{phase.number}</span>
                   </div>
 
-                  <div className="flex items-start gap-3 sm:gap-4 lg:ml-6">
+                  <div className="flex items-start gap-3 sm:gap-4">
                     {/* Number badge visible on mobile */}
                     <div className="lg:hidden flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#00b5ff] to-[#0099dd] rounded-xl flex items-center justify-center shadow-lg">
                       <span className="text-white font-bold text-sm">{phase.number}</span>
                     </div>
 
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md shadow-[#00b5ff]/20 group-hover:scale-110 transition-transform duration-500">
-                      <div className="text-[#00b5ff]">
-                        {phase.icon}
-                      </div>
-                    </div>
-
-                    <div className="flex-1 min-w-0">
+                    <div className="flex-1 min-w-0 lg:ml-6">
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
                         <h3 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-[#00b5ff] transition-colors duration-500">
                           {phase.title}

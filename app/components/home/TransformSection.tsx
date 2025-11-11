@@ -20,9 +20,11 @@ export default function TransformSection() {
         x: -40,
         duration: 0.8,
         ease: "power3.out",
+        force3D: true,
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 75%",
+          once: true,
         },
       });
 
@@ -34,9 +36,11 @@ export default function TransformSection() {
         duration: 0.6,
         stagger: 0.15,
         ease: "power2.out",
+        force3D: true,
         scrollTrigger: {
           trigger: rightRef.current,
           start: "top 75%",
+          once: true,
         },
       });
     }, sectionRef);

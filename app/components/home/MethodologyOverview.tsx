@@ -20,9 +20,11 @@ export default function MethodologyOverview() {
         x: -40,
         duration: 0.8,
         ease: "power3.out",
+        force3D: true,
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 75%",
+          once: true, // Only animate once for performance
         },
       });
 
@@ -34,9 +36,11 @@ export default function MethodologyOverview() {
         duration: 0.6,
         stagger: 0.15,
         ease: "power2.out",
+        force3D: true,
         scrollTrigger: {
           trigger: rightRef.current,
           start: "top 75%",
+          once: true, // Only animate once for performance
         },
       });
     }, sectionRef);
@@ -69,6 +73,8 @@ export default function MethodologyOverview() {
                   src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
                   alt="Business analytics and growth"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 

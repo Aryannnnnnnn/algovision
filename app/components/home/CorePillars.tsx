@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useMemo } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Button from "@/app/components/ui/Button";
@@ -21,9 +21,11 @@ export default function CorePillars() {
         duration: 0.6,
         stagger: 0.1,
         ease: "power2.out",
+        force3D: true,
         scrollTrigger: {
           trigger: headingRef.current,
           start: "top 80%",
+          once: true,
         },
       });
 
@@ -44,9 +46,11 @@ export default function CorePillars() {
             duration: 0.7,
             delay: index * 0.15,
             ease: "power3.out",
+            force3D: true,
             scrollTrigger: {
               trigger: contentRef.current,
               start: "top 75%",
+              once: true,
             },
           }
         );
@@ -190,6 +194,8 @@ export default function CorePillars() {
                     src={pillar.image}
                     alt={pillar.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>

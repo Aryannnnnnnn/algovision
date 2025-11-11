@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Button from "@/app/components/ui/Button";
@@ -21,9 +21,11 @@ export default function PlatformCoverage() {
         duration: 0.5,
         stagger: 0.08,
         ease: "power2.out",
+        force3D: true,
         scrollTrigger: {
           trigger: headingRef.current,
           start: "top 80%",
+          once: true,
         },
       });
 
@@ -39,9 +41,11 @@ export default function PlatformCoverage() {
             duration: 0.6,
             delay: index * 0.15,
             ease: "power2.out",
+            force3D: true,
             scrollTrigger: {
               trigger: card as HTMLElement,
               start: "top 85%",
+              once: true,
             },
           }
         );
@@ -133,6 +137,8 @@ export default function PlatformCoverage() {
                       src={platform.logo}
                       alt={platform.name}
                       className="w-full h-full object-contain transition-all duration-300"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 ))
@@ -151,6 +157,8 @@ export default function PlatformCoverage() {
                       src={platform.logo}
                       alt={platform.name}
                       className="w-full h-full object-contain transition-all duration-300"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 ))
@@ -169,6 +177,8 @@ export default function PlatformCoverage() {
                       src={platform.logo}
                       alt={platform.name}
                       className="w-full h-full object-contain transition-all duration-300"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 ))

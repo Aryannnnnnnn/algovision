@@ -20,9 +20,11 @@ export default function InsightsResources() {
         duration: 0.4,
         stagger: 0.06,
         ease: "power2.out",
+        force3D: true,
         scrollTrigger: {
           trigger: headingRef.current,
           start: "top 85%",
+          once: true,
         },
       });
 
@@ -38,9 +40,11 @@ export default function InsightsResources() {
             duration: 0.5,
             delay: index * 0.05,
             ease: "power2.out",
+            force3D: true,
             scrollTrigger: {
               trigger: card as HTMLElement,
               start: "top 90%",
+              once: true,
             },
           }
         );
@@ -143,6 +147,8 @@ export default function InsightsResources() {
                   src={resource.image}
                   alt={resource.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20"></div>
               </div>

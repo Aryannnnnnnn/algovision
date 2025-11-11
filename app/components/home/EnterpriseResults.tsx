@@ -58,9 +58,11 @@ export default function EnterpriseResults() {
         x: -40,
         duration: 0.8,
         ease: "power3.out",
+        force3D: true,
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 75%",
+          once: true,
         },
       });
 
@@ -72,9 +74,11 @@ export default function EnterpriseResults() {
         duration: 0.6,
         stagger: 0.15,
         ease: "power2.out",
+        force3D: true,
         scrollTrigger: {
           trigger: rightRef.current,
           start: "top 75%",
+          once: true,
         },
       });
     }, sectionRef);
@@ -82,9 +86,10 @@ export default function EnterpriseResults() {
     return () => ctx.revert();
   }, []);
 
-  // Animate stat values when case changes
+  // Animate stat values when case changes - Optimized
   useEffect(() => {
     const currentResults = caseStudies[activeCase].results;
+    const frameIds: number[] = [];
 
     currentResults.forEach((result, index) => {
       const startTime = Date.now();
@@ -103,12 +108,17 @@ export default function EnterpriseResults() {
         });
 
         if (progress < 1) {
-          requestAnimationFrame(animate);
+          frameIds[index] = requestAnimationFrame(animate);
         }
       };
 
-      requestAnimationFrame(animate);
+      frameIds[index] = requestAnimationFrame(animate);
     });
+
+    // Cleanup function to cancel animations
+    return () => {
+      frameIds.forEach(id => cancelAnimationFrame(id));
+    };
   }, [activeCase]);
 
   const currentCase = caseStudies[activeCase];

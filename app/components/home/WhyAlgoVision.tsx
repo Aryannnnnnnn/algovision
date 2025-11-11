@@ -21,9 +21,11 @@ export default function WhyAlgoVision() {
         duration: 0.5,
         stagger: 0.08,
         ease: "power2.out",
+        force3D: true,
         scrollTrigger: {
           trigger: headingRef.current,
           start: "top 80%",
+          once: true,
         },
       });
 
@@ -36,9 +38,11 @@ export default function WhyAlgoVision() {
           duration: 0.5,
           stagger: 0.15,
           ease: "power2.out",
+          force3D: true,
           scrollTrigger: {
             trigger: pillarsRef.current,
             start: "top 80%",
+            once: true,
           },
         });
       }

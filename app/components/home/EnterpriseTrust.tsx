@@ -20,9 +20,11 @@ export default function EnterpriseTrust() {
         duration: 0.4,
         stagger: 0.06,
         ease: "power2.out",
+        force3D: true,
         scrollTrigger: {
           trigger: headingRef.current,
           start: "top 75%",
+          once: true,
         },
       });
 
@@ -39,9 +41,11 @@ export default function EnterpriseTrust() {
             duration: 0.5,
             delay: index * 0.06,
             ease: "back.out(1.2)",
+            force3D: true,
             scrollTrigger: {
               trigger: card as HTMLElement,
               start: "top 80%",
+              once: true,
             },
           }
         );
@@ -59,9 +63,11 @@ export default function EnterpriseTrust() {
             duration: 0.5,
             delay: index * 0.08,
             ease: "power2.out",
+            force3D: true,
             scrollTrigger: {
               trigger: pillar as HTMLElement,
               start: "top 80%",
+              once: true,
             },
           }
         );

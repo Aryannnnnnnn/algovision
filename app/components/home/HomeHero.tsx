@@ -1,26 +1,50 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback, useMemo } from "react";
 import { gsap } from "gsap";
 import Button from "@/app/components/ui/Button";
 
-// Parallax scroll handler
+// Memoized SVG icons to prevent re-renders
+const ArrowIcon = () => (
+  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+  </svg>
+);
+
+const ChevronIcon = () => (
+  <svg className="w-3 h-3 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+  </svg>
+);
+
+// Parallax scroll handler - Optimized with throttle and RAF
 const useParallax = () => {
   useEffect(() => {
-    const handleScroll = () => {
+    let ticking = false;
+
+    const updateParallax = () => {
       const scrolled = window.scrollY;
       const parallaxElements = document.querySelectorAll('.parallax-slow');
       const parallaxFast = document.querySelectorAll('.parallax-fast');
 
       parallaxElements.forEach((el) => {
         const element = el as HTMLElement;
-        element.style.transform = `translateY(${scrolled * 0.15}px)`;
+        element.style.transform = `translate3d(0, ${scrolled * 0.15}px, 0)`;
       });
 
       parallaxFast.forEach((el) => {
         const element = el as HTMLElement;
-        element.style.transform = `translateY(${scrolled * 0.3}px)`;
+        element.style.transform = `translate3d(0, ${scrolled * 0.3}px, 0)`;
       });
+
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -38,15 +62,43 @@ export default function HomeHero() {
     years: 0,
   });
 
+  // Memoize stats data to prevent unnecessary re-renders
+  const statsData = useMemo(() => [
+    { key: "projects", num: animatedStats.projects, suffix: "+", label: "Projects" },
+    { key: "satisfaction", num: animatedStats.satisfaction, suffix: "%", label: "Satisfaction" },
+    { key: "years", num: animatedStats.years, suffix: "+", label: "Years" },
+  ], [animatedStats]);
+
   useParallax();
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+    let cleanupFunctions: (() => void)[] = [];
 
-      // Set initial states
-      gsap.set(".floating-badge", { opacity: 0, scale: 0.85, y: 20 });
-      gsap.set(".dashboard-main", { opacity: 0, y: 30 });
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        defaults: { ease: "power2.out" },
+        onComplete: () => {
+          // Start stat animations after GSAP completes
+          cleanupFunctions.push(animateValue('projects', 0, 500, 1800));
+          cleanupFunctions.push(animateValue('satisfaction', 0, 98, 1800));
+          cleanupFunctions.push(animateValue('years', 0, 15, 1800));
+        }
+      });
+
+      // Set initial states with will-change
+      gsap.set(".floating-badge", {
+        opacity: 0,
+        scale: 0.85,
+        y: 20,
+        force3D: true,
+        willChange: 'transform, opacity'
+      });
+      gsap.set(".dashboard-main", {
+        opacity: 0,
+        y: 30,
+        force3D: true,
+        willChange: 'transform, opacity'
+      });
 
       // Quick fade-in for left content
       tl.from(leftRef.current?.children || [], {
@@ -54,6 +106,12 @@ export default function HomeHero() {
         y: 20,
         duration: 0.5,
         stagger: 0.08,
+        force3D: true,
+        willChange: 'transform, opacity',
+        onComplete: function() {
+          // Remove will-change after animation completes
+          gsap.set(this.targets(), { willChange: 'auto' });
+        }
       })
       // Floating badge entrance
       .to(".floating-badge", {
@@ -62,6 +120,11 @@ export default function HomeHero() {
         y: 0,
         duration: 0.8,
         ease: "power2.inOut",
+        force3D: true,
+        willChange: 'transform, opacity',
+        onComplete: () => {
+          gsap.set(".floating-badge", { willChange: 'auto' });
+        }
       }, "-=0.2")
       // Dashboard cards fade-in
       .to(".dashboard-main", {
@@ -69,12 +132,19 @@ export default function HomeHero() {
         y: 0,
         duration: 0.6,
         ease: "power3.out",
+        force3D: true,
+        willChange: 'transform, opacity',
+        onComplete: () => {
+          gsap.set(".dashboard-main", { willChange: 'auto' });
+        }
       }, "-=0.4");
     }, heroRef);
 
-    // Animate stats numbers
+    // Animate stats numbers - Optimized with batch updates
     const animateValue = (key: keyof typeof animatedStats, start: number, end: number, duration: number) => {
       const startTime = Date.now();
+      let frameId: number;
+
       const animate = () => {
         const now = Date.now();
         const progress = Math.min((now - startTime) / duration, 1);
@@ -84,24 +154,23 @@ export default function HomeHero() {
         setAnimatedStats(prev => ({ ...prev, [key]: current }));
 
         if (progress < 1) {
-          requestAnimationFrame(animate);
+          frameId = requestAnimationFrame(animate);
         }
       };
-      requestAnimationFrame(animate);
+      frameId = requestAnimationFrame(animate);
+
+      // Return cleanup function
+      return () => cancelAnimationFrame(frameId);
     };
 
-    // Start animations after a short delay to match GSAP timeline
-    setTimeout(() => {
-      animateValue('projects', 0, 500, 1800);
-      animateValue('satisfaction', 0, 98, 1800);
-      animateValue('years', 0, 15, 1800);
-    }, 600);
-
-    return () => ctx.revert();
+    return () => {
+      ctx.revert();
+      cleanupFunctions.forEach(cleanup => cleanup());
+    };
   }, []);
 
   return (
-    <section ref={heroRef} className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden bg-white">
+    <section ref={heroRef} className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-x-hidden overflow-y-visible bg-white">
 
       {/* Animated grid background */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
@@ -112,7 +181,7 @@ export default function HomeHero() {
       </div>
 
 
-      <div className="relative xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12">
+      <div className="relative xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 pb-24 lg:pb-32">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* Left Content */}
@@ -136,11 +205,7 @@ export default function HomeHero() {
                 href="/company/contact"
                 variant="primary"
                 size="md"
-                icon={
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                }
+                icon={<ArrowIcon />}
               >
                 Book a Strategy Call
               </Button>
@@ -155,11 +220,7 @@ export default function HomeHero() {
 
             {/* Stats with subtle interaction and glow */}
             <div className="grid grid-cols-3 gap-8 pt-10 border-t border-gray-200">
-              {[
-                { key: "projects", num: animatedStats.projects, suffix: "+", label: "Projects" },
-                { key: "satisfaction", num: animatedStats.satisfaction, suffix: "%", label: "Satisfaction" },
-                { key: "years", num: animatedStats.years, suffix: "+", label: "Years" },
-              ].map((stat, idx) => (
+              {statsData.map((stat, idx) => (
                 <div key={idx} className="group cursor-pointer">
                   <div className="relative transition-all duration-500 ease-out group-hover:scale-105">
                     <div className="absolute inset-0 bg-[#00b5ff]/0 group-hover:bg-[#00b5ff]/10 rounded-lg blur-xl transition-all duration-500 ease-out"></div>
@@ -176,10 +237,10 @@ export default function HomeHero() {
           </div>
 
           {/* Right Visual - Floating Dashboard */}
-          <div ref={rightRef} className="relative pt-12">
+          <div ref={rightRef} className="relative pt-0 lg:pt-12 pb-12 lg:pb-24">
 
             {/* Floating ROAS Badge */}
-            <div className="floating-badge absolute top-4 lg:-top-38 right-4 md:right-8 lg:right-12 z-30 bg-white rounded-xl md:rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,181,255,0.4)] px-3 md:px-4 lg:px-5 py-2 md:py-3 lg:py-3 border border-blue-100/50 hover:scale-105 transition-transform duration-300">
+            <div className="floating-badge absolute top-4 lg:top-4 right-4 md:right-8 lg:right-12 z-30 bg-white rounded-xl md:rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,181,255,0.4)] px-3 md:px-4 lg:px-5 py-2 md:py-3 lg:py-3 border border-blue-100/50 hover:scale-105 transition-transform duration-300">
               <div className="text-center">
                 <div className="text-lg md:text-xl lg:text-2xl font-bold text-[#00b5ff] mb-0.5 md:mb-1">+48% ROAS</div>
                 <p className="text-[8px] md:text-[9px] lg:text-[10px] text-gray-500 font-medium">By managing engagement</p>
@@ -188,13 +249,13 @@ export default function HomeHero() {
             </div>
 
             {/* Main Dashboard Container with Floating Effect */}
-            <div className="dashboard-main relative mt-0 lg:-mt-44">
+            <div className="dashboard-main relative mt-0 lg:mt-0 min-h-[600px] lg:min-h-[700px]">
 
               {/* Background Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-purple-100/20 to-blue-100/30 rounded-[36px] blur-2xl"></div>
 
               {/* Floating Metric Cards - Outside Main Container - Tablet & Desktop */}
-              <div className="hidden lg:grid absolute -left-4 xl:-left-20 top-32 xl:top-36 z-30 grid-cols-2 gap-2 xl:gap-3 w-[280px] xl:w-[380px]">
+              <div className="hidden lg:grid absolute -left-4 xl:-left-20 top-[120px] xl:top-[140px] z-30 grid-cols-2 gap-2 xl:gap-3 w-[280px] xl:w-[380px]">
 
                   {/* Comments Hidden */}
                   <div className="bg-white rounded-lg lg:rounded-xl shadow-[0_10px_35px_-12px_rgba(0,0,0,0.15)] px-2.5 lg:px-4 py-2.5 lg:py-4 border border-white/60 hover:shadow-[0_15px_45px_-12px_rgba(239,68,68,0.3)] hover:-translate-y-1 transition-all duration-300 cursor-pointer">
@@ -251,7 +312,7 @@ export default function HomeHero() {
               </div>
 
               {/* AI Insights - Positioned to overlap stats - Desktop only */}
-              <div className="hidden lg:block absolute z-40 bg-white border border-white/60 shadow-[0_15px_50px_-10px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_60px_-10px_rgba(0,181,255,0.3)] transition-all duration-300 lg:right-2 lg:top-80 lg:w-[280px] lg:rounded-xl lg:px-3 lg:py-3 xl:right-8 xl:top-88 xl:w-[300px] xl:rounded-2xl xl:px-5 xl:py-5 2xl:w-[360px]">
+              <div className="hidden lg:block absolute z-40 bg-white border border-white/60 shadow-[0_15px_50px_-10px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_60px_-10px_rgba(0,181,255,0.3)] transition-all duration-300 lg:right-2 lg:bottom-[60px] lg:w-[280px] lg:rounded-xl lg:px-3 lg:py-3 xl:right-8 xl:bottom-[80px] xl:w-[300px] xl:rounded-2xl xl:px-5 xl:py-5 2xl:w-[420px]">
                 <div className="flex items-center gap-2 mb-3.5">
                   <div className="w-7 h-7 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center shadow-sm">
                     <svg className="w-3.5 h-3.5 text-[#00b5ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -314,7 +375,7 @@ export default function HomeHero() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
 
                   {/* Left: Empty space for floating stats - Desktop only */}
-                  <div className="hidden lg:block h-[240px]" />
+                  <div className="hidden lg:block h-[280px]" />
 
                   {/* Stats Grid - Mobile & Tablet only */}
                   <div className="lg:hidden grid grid-cols-2 gap-3 mb-4">
@@ -390,9 +451,7 @@ export default function HomeHero() {
                               <div className={`w-1.5 h-1.5 rounded-full ${item.color}`}></div>
                               <span className="text-xs text-gray-600">{item.label}</span>
                             </div>
-                            <svg className="w-3 h-3 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                            </svg>
+                            <ChevronIcon />
                           </div>
                         ))}
                       </div>

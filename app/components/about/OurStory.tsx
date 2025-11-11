@@ -29,20 +29,22 @@ export default function OurStory() {
   }, []);
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 bg-white">
+      <div className="max-w-[90vw] mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={storyRef} className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left - Image placeholder */}
+          {/* Left - Image */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-[#00b5ff]/20 to-[#00b5ff]/30 shadow-2xl shadow-[#00b5ff]/20 overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg className="w-24 h-24 text-[#00b5ff]/20" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd"/>
-                </svg>
-              </div>
+            {/* Decorative element - positioned behind */}
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 sm:-bottom-8 sm:-right-8 sm:w-40 sm:h-40 lg:-bottom-10 lg:-right-10 lg:w-48 lg:h-48 bg-[#00b5ff] rounded-2xl -z-10"></div>
+
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
+                alt="Our Story"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
-            {/* Decorative element - Responsive sizing - positioned below */}
-            <div className="absolute -bottom-3 -right-3 w-16 h-16 sm:-bottom-4 sm:-right-4 sm:w-24 sm:h-24 lg:-bottom-5 lg:-right-5 lg:w-28 lg:h-28 bg-[#00b5ff] rounded-2xl -z-10"></div>
           </div>
 
           {/* Right - Content */}

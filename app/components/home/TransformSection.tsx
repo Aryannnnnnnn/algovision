@@ -60,7 +60,7 @@ export default function TransformSection() {
           {/* Left Side - Content */}
           <div ref={rightRef} className="order-1 space-y-6">
             {/* Badge */}
-            <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full shadow-lg">
+            <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
               <span className="text-sm font-bold text-white">Our Methodology</span>
             </div>
 

@@ -118,7 +118,7 @@ export default function HomeHero() {
           {/* Left Content */}
           <div ref={leftRef} className="space-y-8">
             <div>
-              <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full mb-6 shadow-lg">
+              <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-6 shadow-lg">
                 <span className="text-sm font-bold text-white">Your Digital Partner</span>
               </div>
 

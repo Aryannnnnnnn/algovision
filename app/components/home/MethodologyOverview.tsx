@@ -76,8 +76,8 @@ export default function MethodologyOverview() {
               <div className="absolute -bottom-8 sm:-bottom-10 md:-bottom-12 lg:-bottom-14 xl:-bottom-16 -right-10 sm:-right-14 md:-right-18 lg:-right-28 xl:-right-32 w-[75%] sm:w-[70%] md:w-[75%] lg:w-[75%] xl:w-[80%]">
                 <div className="bg-[#2a2a2a] rounded-xl sm:rounded-2xl shadow-2xl px-6 py-10 sm:px-8 sm:py-12 md:px-10 md:py-16 lg:px-10 lg:py-16 xl:px-12 xl:py-20">
                   <p className="text-base sm:text-lg md:text-xl lg:text-lg xl:text-2xl font-normal text-white leading-relaxed">
-                    Power grows companies{" "}
-                    <span className="text-[#00b5ff] font-bold">2.6x faster</span>{" "}
+                    Algo Vision companies{" "}
+                    <span className="text-[#00b5ff] font-bold">3.2x faster</span>{" "}
                     than the industry average.
                   </p>
                 </div>
@@ -88,7 +88,7 @@ export default function MethodologyOverview() {
           {/* Right Side - Content */}
           <div ref={rightRef} className="space-y-6">
             {/* Badge */}
-            <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full shadow-lg">
+            <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
               <span className="text-sm font-bold text-white">Our Methodology</span>
             </div>
 

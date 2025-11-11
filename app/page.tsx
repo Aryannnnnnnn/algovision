@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <HomeHero />
-      <WhyAlgoVision />
       <MethodologyOverview />
+      <WhyAlgoVision />
       <TransformSection />
       <CorePillars />
       <EnterpriseResults />

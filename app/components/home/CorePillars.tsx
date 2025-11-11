@@ -18,8 +18,8 @@ export default function CorePillars() {
       gsap.from(headingRef.current?.children || [], {
         opacity: 0,
         y: 20,
-        duration: 0.5,
-        stagger: 0.08,
+        duration: 0.6,
+        stagger: 0.1,
         ease: "power2.out",
         scrollTrigger: {
           trigger: headingRef.current,
@@ -27,24 +27,26 @@ export default function CorePillars() {
         },
       });
 
-      // Animate pillar cards with explicit initial state
+      // Animate pillar cards
       const cards = gsap.utils.toArray(".pillar-card");
       cards.forEach((card, index) => {
         gsap.fromTo(
           card as HTMLElement,
           {
             opacity: 0,
-            y: 30,
+            y: 40,
+            scale: 0.95,
           },
           {
             opacity: 1,
             y: 0,
-            duration: 0.6,
-            delay: index * 0.12,
-            ease: "power2.out",
+            scale: 1,
+            duration: 0.7,
+            delay: index * 0.15,
+            ease: "power3.out",
             scrollTrigger: {
               trigger: contentRef.current,
-              start: "top 70%",
+              start: "top 75%",
             },
           }
         );
@@ -54,214 +56,203 @@ export default function CorePillars() {
     return () => ctx.revert();
   }, []);
 
+  const pillars = [
+    {
+      id: "01",
+      title: "AI Solutions",
+      tagline: "Intelligent automation that scales",
+      description: "Advanced AI systems that work 24/7 to automate customer interactions and drive engagement.",
+      features: ["Chatbots", "Virtual Assistants", "Web VA"],
+      stats: [
+        { value: "5+", label: "AI Systems" },
+        { value: "24/7", label: "Active" },
+      ],
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+      href: "/services/ai-solutions",
+      gradient: "from-blue-500/10 to-cyan-500/10",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80",
+    },
+    {
+      id: "02",
+      title: "PR & Communications",
+      tagline: "Reputation engineered, not managed",
+      description: "Strategic public relations that builds trust, manages crises, and amplifies your brand voice.",
+      features: ["Crisis Management", "Brand Monitoring", "SEO 3.0", "Media Relations"],
+      stats: [
+        { value: "10+", label: "PR Tools" },
+        { value: "98%", label: "Coverage" },
+      ],
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+        </svg>
+      ),
+      href: "/services/pr-communications",
+      gradient: "from-purple-500/10 to-pink-500/10",
+      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80",
+    },
+    {
+      id: "03",
+      title: "Omnichannel Advertising",
+      tagline: "Every channel, one brain",
+      description: "Unified advertising strategy across 15+ platforms, orchestrated by intelligent automation.",
+      features: ["Google Ads", "Meta", "TikTok", "LinkedIn", "15+ Platforms"],
+      stats: [
+        { value: "15+", label: "Platforms" },
+        { value: "95%", label: "Reach" },
+      ],
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z" />
+        </svg>
+      ),
+      href: "/services/advertising",
+      gradient: "from-orange-500/10 to-red-500/10",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
+    },
+    {
+      id: "04",
+      title: "Growth & Performance",
+      tagline: "Compounding growth across touchpoints",
+      description: "Multi-channel growth marketing that drives measurable results across every customer touchpoint.",
+      features: ["Email", "SMS", "WhatsApp", "LinkedIn", "Telegram"],
+      stats: [
+        { value: "3.2x", label: "ROAS" },
+        { value: "5+", label: "Channels" },
+      ],
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+        </svg>
+      ),
+      href: "/services/growth-performance",
+      gradient: "from-green-500/10 to-emerald-500/10",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
+    },
+  ];
+
   return (
-    <section ref={sectionRef} className="relative py-12 bg-white overflow-hidden">
-      {/* Background grid */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
+    <section ref={sectionRef} className="relative py-20 sm:py-24 lg:py-32 bg-gradient-to-br from-gray-50 via-white to-gray-50 overflow-hidden">
+      {/* Animated Background Elements */}
+      {/* <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#00b5ff]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+      </div> */}
+
+      {/* Grid Pattern */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.02]">
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `linear-gradient(to right, #94a3b8 1px, transparent 1px), linear-gradient(to bottom, #94a3b8 1px, transparent 1px)`,
-            backgroundSize: "64px 64px",
+            backgroundImage: `linear-gradient(to right, #000 1px, transparent 1px), linear-gradient(to bottom, #000 1px, transparent 1px)`,
+            backgroundSize: "80px 80px",
           }}
         ></div>
       </div>
 
-      <div className="relative xl:max-w-[95vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        {/* Header */}
-        <div ref={headingRef} className="mb-16">
-          <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full mb-8 shadow-lg">
+      <div className="relative max-w-[90vw] mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
+        <div ref={headingRef} className="mb-16 lg:mb-20">
+          <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-8 shadow-lg">
             <span className="text-sm font-bold text-white">Our Core Solutions</span>
           </div>
 
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-2 tracking-tight">
-            4 Core Pillars.
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight mb-4">
+            4 Core Pillars
           </h2>
-          <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 tracking-tight">
-            <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">
-              One Intelligence Layer.
+          <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-8">
+            <span className="bg-gradient-to-r from-[#00b5ff] via-[#0099dd] to-[#00b5ff] bg-clip-text text-transparent">
+              One Intelligence Layer
             </span>
           </h3>
 
-          <p className="text-xl text-gray-600 leading-relaxed max-w-3xl">
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-4xl">
             A unified ecosystem connecting AI, advertising, PR, and performance marketing through one intelligent platform.
           </p>
         </div>
 
-        {/* Simple 2x2 Grid */}
-        <div ref={contentRef} className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          {/* Card 1 - AI Solutions */}
-          <a href="/services/ai-solutions" className="pillar-card group block bg-white rounded-2xl shadow-[0_8px_30px_-10px_rgba(0,0,0,0.12)] border-2 border-gray-100 p-8 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] hover:border-[#1e293b] hover:-translate-y-2 transition-all duration-500 cursor-pointer relative overflow-hidden">
-            {/* Hover Background Effect */}
-
-            <div className="relative z-10">
-              <div className="flex items-start justify-between mb-6">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-7 h-7 text-[#00b5ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
+        {/* Pillars Grid */}
+        <div ref={contentRef} className="mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-6">
+            {pillars.map((pillar, index) => (
+              <a
+                key={pillar.id}
+                href={pillar.href}
+                className="pillar-card group relative bg-blue-50/30 rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 flex flex-col h-full"
+              >
+                {/* Image */}
+                <div className="relative h-36 sm:h-40 xl:h-40 overflow-hidden">
+                  <img
+                    src={pillar.image}
+                    alt={pillar.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
-                <span className="text-6xl font-bold text-gray-200 group-hover:text-[#00b5ff]/20 transition-colors duration-500">01</span>
-              </div>
 
-              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#00b5ff] transition-colors duration-300">AI Solutions</h3>
-              <p className="text-lg font-semibold text-[#00b5ff] mb-4">Intelligent automation that scales</p>
-              <p className="text-base text-gray-600 leading-relaxed mb-6">
-                Chatbots, Virtual Assistants, Web VA
-              </p>
+                {/* Content */}
+                <div className="relative p-4 sm:p-5 xl:p-6 bg-blue-50 flex-1 flex flex-col">
 
-              <div className="flex gap-3 pt-4 border-t border-gray-100 mb-6">
-                <div className="flex-1 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-xl px-4 py-3 border border-blue-100/50">
-                  <div className="text-lg font-bold text-gray-900">5+</div>
-                  <div className="text-xs text-gray-600">AI Systems</div>
+                {/* Title & Tagline */}
+                <h3 className="text-lg sm:text-xl xl:text-lg font-bold text-gray-900 mb-1.5 sm:mb-2 group-hover:text-[#00b5ff] transition-colors duration-300 leading-tight">
+                  {pillar.title}
+                </h3>
+                <p className="text-xs sm:text-sm xl:text-xs font-semibold text-[#00b5ff] mb-2 sm:mb-3">
+                  {pillar.tagline}
+                </p>
+                <p className="text-xs sm:text-sm xl:text-xs text-gray-600 leading-relaxed mb-3 sm:mb-4">
+                  {pillar.description}
+                </p>
+
+                {/* Features */}
+                <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-3 sm:mb-4">
+                  {pillar.features.map((feature, idx) => (
+                    <span
+                      key={idx}
+                      className="inline-flex items-center px-2 sm:px-2.5 py-0.5 sm:py-1 bg-gray-100 group-hover:bg-white rounded-full text-[9px] sm:text-[10px] font-semibold text-gray-700 border border-gray-200 group-hover:border-[#00b5ff]/30 transition-all duration-300"
+                    >
+                      {feature}
+                    </span>
+                  ))}
                 </div>
-                <div className="flex-1 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-xl px-4 py-3 border border-blue-100/50">
-                  <div className="text-lg font-bold text-green-500">24/7</div>
-                  <div className="text-xs text-gray-600">Active</div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-gray-100 group-hover:border-[#00b5ff]/20 transition-colors duration-300 mb-3 sm:mb-4">
+                  {pillar.stats.map((stat, idx) => (
+                    <div key={idx} className="bg-gradient-to-br from-gray-50 to-white rounded-lg p-2 sm:p-3 xl:p-2 border border-gray-200 group-hover:border-[#00b5ff]/30 group-hover:shadow-md transition-all duration-300">
+                      <div className="text-lg sm:text-xl xl:text-base font-bold text-gray-900 group-hover:text-[#00b5ff] transition-colors duration-300 mb-0.5 leading-tight">
+                        {stat.value}
+                      </div>
+                      <div className="text-[9px] sm:text-[10px] xl:text-[8px] font-semibold text-gray-600 uppercase tracking-wider leading-tight">
+                        {stat.label}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              </div>
 
-              {/* Arrow Icon CTA */}
-              <div className="flex items-center justify-between pt-4">
-                <span className="text-sm font-semibold text-gray-600 group-hover:text-[#00b5ff] transition-colors duration-300">Learn More</span>
-                <div className="w-10 h-10 rounded-full bg-[#1e293b] group-hover:bg-[#00b5ff] flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                  <svg className="w-5 h-5 text-white group-hover:translate-x-0.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                {/* CTA */}
+                <div className="flex items-center justify-between pt-2 sm:pt-3 border-t border-gray-100 group-hover:border-[#00b5ff]/20 transition-colors duration-300 mt-auto">
+                  <span className="text-[10px] sm:text-xs font-bold text-gray-700 group-hover:text-[#00b5ff] transition-colors duration-300 uppercase tracking-wide">
+                    Explore Solution
+                  </span>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#1e293b] group-hover:bg-[#00b5ff] flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-lg">
+                    <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </a>
-
-          {/* Card 2 - PR & Communications */}
-          <a href="/services/pr-communications" className="pillar-card group block bg-white rounded-2xl shadow-[0_8px_30px_-10px_rgba(0,0,0,0.12)] border-2 border-gray-100 p-8 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] hover:border-[#1e293b] hover:-translate-y-2 transition-all duration-500 cursor-pointer relative overflow-hidden">
-
-            <div className="relative z-10">
-              <div className="flex items-start justify-between mb-6">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-7 h-7 text-[#00b5ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
-                  </svg>
                 </div>
-                <span className="text-6xl font-bold text-gray-200 group-hover:text-[#00b5ff]/20 transition-colors duration-500">02</span>
-              </div>
-
-              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#00b5ff] transition-colors duration-300">PR & Communications</h3>
-              <p className="text-lg font-semibold text-[#00b5ff] mb-4">Reputation engineered, not managed</p>
-              <p className="text-base text-gray-600 leading-relaxed mb-6">
-                Crisis Management, Brand Monitoring, SEO 3.0, Media Relations
-              </p>
-
-              <div className="flex gap-3 pt-4 border-t border-gray-100 mb-6">
-                <div className="flex-1 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-xl px-4 py-3 border border-blue-100/50">
-                  <div className="text-lg font-bold text-gray-900">10+</div>
-                  <div className="text-xs text-gray-600">PR Tools</div>
-                </div>
-                <div className="flex-1 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-xl px-4 py-3 border border-blue-100/50">
-                  <div className="text-lg font-bold text-[#00b5ff]">98%</div>
-                  <div className="text-xs text-gray-600">Coverage</div>
-                </div>
-              </div>
-
-              {/* Arrow Icon CTA */}
-              <div className="flex items-center justify-between pt-4">
-                <span className="text-sm font-semibold text-gray-600 group-hover:text-[#00b5ff] transition-colors duration-300">Learn More</span>
-                <div className="w-10 h-10 rounded-full bg-[#1e293b] group-hover:bg-[#00b5ff] flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                  <svg className="w-5 h-5 text-white group-hover:translate-x-0.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          {/* Card 3 - Omnichannel Advertising */}
-          <a href="/services/advertising" className="pillar-card group block bg-white rounded-2xl shadow-[0_8px_30px_-10px_rgba(0,0,0,0.12)] border-2 border-gray-100 p-8 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] hover:border-[#1e293b] hover:-translate-y-2 transition-all duration-500 cursor-pointer relative overflow-hidden">
-
-            <div className="relative z-10">
-              <div className="flex items-start justify-between mb-6">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-7 h-7 text-[#00b5ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z" />
-                  </svg>
-                </div>
-                <span className="text-6xl font-bold text-gray-200 group-hover:text-[#00b5ff]/20 transition-colors duration-500">03</span>
-              </div>
-
-              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#00b5ff] transition-colors duration-300">Omnichannel Advertising</h3>
-              <p className="text-lg font-semibold text-[#00b5ff] mb-4">Every channel, one brain</p>
-              <p className="text-base text-gray-600 leading-relaxed mb-6">
-                15 platforms from Google to Bluesky
-              </p>
-
-              <div className="flex gap-3 pt-4 border-t border-gray-100 mb-6">
-                <div className="flex-1 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-xl px-4 py-3 border border-blue-100/50">
-                  <div className="text-lg font-bold text-gray-900">15+</div>
-                  <div className="text-xs text-gray-600">Platforms</div>
-                </div>
-                <div className="flex-1 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-xl px-4 py-3 border border-blue-100/50">
-                  <div className="text-lg font-bold text-[#00b5ff]">95%</div>
-                  <div className="text-xs text-gray-600">Reach</div>
-                </div>
-              </div>
-
-              {/* Arrow Icon CTA */}
-              <div className="flex items-center justify-between pt-4">
-                <span className="text-sm font-semibold text-gray-600 group-hover:text-[#00b5ff] transition-colors duration-300">Learn More</span>
-                <div className="w-10 h-10 rounded-full bg-[#1e293b] group-hover:bg-[#00b5ff] flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                  <svg className="w-5 h-5 text-white group-hover:translate-x-0.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          {/* Card 4 - Growth & Performance */}
-          <a href="/services/growth-performance" className="pillar-card group block bg-white rounded-2xl shadow-[0_8px_30px_-10px_rgba(0,0,0,0.12)] border-2 border-gray-100 p-8 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] hover:border-[#1e293b] hover:-translate-y-2 transition-all duration-500 cursor-pointer relative overflow-hidden">
-
-            <div className="relative z-10">
-              <div className="flex items-start justify-between mb-6">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#00b5ff]/10 to-[#00b5ff]/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-7 h-7 text-[#00b5ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                  </svg>
-                </div>
-                <span className="text-6xl font-bold text-gray-200 group-hover:text-[#00b5ff]/20 transition-colors duration-500">04</span>
-              </div>
-
-              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#00b5ff] transition-colors duration-300">Growth & Performance</h3>
-              <p className="text-lg font-semibold text-[#00b5ff] mb-4">Compounding growth across touchpoints</p>
-              <p className="text-base text-gray-600 leading-relaxed mb-6">
-                Email, SMS, WhatsApp, LinkedIn, Telegram
-              </p>
-
-              <div className="flex gap-3 pt-4 border-t border-gray-100 mb-6">
-                <div className="flex-1 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-xl px-4 py-3 border border-blue-100/50">
-                  <div className="text-lg font-bold text-gray-900">3.2x</div>
-                  <div className="text-xs text-gray-600">ROAS</div>
-                </div>
-                <div className="flex-1 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-xl px-4 py-3 border border-blue-100/50">
-                  <div className="text-lg font-bold text-[#00b5ff]">5+</div>
-                  <div className="text-xs text-gray-600">Channels</div>
-                </div>
-              </div>
-
-              {/* Arrow Icon CTA */}
-              <div className="flex items-center justify-between pt-4">
-                <span className="text-sm font-semibold text-gray-600 group-hover:text-[#00b5ff] transition-colors duration-300">Learn More</span>
-                <div className="w-10 h-10 rounded-full bg-[#1e293b] group-hover:bg-[#00b5ff] flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-                  <svg className="w-5 h-5 text-white group-hover:translate-x-0.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </a>
+              </a>
+            ))}
+          </div>
         </div>
 
-        {/* CTA Button */}
-        <div className="inline-block pt-6">
+        {/* Bottom CTA */}
+        <div className="inline-block pt-8">
           <Button
             href="/services"
             variant="primary"
@@ -272,7 +263,7 @@ export default function CorePillars() {
               </svg>
             }
           >
-            View All Solutions
+            Explore All Solutions
           </Button>
         </div>
       </div>

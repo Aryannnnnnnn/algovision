@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import * as SimpleIcons from "simple-icons";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,12 +17,12 @@ export default function EnterpriseTrust() {
       gsap.from(headingRef.current?.children || [], {
         opacity: 0,
         y: 20,
-        duration: 0.5,
-        stagger: 0.08,
+        duration: 0.4,
+        stagger: 0.06,
         ease: "power2.out",
         scrollTrigger: {
           trigger: headingRef.current,
-          start: "top 80%",
+          start: "top 75%",
         },
       });
 
@@ -32,17 +31,17 @@ export default function EnterpriseTrust() {
       metricCards.forEach((card, index) => {
         gsap.fromTo(
           card as HTMLElement,
-          { opacity: 0, scale: 0.9, y: 30 },
+          { opacity: 0, scale: 0.95, y: 20 },
           {
             opacity: 1,
             scale: 1,
             y: 0,
-            duration: 0.6,
-            delay: index * 0.1,
-            ease: "back.out(1.4)",
+            duration: 0.5,
+            delay: index * 0.06,
+            ease: "back.out(1.2)",
             scrollTrigger: {
               trigger: card as HTMLElement,
-              start: "top 85%",
+              start: "top 80%",
             },
           }
         );
@@ -53,16 +52,16 @@ export default function EnterpriseTrust() {
       pillars.forEach((pillar, index) => {
         gsap.fromTo(
           pillar as HTMLElement,
-          { opacity: 0, x: -30 },
+          { opacity: 0, x: -20 },
           {
             opacity: 1,
             x: 0,
-            duration: 0.6,
-            delay: index * 0.12,
+            duration: 0.5,
+            delay: index * 0.08,
             ease: "power2.out",
             scrollTrigger: {
               trigger: pillar as HTMLElement,
-              start: "top 85%",
+              start: "top 80%",
             },
           }
         );
@@ -112,26 +111,6 @@ export default function EnterpriseTrust() {
       badges: ["100+ Brands", "$50M+ Managed", "Fortune 500"],
     },
   ];
-
-  const clients = [
-    { name: "Google", icon: "google", color: "#4285F4" },
-    { name: "Meta", icon: "meta", color: "#0668E1" },
-    { name: "Apple", icon: "apple", color: "#000000" },
-    { name: "Netflix", icon: "netflix", color: "#E50914" },
-    { name: "Salesforce", icon: "salesforce", color: "#00A1E0" },
-    { name: "Tesla", icon: "tesla", color: "#CC0000" },
-    { name: "Uber", icon: "uber", color: "#000000" },
-    { name: "Spotify", icon: "spotify", color: "#1DB954" },
-    { name: "Airbnb", icon: "airbnb", color: "#FF5A5F" },
-    { name: "Slack", icon: "slack", color: "#4A154B" },
-    { name: "YouTube", icon: "youtube", color: "#FF0000" },
-    { name: "Instagram", icon: "instagram", color: "#E4405F" },
-    { name: "TikTok", icon: "tiktok", color: "#000000" },
-    { name: "Samsung", icon: "samsung", color: "#1428A0" },
-    { name: "Intel", icon: "intel", color: "#0071C5" },
-    { name: "NVIDIA", icon: "nvidia", color: "#76B900" },
-  ];
-
   const metrics = [
     { label: "Enterprise Brands", value: "100+", trend: "+12", color: "blue" },
     { label: "Ad Spend Managed", value: "$50M+", trend: "+28%", color: "green" },
@@ -139,26 +118,16 @@ export default function EnterpriseTrust() {
   ];
 
   return (
-    <section ref={sectionRef} className="relative py-12 bg-white overflow-hidden">
-      {/* Background grid */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `linear-gradient(to right, #94a3b8 1px, transparent 1px), linear-gradient(to bottom, #94a3b8 1px, transparent 1px)`,
-            backgroundSize: "64px 64px",
-          }}
-        ></div>
-      </div>
+    <section ref={sectionRef} className="relative py-12 bg-[#0a1628] overflow-hidden">
 
       <div className="relative xl:max-w-[95vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Header */}
         <div ref={headingRef} className="mb-16">
-          <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full mb-8 shadow-lg">
+          <div className="inline-flex items-center px-4 py-2 bg-white/10 rounded-full mb-8 shadow-lg">
             <span className="text-sm font-bold text-white">Enterprise Trust</span>
           </div>
 
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-2 tracking-tight">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-2 tracking-tight">
             Built for Enterprises
           </h2>
           <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 tracking-tight">
@@ -167,7 +136,7 @@ export default function EnterpriseTrust() {
             </span>
           </h3>
 
-          <p className="text-xl text-gray-600 leading-relaxed max-w-3xl">
+          <p className="text-xl text-gray-300 leading-relaxed max-w-3xl">
             Trusted by Fortune 500 companies and scaling enterprises worldwide
           </p>
         </div>
@@ -178,22 +147,22 @@ export default function EnterpriseTrust() {
             {trustPillars.map((pillar, index) => (
               <div
                 key={index}
-                className="trust-pillar group relative bg-white rounded-2xl hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] transition-all duration-500 border-2 border-transparent hover:border-[#1e293b] p-6"
+                className="trust-pillar group relative  hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-[#00b5ff] p-6"
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#00b5ff] flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
                     {pillar.icon}
                   </div>
 
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{pillar.title}</h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">{pillar.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-2">{pillar.title}</h3>
+                    <p className="text-gray-300 mb-4 leading-relaxed">{pillar.description}</p>
 
                     <div className="flex flex-wrap gap-2">
                       {pillar.badges.map((badge, idx) => (
                         <span
                           key={idx}
-                          className="inline-flex items-center px-3 py-1 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-full border border-blue-100/50 text-xs font-semibold text-[#00b5ff]"
+                          className="inline-flex items-center px-3 py-1 bg-[#00b5ff]/20 rounded-full border border-[#00b5ff]/30 text-xs font-semibold text-[#00b5ff]"
                         >
                           {badge}
                         </span>
@@ -208,12 +177,19 @@ export default function EnterpriseTrust() {
           {/* Right: Trust Pillars */}
           <div className="space-y-6 order-1 lg:order-2">
             {/* Metrics Dashboard */}
-            <div className="bg-gradient-to-br from-[#E8F4FE] via-[#F5F3FF] to-[#E8F4FE] rounded-2xl shadow-xl border border-blue-100/30 p-6">
+            <div className="relative bg-gradient-to-br from-[#0a1628] to-[#1e293b] rounded-2xl shadow-xl p-6 overflow-hidden">
+              {/* Background decoration */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-0 right-0 w-48 h-48 bg-[#00b5ff] rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#00b5ff] rounded-full blur-3xl"></div>
+              </div>
+
+              <div className="relative">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wide">Live Metrics</h3>
+                <h3 className="text-sm font-bold text-gray-200 uppercase tracking-wide">Live Metrics</h3>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-xs font-semibold text-gray-600">Real-time</span>
+                  <span className="text-xs font-semibold text-gray-300">Real-time</span>
                 </div>
               </div>
 
@@ -223,15 +199,15 @@ export default function EnterpriseTrust() {
                   <button
                     key={idx}
                     onClick={() => setActiveMetric(idx)}
-                    className={`metric-card bg-white rounded-xl p-2 sm:p-3 lg:p-4 text-center transition-all duration-300 ${
+                    className={`metric-card bg-white/10 backdrop-blur-sm rounded-xl p-2 sm:p-3 lg:p-4 text-center transition-all duration-300 border border-white/10 ${
                       activeMetric === idx
-                        ? "ring-2 ring-[#00b5ff] shadow-lg scale-105"
-                        : "hover:shadow-md"
+                        ? "ring-2 ring-[#00b5ff] shadow-lg scale-105 bg-white/20"
+                        : "hover:bg-white/15"
                     }`}
                   >
                     <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#00b5ff] mb-1 break-words">{metric.value}</div>
-                    <div className="text-[10px] sm:text-xs text-gray-600 font-medium mb-1 sm:mb-2 leading-tight">{metric.label}</div>
-                    <div className="inline-flex items-center gap-0.5 sm:gap-1 text-[10px] sm:text-xs font-semibold text-green-500">
+                    <div className="text-[10px] sm:text-xs text-gray-300 font-medium mb-1 sm:mb-2 leading-tight">{metric.label}</div>
+                    <div className="inline-flex items-center gap-0.5 sm:gap-1 text-[10px] sm:text-xs font-semibold text-green-400">
                       <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
                       </svg>
@@ -242,10 +218,10 @@ export default function EnterpriseTrust() {
               </div>
 
               {/* Growth Chart */}
-              <div className="bg-white rounded-xl p-4">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-bold text-gray-700">Growth Trajectory</span>
-                  <span className="text-xs text-gray-500">Last 12 Months</span>
+                  <span className="text-xs font-bold text-gray-200">Growth Trajectory</span>
+                  <span className="text-xs text-gray-400">Last 12 Months</span>
                 </div>
 
                 <svg className="w-full h-32" viewBox="0 0 400 120" preserveAspectRatio="none">
@@ -309,68 +285,15 @@ export default function EnterpriseTrust() {
                   ))}
                 </svg>
 
-                <div className="flex justify-between text-xs text-gray-500 mt-2">
+                <div className="flex justify-between text-xs text-gray-400 mt-2">
                   <span>Jan</span>
                   <span>Jun</span>
                   <span>Dec</span>
                 </div>
               </div>
+              </div>
             </div>
 
-          </div>
-        </div>
-
-        {/* Full-Width Scrolling Logos Section */}
-        <div className="relative -mx-4 sm:-mx-6 lg:-mx-8 mt-20">
-          <div className="text-center mb-8">
-            <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wide">
-              Trusted By Leading Enterprises
-            </h3>
-          </div>
-
-          {/* Scrolling Logo Strip */}
-          <div className="relative overflow-hidden bg-gradient-to-r from-gray-50 via-white to-gray-50 py-8">
-            {/* Gradient overlays */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
-
-            {/* Scrolling container */}
-            <div className="flex gap-16 animate-scroll" style={{ width: 'max-content' }}>
-              {/* Render logos multiple times for seamless infinite scroll */}
-              {[...Array(6)].map((_, setIndex) => (
-                clients.map((client, index) => {
-                  const iconData = SimpleIcons[`si${client.icon.charAt(0).toUpperCase() + client.icon.slice(1)}` as keyof typeof SimpleIcons];
-                  const hasPath = iconData && typeof iconData === 'object' && 'path' in iconData;
-                  return (
-                    <div
-                      key={`set${setIndex}-${index}`}
-                      className="flex-shrink-0 w-32 h-20 flex items-center justify-center grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition-all duration-300 cursor-pointer"
-                    >
-                      {hasPath && (
-                        <svg
-                          role="img"
-                          viewBox="0 0 24 24"
-                          className="w-20 h-20"
-                          fill={client.color}
-                        >
-                          <title>{client.name}</title>
-                          <path d={(iconData as any).path} />
-                        </svg>
-                      )}
-                    </div>
-                  );
-                })
-              ))}
-            </div>
-          </div>
-
-          <div className="text-center mt-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-full border border-blue-100/50">
-              <svg className="w-4 h-4 text-[#00b5ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-              </svg>
-              <span className="text-xs font-semibold text-gray-600">+92 More Fortune 500s</span>
-            </div>
           </div>
         </div>
       </div>

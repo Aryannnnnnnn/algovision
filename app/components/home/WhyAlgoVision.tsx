@@ -93,7 +93,7 @@ export default function WhyAlgoVision() {
       <div className="relative xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Header */}
         <div ref={headingRef} className="max-w-4xl mb-20">
-          <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full mb-8 shadow-lg">
+          <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-8 shadow-lg">
             <span className="text-sm font-bold text-white">Why Enterprise Leaders Choose Us</span>
           </div>
 

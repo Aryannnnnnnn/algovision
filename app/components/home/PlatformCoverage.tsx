@@ -51,40 +51,34 @@ export default function PlatformCoverage() {
     return () => ctx.revert();
   }, []);
 
-  const platformCategories = {
-    advertising: {
-      title: "Advertising Platforms",
-      description: "Omnichannel ad management across all major networks",
-      platforms: [
-        { name: "Google Ads", color: "bg-blue-500" },
-        { name: "Meta Ads", color: "bg-blue-600" },
-        { name: "LinkedIn", color: "bg-blue-700" },
-        { name: "Twitter/X", color: "bg-gray-900" },
-        { name: "TikTok", color: "bg-gray-900" },
-        { name: "Pinterest", color: "bg-red-600" },
-        { name: "Snapchat", color: "bg-yellow-400" },
-        { name: "YouTube", color: "bg-red-600" },
-        { name: "Bluesky", color: "bg-blue-400" },
-        { name: "Reddit", color: "bg-orange-600" },
-      ],
-      stat: "10+",
-      statLabel: "Networks",
-    },
-    communication: {
-      title: "Communication Channels",
-      description: "Direct customer engagement across messaging platforms",
-      platforms: [
-        { name: "Email", color: "bg-gray-700" },
-        { name: "SMS", color: "bg-green-600" },
-        { name: "WhatsApp", color: "bg-green-500" },
-        { name: "Telegram", color: "bg-blue-500" },
-        { name: "Slack", color: "bg-purple-600" },
-        { name: "MS Teams", color: "bg-blue-600" },
-      ],
-      stat: "6+",
-      statLabel: "Channels",
-    },
-  };
+  const platforms = [
+    { name: "Google Ads", icon: "google", logo: "https://img.icons8.com/color/96/google-logo.png" },
+    { name: "YouTube", icon: "youtube", logo: "https://img.icons8.com/color/96/youtube-play.png" },
+    { name: "Meta", icon: "meta", logo: "https://img.icons8.com/color/96/meta.png" },
+    { name: "Instagram", icon: "instagram", logo: "https://img.icons8.com/color/96/instagram-new.png" },
+    { name: "Reddit", icon: "reddit", logo: "https://img.icons8.com/color/96/reddit.png" },
+    { name: "TikTok", icon: "tiktok", logo: "https://img.icons8.com/color/96/tiktok--v1.png" },
+    { name: "Snapchat", icon: "snapchat", logo: "https://img.icons8.com/color/96/snapchat.png" },
+    { name: "LinkedIn", icon: "linkedin", logo: "https://img.icons8.com/color/96/linkedin.png" },
+    { name: "X", icon: "x", logo: "https://img.icons8.com/color/96/twitterx.png" },
+    { name: "Twitter", icon: "twitter", logo: "https://img.icons8.com/color/96/twitter--v1.png" },
+    { name: "Bing", icon: "microsoftbing", logo: "https://img.icons8.com/color/96/bing.png" },
+    { name: "Yahoo", icon: "yahoo", logo: "https://img.icons8.com/color/96/yahoo.png" },
+    { name: "Twitch", icon: "twitch", logo: "https://img.icons8.com/color/96/twitch--v1.png" },
+    { name: "Spotify", icon: "spotify", logo: "https://img.icons8.com/color/96/spotify.png" },
+    { name: "Discord", icon: "discord", logo: "https://img.icons8.com/color/96/discord-logo.png" },
+    { name: "Slack", icon: "slack", logo: "https://img.icons8.com/color/96/slack-new.png" },
+    { name: "WhatsApp", icon: "whatsapp", logo: "https://img.icons8.com/color/96/whatsapp.png" },
+    { name: "Telegram", icon: "telegram", logo: "https://img.icons8.com/color/96/telegram-app.png" },
+    { name: "Email", icon: "gmail", logo: "https://img.icons8.com/color/96/gmail-new.png" },
+    { name: "SMS", icon: "messenger", logo: "https://img.icons8.com/color/96/facebook-messenger.png" },
+    { name: "Pinterest", icon: "pinterest", logo: "https://img.icons8.com/color/96/pinterest--v1.png" },
+  ];
+
+  // Split platforms into 3 rows (7, 7, 7)
+  const row1 = platforms.slice(0, 7);
+  const row2 = platforms.slice(7, 14);
+  const row3 = platforms.slice(14, 21); // Now includes Pinterest as the 7th item
 
   return (
     <section ref={sectionRef} className="relative py-12 bg-white overflow-hidden">
@@ -102,7 +96,7 @@ export default function PlatformCoverage() {
       <div className="relative xl:max-w-[95vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Header */}
         <div ref={headingRef} className="mb-16">
-          <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full mb-8 shadow-lg">
+          <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-8 shadow-lg">
             <span className="text-sm font-bold text-white">Platform Coverage</span>
           </div>
 
@@ -120,97 +114,112 @@ export default function PlatformCoverage() {
           </p>
         </div>
 
-        {/* Category Cards */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
-          {/* Advertising Platforms Card */}
-          <div className="category-card group relative bg-white rounded-2xl hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] transition-all duration-500 overflow-hidden border-2 border-transparent hover:border-[#1e293b]">
-            {/* Header */}
-            <div className="p-8">
-              <div className="flex items-start justify-between mb-4">
-                <div className="w-14 h-14 rounded-xl bg-[#00b5ff] flex items-center justify-center shadow-lg">
-                  <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
-                  </svg>
-                </div>
-                <div className="text-right">
-                  <div className="text-3xl font-bold text-[#00b5ff]">{platformCategories.advertising.stat}</div>
-                  <div className="text-sm text-gray-600">{platformCategories.advertising.statLabel}</div>
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">{platformCategories.advertising.title}</h3>
-              <p className="text-gray-600">{platformCategories.advertising.description}</p>
+        {/* 3-Row Zigzag Infinite Sliding Platform Logos */}
+        <div className="relative mb-16">
+          <div className="relative overflow-hidden py-8 space-y-6">
+            {/* Gradient Overlays */}
+            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+            {/* Row 1 */}
+            <div className="flex gap-20 animate-scroll" style={{ width: 'max-content' }}>
+              {[...Array(4)].map((_, setIndex) => (
+                row1.map((platform, index) => (
+                  <div
+                    key={`row1-${setIndex}-${index}`}
+                    className="flex-shrink-0 w-12 h-12 flex items-center justify-center cursor-pointer group transition-all duration-300 hover:scale-110"
+                  >
+                    <img
+                      src={platform.logo}
+                      alt={platform.name}
+                      className="w-full h-full object-contain transition-all duration-300"
+                    />
+                  </div>
+                ))
+              ))}
             </div>
 
-            {/* Platform Pills */}
-            <div className="p-8">
-              <div className="flex flex-wrap gap-3">
-                {platformCategories.advertising.platforms.map((platform, idx) => (
+            {/* Row 2 - Offset position for zigzag */}
+            <div className="flex gap-20 animate-scroll" style={{ width: 'max-content', marginLeft: '46px' }}>
+              {[...Array(4)].map((_, setIndex) => (
+                row2.map((platform, index) => (
                   <div
-                    key={idx}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-full border border-blue-100/50 transition-all duration-300"
+                    key={`row2-${setIndex}-${index}`}
+                    className="flex-shrink-0 w-12 h-12 flex items-center justify-center cursor-pointer group transition-all duration-300 hover:scale-110"
                   >
-                    <div className={`w-2 h-2 rounded-full ${platform.color}`}></div>
-                    <span className="text-sm font-semibold text-gray-700">{platform.name}</span>
+                    <img
+                      src={platform.logo}
+                      alt={platform.name}
+                      className="w-full h-full object-contain transition-all duration-300"
+                    />
                   </div>
-                ))}
-              </div>
+                ))
+              ))}
+            </div>
+
+            {/* Row 3 - Offset position for zigzag */}
+            <div className="flex gap-20 animate-scroll" style={{ width: 'max-content', marginLeft: '0px' }}>
+              {[...Array(4)].map((_, setIndex) => (
+                row3.map((platform, index) => (
+                  <div
+                    key={`row3-${setIndex}-${index}`}
+                    className="flex-shrink-0 w-12 h-12 flex items-center justify-center cursor-pointer group transition-all duration-300 hover:scale-110"
+                  >
+                    <img
+                      src={platform.logo}
+                      alt={platform.name}
+                      className="w-full h-full object-contain transition-all duration-300"
+                    />
+                  </div>
+                ))
+              ))}
             </div>
           </div>
 
-          {/* Communication Channels Card */}
-          <div className="category-card group relative bg-white rounded-2xl hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] transition-all duration-500 overflow-hidden border-2 border-transparent hover:border-[#1e293b]">
-            {/* Header */}
-            <div className="p-8">
-              <div className="flex items-start justify-between mb-4">
-                <div className="w-14 h-14 rounded-xl bg-[#00b5ff] flex items-center justify-center shadow-lg">
-                  <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                  </svg>
-                </div>
-                <div className="text-right">
-                  <div className="text-3xl font-bold text-[#00b5ff]">{platformCategories.communication.stat}</div>
-                  <div className="text-sm text-gray-600">{platformCategories.communication.statLabel}</div>
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">{platformCategories.communication.title}</h3>
-              <p className="text-gray-600">{platformCategories.communication.description}</p>
-            </div>
-
-            {/* Platform Pills */}
-            <div className="p-8">
-              <div className="flex flex-wrap gap-3">
-                {platformCategories.communication.platforms.map((platform, idx) => (
-                  <div
-                    key={idx}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-br from-[#E8F4FE]/60 to-[#F5F3FF]/60 rounded-full border border-blue-100/50 transition-all duration-300"
-                  >
-                    <div className={`w-2 h-2 rounded-full ${platform.color}`}></div>
-                    <span className="text-sm font-semibold text-gray-700">{platform.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          {/* Add CSS animations */}
+          <style jsx>{`
+            @keyframes scroll {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+            .animate-scroll {
+              animation: scroll 80s linear infinite;
+            }
+          `}</style>
         </div>
 
         {/* Bottom Stats Banner */}
-        <div className="bg-white rounded-2xl p-8 mb-12">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-[#00b5ff] mb-2">15+</div>
-              <div className="text-sm font-semibold text-gray-900 mb-1">Total Platforms</div>
-              <div className="text-xs text-gray-600">Unified integration</div>
+        <div className="relative bg-gradient-to-br from-[#0a1628] to-[#1e293b] rounded-3xl p-8 sm:p-12 mb-12 overflow-hidden">
+          {/* Background decoration */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#00b5ff] rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#00b5ff] rounded-full blur-3xl"></div>
+          </div>
+
+          <div className="relative grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12">
+            {/* Stat 1 */}
+            <div className="text-center group">
+              <div className="text-5xl font-bold text-white mb-2">21</div>
+              <div className="text-lg font-semibold text-gray-200 mb-1">Platforms</div>
+              <div className="text-sm text-gray-400">Connected & integrated</div>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-[#00b5ff] mb-2">1</div>
-              <div className="text-sm font-semibold text-gray-900 mb-1">Command Center</div>
-              <div className="text-xs text-gray-600">Single dashboard control</div>
+
+            {/* Stat 2 */}
+            <div className="text-center group">
+              <div className="text-5xl font-bold text-white mb-2">1</div>
+              <div className="text-lg font-semibold text-gray-200 mb-1">Command Center</div>
+              <div className="text-sm text-gray-400">Unified dashboard</div>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-[#00b5ff] mb-2">100%</div>
-              <div className="text-sm font-semibold text-gray-900 mb-1">Platform Agnostic</div>
-              <div className="text-xs text-gray-600">Results-obsessed approach</div>
+
+            {/* Stat 3 */}
+            <div className="text-center group">
+              <div className="text-5xl font-bold text-white mb-2">100%</div>
+              <div className="text-lg font-semibold text-gray-200 mb-1">Platform Agnostic</div>
+              <div className="text-sm text-gray-400">Results-obsessed</div>
             </div>
           </div>
         </div>

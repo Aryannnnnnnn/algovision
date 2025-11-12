@@ -12,9 +12,9 @@ export default function MethodologyPage() {
     <main className="min-h-screen bg-white">
       <MethodologyHero />
       <OurApproach />
+      <EnterpriseInfrastructure />
       <ProcessSteps />
       <Framework />
-      <EnterpriseInfrastructure />
       <GovernanceCompliance />
       <IntegrationCapabilities />
       <CaseStudyPreview />

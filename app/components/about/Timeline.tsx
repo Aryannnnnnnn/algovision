@@ -42,7 +42,7 @@ export default function Timeline() {
       year: "2010",
       title: "Founded",
       subtitle: "The Beginning",
-      description: "AlgoVision launched with a vision to unify marketing intelligence across all channels.",
+      description: "Algo Vision launched with a vision to unify marketing intelligence across all channels.",
       achievements: ["3 Founders", "First Office", "Initial Product Launch"],
       metric: "Year One",
     },

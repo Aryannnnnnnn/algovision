@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: SolutionPageProps) {
   }
 
   return {
-    title: `${solution.title} | AlgoVision Solutions`,
+    title: `${solution.title} | Algo Vision Solutions`,
     description: solution.description,
   };
 }

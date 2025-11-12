@@ -19,7 +19,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "AlgoVision - Digital Solutions for Growing Businesses",
+  title: "Algo Vision - Digital Solutions for Growing Businesses",
   description: "Strategic IT solutions and digital transformation services that deliver measurable results for growing enterprises.",
 };
 

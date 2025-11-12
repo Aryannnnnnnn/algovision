@@ -7,19 +7,18 @@ import Button from "@/app/components/ui/Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function WhyAlgoVision() {
+export default function WhyJoinUs() {
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
-  const pillarsRef = useRef<HTMLDivElement>(null);
+  const benefitsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animate heading
       gsap.from(headingRef.current?.children || [], {
         opacity: 0,
         y: 20,
-        duration: 0.5,
-        stagger: 0.08,
+        duration: 0.3,
+        stagger: 0.05,
         ease: "power2.out",
         force3D: true,
         scrollTrigger: {
@@ -29,18 +28,17 @@ export default function WhyAlgoVision() {
         },
       });
 
-      // Animate pillars
-      const pillars = pillarsRef.current?.children;
-      if (pillars) {
-        gsap.from(pillars, {
+      const benefits = benefitsRef.current?.children;
+      if (benefits) {
+        gsap.from(benefits, {
           opacity: 0,
           y: 30,
-          duration: 0.5,
-          stagger: 0.15,
+          duration: 0.3,
+          stagger: 0.08,
           ease: "power2.out",
           force3D: true,
           scrollTrigger: {
-            trigger: pillarsRef.current,
+            trigger: benefitsRef.current,
             start: "top 80%",
             once: true,
           },
@@ -51,31 +49,31 @@ export default function WhyAlgoVision() {
     return () => ctx.revert();
   }, []);
 
-  const pillars = [
+  const benefits = [
     {
-      title: "Unified Intelligence Foundation",
-      subtitle: "Own your growth trajectory",
-      description: "Consolidate 25+ fragmented solutions into one self-optimizing ecosystem. Connect AI, advertising, PR, and performance marketing through a single intelligence layer that learns from every interaction.",
+      title: "Remote-First Culture",
+      subtitle: "Work from anywhere",
+      description: "Join our distributed team across 15+ countries. We believe in flexibility and trust our people to deliver exceptional results from wherever they do their best work.",
       icon: (
         <svg className="w-full h-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
       ),
     },
     {
-      title: "Cross-Channel Orchestration",
-      subtitle: "Execute with precision",
-      description: "Activate across 15+ advertising platforms, 8 communication channels, and PR networks—all synchronized in real-time. Your entire system responds as one, whether managing routine optimization or navigating unexpected challenges.",
+      title: "Competitive Compensation",
+      subtitle: "Industry-leading packages",
+      description: "Attractive salaries, performance bonuses, equity options for key team members, and annual reviews to ensure you're rewarded for your contributions.",
       icon: (
         <svg className="w-full h-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
         </svg>
       ),
     },
     {
-      title: "Enterprise-Grade Scale",
-      subtitle: "Deliver results that matter",
-      description: "Deploy campaigns across Google, Meta, TikTok, Bluesky, LinkedIn, and emerging platforms through the industry's most comprehensive growth network. Achieve 3.2x industry-average growth with infrastructure built for Fortune 500 demands.",
+      title: "Professional Growth",
+      subtitle: "Invest in your future",
+      description: "Continuous learning opportunities, mentorship programs, conference budgets, and access to premium courses. We're committed to helping you grow your skills and advance your career.",
       icon: (
         <svg className="w-full h-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
@@ -85,7 +83,7 @@ export default function WhyAlgoVision() {
   ];
 
   return (
-    <section ref={sectionRef} className="relative py-12 bg-white overflow-hidden">
+    <section id="culture" ref={sectionRef} className="relative py-12 bg-white overflow-hidden">
       {/* Grid background */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
         <div className="absolute inset-0" style={{
@@ -98,41 +96,45 @@ export default function WhyAlgoVision() {
         {/* Header */}
         <div ref={headingRef} className="max-w-4xl mb-20">
           <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-8 shadow-lg">
-            <span className="text-sm font-bold text-white">Why Enterprise Leaders Choose Us</span>
+            <span className="text-sm font-bold text-white">Why Algo Vision</span>
           </div>
 
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 tracking-tight">
-            Why do <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">enterprise leaders</span> choose Algo Vision?
+            Why do talented people choose{" "}
+            <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">
+              Algo Vision
+            </span>
+            ?
           </h2>
 
           <p className="text-xl text-gray-600 leading-relaxed mb-4">
-            Trusted by global innovators and enterprise leaders shaping the next era of marketing intelligence.
+            We're building a workplace where talented people can do their best work, grow their careers, and make a real impact.
           </p>
 
           <p className="text-lg text-gray-500 leading-relaxed">
-            100+ brands trust Algo Vision to unify their marketing intelligence—from Fortune 500s to category-defining disruptors.
+            Join 50+ team members across 15+ countries who are shaping the future of marketing.
           </p>
         </div>
 
-        {/* Three Pillars - Horizontal Layout */}
-        <div ref={pillarsRef} className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-16">
-          {pillars.map((pillar, index) => (
+        {/* Three Benefits - Horizontal Layout */}
+        <div ref={benefitsRef} className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-16">
+          {benefits.map((benefit, index) => (
             <div key={index} className="space-y-6">
               {/* Icon */}
               <div className="w-16 h-16 text-[#00b5ff]">
-                {pillar.icon}
+                {benefit.icon}
               </div>
 
               {/* Content below icon */}
               <div className="space-y-4">
                 <h3 className="font-display text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">
-                  {pillar.title}
+                  {benefit.title}
                 </h3>
                 <p className="text-base sm:text-lg font-semibold text-[#00b5ff]">
-                  → {pillar.subtitle}
+                  → {benefit.subtitle}
                 </p>
                 <p className="text-base text-gray-600 leading-relaxed">
-                  {pillar.description}
+                  {benefit.description}
                 </p>
               </div>
             </div>
@@ -142,7 +144,7 @@ export default function WhyAlgoVision() {
         {/* CTA */}
         <div className="inline-block">
           <Button
-            href="/company/methodology"
+            href="#positions"
             variant="primary"
             size="md"
             icon={
@@ -151,7 +153,7 @@ export default function WhyAlgoVision() {
               </svg>
             }
           >
-            Explore Our Methodology
+            View Open Positions
           </Button>
         </div>
       </div>

@@ -349,7 +349,7 @@ export default function HomeHero() {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
                           <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                          <span className="text-xs font-bold text-gray-800">How AlgoVision supports your brand</span>
+                          <span className="text-xs font-bold text-gray-800">How Algo Vision supports your brand</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <button className="w-6 h-6 flex items-center justify-center rounded-lg bg-white/70 text-gray-400 hover:text-blue-500 hover:bg-white transition-all duration-200 shadow-sm">

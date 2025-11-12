@@ -1,6 +1,6 @@
 export const footerData = {
   company: {
-    name: "AlgoVision",
+    name: "Algo Vision",
     tagline: "Your Reliable Outsourced IT Partner",
     description: "Digital solutions for growing businesses. From AI-powered solutions to creative content and strategic marketing.",
   },
@@ -25,10 +25,10 @@ export const footerData = {
     ],
   },
   social: [
-    { name: "LinkedIn", href: "#", icon: "linkedin" },
+    { name: "LinkedIn", href: "https://in.linkedin.com/company/algovisionglobal", icon: "linkedin" },
     { name: "Twitter", href: "#", icon: "twitter" },
-    { name: "Facebook", href: "#", icon: "facebook" },
-    { name: "Instagram", href: "#", icon: "instagram" },
+    { name: "Youtube", href: "https://www.youtube.com/@algovisionglobal", icon: "youtube" },
+    { name: "Instagram", href: "https://www.instagram.com/algovision.co/", icon: "instagram" },
   ],
   contact: {
     email: "contact@algovision.com",

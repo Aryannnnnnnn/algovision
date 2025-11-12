@@ -30,10 +30,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-9 h-9">
-              <img src="/AlgoVisionLogo.png" alt="AlgoVision Logo" className="w-full h-full object-contain" />
+              <img src="/AlgoVisionLogo.png" alt="Algo Vision Logo" className="w-full h-full object-contain" />
             </div>
             <span className="font-display text-lg font-semibold text-gray-900 tracking-tight">
-              AlgoVision
+              Algo Vision
             </span>
           </Link>
 
@@ -175,12 +175,6 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Our Methodology - Standalone */}
-            <Link href="/company/methodology" className="px-3.5 py-2 text-[15px] text-gray-700 hover:text-gray-900 font-medium transition-colors duration-150 relative group">
-              Our Methodology
-              <span className="absolute inset-x-3 -bottom-px h-0.5 bg-[#00b5ff] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-center rounded-full"></span>
-            </Link>
-
             {/* Resources Dropdown */}
             <div
               className="relative h-[72px] flex items-center"
@@ -318,7 +312,7 @@ export default function Navbar() {
                 <div className="w-8 h-8 bg-gradient-to-br from-[#00b5ff] via-[#00b5ff] to-[#0095d9] rounded-lg flex items-center justify-center">
                   <span className="text-white font-display text-base font-bold">A</span>
                 </div>
-                <span className="font-display text-lg font-semibold text-gray-900">AlgoVision</span>
+                <span className="font-display text-lg font-semibold text-gray-900">Algo Vision</span>
               </Link>
               <button
                 onClick={() => setMobileMenuOpen(false)}
@@ -400,15 +394,6 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-
-            {/* Our Methodology Link */}
-            <Link
-              href="/company/methodology"
-              className="block px-4 py-3 text-gray-900 hover:bg-[#00b5ff]/10 hover:text-[#00b5ff] rounded-lg font-medium transition-colors mb-1"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Our Methodology
-            </Link>
 
             {/* Resources Accordion */}
             <div className="mb-1">

@@ -134,7 +134,7 @@ export default function HowWeWork() {
             </div>
 
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              The AlgoVision <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">Methodology</span>
+              The Algo Vision <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">Methodology</span>
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
               A proven approach that transforms fragmented marketing into a unified intelligence system. Four phases, one unified system.

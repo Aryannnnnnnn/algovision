@@ -54,12 +54,12 @@ export default function OurStory() {
             </div>
 
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              The <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">Story</span> Behind AlgoVision
+              The <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">Story</span> Behind Algo Vision
             </h2>
 
             <div className="space-y-5 text-gray-600 leading-relaxed text-lg">
               <p>
-                Founded with a vision to revolutionize the digital landscape, AlgoVision has grown from a small startup to a trusted partner for businesses worldwide. Our journey began with a simple belief: <span className="font-semibold text-gray-900">technology should empower, not complicate.</span>
+                Founded with a vision to revolutionize the digital landscape, Algo Vision has grown from a small startup to a trusted partner for businesses worldwide. Our journey began with a simple belief: <span className="font-semibold text-gray-900">technology should empower, not complicate.</span>
               </p>
               <p>
                 Over the years, we've helped hundreds of companies transform their digital presence, streamline their operations, and achieve remarkable growth. Our secret? A relentless focus on innovation, a deep understanding of our clients' needs, and a team that's passionate about what they do.

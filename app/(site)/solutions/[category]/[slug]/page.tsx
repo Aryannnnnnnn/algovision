@@ -10,10 +10,10 @@ import SolutionFAQ from "@/app/components/solution-detail/SolutionFAQ";
 import SolutionRelatedSolutions from "@/app/components/solution-detail/SolutionRelatedSolutions";
 
 interface SolutionPageProps {
-  params: {
+  params: Promise<{
     category: string;
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -25,7 +25,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: SolutionPageProps) {
-  const { category, slug } = params;
+  const { category, slug } = await params;
   const solution = getSolutionData(category, slug);
 
   if (!solution) {
@@ -40,8 +40,8 @@ export async function generateMetadata({ params }: SolutionPageProps) {
   };
 }
 
-export default function SolutionPage({ params }: SolutionPageProps) {
-  const { category, slug } = params;
+export default async function SolutionPage({ params }: SolutionPageProps) {
+  const { category, slug } = await params;
   const solution = getSolutionData(category, slug);
 
   if (!solution) {

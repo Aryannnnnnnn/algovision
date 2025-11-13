@@ -147,7 +147,7 @@ export default function MethodologyOverview() {
             {/* CTA */}
             <div className="inline-block pt-2">
               <Button
-                href="/methodology"
+                href="/company/methodology"
                 variant="primary"
                 size="md"
                 icon={

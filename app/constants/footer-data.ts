@@ -7,7 +7,7 @@ export const footerData = {
   links: {
     company: [
       { name: "About Us", href: "/company/about" },
-      { name: "Solutions", href: "/services" },
+      { name: "Solutions", href: "/solutions" },
       { name: "Our Methodology", href: "/company/methodology" },
       { name: "Careers", href: "/company/careers" },
       { name: "Contact", href: "/company/contact" },
@@ -20,7 +20,7 @@ export const footerData = {
     ],
     connect: [
       { name: "Book a Call", href: "/connect/book-call" },
-      { name: "Request a Proposal", href: "/connect/proposal" },
+      { name: "Request a Proposal", href: "/connect/work-with-us" },
       { name: "Apply for Career", href: "/company/careers" },
     ],
   },

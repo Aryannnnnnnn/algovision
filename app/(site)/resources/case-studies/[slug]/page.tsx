@@ -28,9 +28,10 @@ async function getCaseStudy(slug: string) {
 export default async function CaseStudyPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const caseStudy = await getCaseStudy(params.slug);
+  const { slug } = await params;
+  const caseStudy = await getCaseStudy(slug);
 
   if (!caseStudy || caseStudy.status !== 'published') {
     notFound();
@@ -63,7 +64,7 @@ export default async function CaseStudyPage({
         </div>
       </div>
 
-      <CaseStudiesCarousel currentSlug={params.slug} />
+      <CaseStudiesCarousel currentSlug={slug} />
     </main>
   );
 }

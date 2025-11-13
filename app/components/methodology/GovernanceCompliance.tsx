@@ -52,51 +52,64 @@ export default function GovernanceCompliance() {
 
   const governanceAreas = [
     {
-      title: "Data Governance Framework",
-      description: "Comprehensive policies and procedures governing data collection, storage, processing, and deletion throughout the entire lifecycle.",
+      title: "Discovery",
+      description: "Deep analysis before strategy. We map your business landscape, competitive position, and objectives to establish the foundation for guaranteed success.",
+      subtitle: "What happens:",
       items: [
-        "Data classification & cataloging",
-        "Access control policies",
-        "Data retention schedules",
-        "Privacy impact assessments",
-        "Data lineage tracking",
-        "Automated compliance monitoring"
+        "Business analysis",
+        "Market intelligence",
+        "Performance audit",
+        "Goal alignment",
+        "Feasibility assessment"
       ]
     },
     {
-      title: "Regulatory Compliance",
-      description: "Full adherence to global data protection and privacy regulations across all jurisdictions where we operate.",
+      title: "Requirement Mapping",
+      description: "We translate objectives into a detailed scope of work—a contract of certainty with defined deliverables, timelines, and measurable parameters.",
+      subtitle: "What happens:",
       items: [
-        "GDPR (EU General Data Protection)",
-        "CCPA (California Consumer Privacy)",
-        "HIPAA (Healthcare data)",
-        "SOX (Financial reporting)",
-        "PCI DSS (Payment card data)",
-        "Regional compliance (LGPD, PDPA, etc.)"
+        "Deliverable breakdown",
+        "Parameter framework",
+        "Timeline mapping",
+        "Resource allocation",
+        "Risk mitigation"
       ]
     },
     {
-      title: "Security Certifications",
-      description: "Industry-recognized certifications demonstrating our commitment to security best practices and continuous improvement.",
+      title: "Onboarding & Integration",
+      description: "Our thorough onboarding ensures everything is aligned before execution. This takes time because we're eliminating mid-project surprises.",
+      subtitle: "What happens:",
       items: [
-        "SOC 2 Type II (Annual audits)",
-        "ISO 27001 (Information security)",
-        "ISO 27701 (Privacy management)",
-        "NIST Cybersecurity Framework",
-        "CSA STAR Certification",
-        "FedRAMP (For government clients)"
-      ]
+        "System integration",
+        "Team alignment",
+        "Technology setup",
+        "Communication protocols",
+        "Baseline measurement"
+      ],
+      whyItMatters: "No disruptions. No surprises. Everything anticipated and addressed before launch."
     },
     {
-      title: "Audit & Reporting",
-      description: "Comprehensive audit trails and reporting capabilities to demonstrate compliance and support internal/external audits.",
+      title: "Execution & Optimization",
+      description: "Real-time monitoring and continuous optimization across every channel. Data-driven adjustments ensure performance against every committed parameter.",
+      subtitle: "What happens:",
       items: [
-        "Real-time activity monitoring",
-        "Immutable audit logs",
-        "Compliance dashboards",
-        "Automated reporting",
-        "Third-party audit support",
-        "Incident response documentation"
+        "Multi-channel deployment",
+        "Performance monitoring",
+        "Data analysis",
+        "Agile optimization",
+        "Regular reviews"
+      ],
+      poweredBy: "Our proprietary CRM and dedicated teams who own your success."
+    },
+    {
+      title: "Delivery & Completion",
+      description: "Every deliverable executed. Every parameter achieved. Every commitment fulfilled.",
+      subtitle: "What happens:",
+      items: [
+        "Scope verification",
+        "Performance documentation",
+        "Knowledge transfer",
+        "Optimization roadmap"
       ]
     }
   ];
@@ -144,7 +157,7 @@ export default function GovernanceCompliance() {
     <section ref={sectionRef} className="py-24 bg-white">
       <div className="max-w-[90vw] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 xl:gap-34 items-start">
-          {/* Governance Areas - Left on desktop, bottom on mobile/tablet */}
+          {/* Process Steps - Left on desktop, bottom on mobile/tablet */}
           <div className="space-y-6 order-2 lg:order-1">
             {governanceAreas.map((area, index) => (
               <div key={index} className="governance-item group">
@@ -168,8 +181,15 @@ export default function GovernanceCompliance() {
                         {area.description}
                       </p>
 
+                      {/* What happens subtitle */}
+                      {area.subtitle && (
+                        <p className="text-sm font-semibold text-gray-700 mb-2">
+                          {area.subtitle}
+                        </p>
+                      )}
+
                       {/* Items */}
-                      <div className="space-y-2">
+                      <div className="space-y-2 mb-4">
                         {area.items.map((item, idx) => (
                           <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
                             <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -179,6 +199,22 @@ export default function GovernanceCompliance() {
                           </div>
                         ))}
                       </div>
+
+                      {/* Why it matters (optional) */}
+                      {area.whyItMatters && (
+                        <div className="mt-4 pt-4 border-t border-gray-200">
+                          <p className="text-sm font-semibold text-gray-700 mb-1">Why it matters:</p>
+                          <p className="text-sm text-gray-600 italic">{area.whyItMatters}</p>
+                        </div>
+                      )}
+
+                      {/* Powered by (optional) */}
+                      {area.poweredBy && (
+                        <div className="mt-4 pt-4 border-t border-gray-200">
+                          <p className="text-sm font-semibold text-gray-700 mb-1">Powered by:</p>
+                          <p className="text-sm text-gray-600 italic">{area.poweredBy}</p>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -189,14 +225,14 @@ export default function GovernanceCompliance() {
           {/* Heading - Right on desktop, top on mobile/tablet */}
           <div className="lg:sticky lg:top-24 max-w-2xl mx-auto order-1 lg:order-2">
             <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-6 shadow-lg">
-              <span className="text-sm font-bold text-white">Governance & Compliance</span>
+              <span className="text-sm font-bold text-white">The AlgoVision Process</span>
             </div>
 
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Compliance at Scale. <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">Trust at Every Layer.</span>
+              From Discovery to <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">Guaranteed Delivery.</span>
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              Our comprehensive governance framework ensures your data is protected, compliant, and auditable at all times.
+              Our five-phase methodology transforms objectives into outcomes—with precision, speed, and absolute certainty.
             </p>
 
             {/* Trust Badge */}
@@ -205,17 +241,17 @@ export default function GovernanceCompliance() {
                 <svg className="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span className="text-white font-bold text-lg">Certified & Audited</span>
+                <span className="text-white font-bold text-lg">Every Step, Every Time</span>
               </div>
               <p className="text-gray-300 text-sm leading-relaxed">
-                Annual third-party security audits with results available to enterprise clients under NDA.
+                No shortcuts. No compromises. Every phase executed with the same rigor that defines our commitment to results.
               </p>
             </div>
 
             {/* CTA */}
             <div className="inline-block">
               <Button
-                href="/company/contact"
+                href="/connect/book-call"
                 variant="primary"
                 size="md"
                 icon={
@@ -224,7 +260,7 @@ export default function GovernanceCompliance() {
                   </svg>
                 }
               >
-                Request Compliance Documentation
+                See Our Process in Action
               </Button>
             </div>
           </div>

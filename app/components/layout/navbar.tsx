@@ -24,23 +24,20 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white/90 backdrop-blur-lg border-b border-gray-200/60 sticky top-0 z-50">
+    <nav className="bg-[#111111] backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
       <div className="max-w-[1400px] mx-auto px-6">
         <div className="flex items-center justify-between h-[72px]">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-9 h-9">
-              <img src="/AlgoVisionLogo.png" alt="Algo Vision Logo" className="w-full h-full object-contain" />
+          <Link href="/" className="flex items-center group">
+            <div className="relative h-12">
+              <img src="/AlgoVisionLogo.png" alt="Algo Vision Logo" className="h-full object-contain" />
             </div>
-            <span className="font-display text-lg font-semibold text-gray-900 tracking-tight">
-              Algo Vision
-            </span>
           </Link>
 
           {/* Desktop Navigation - Centered */}
           <div className="hidden lg:flex items-center gap-2">
             {/* Home */}
-            <Link href="/" className="px-3.5 py-2 text-[15px] text-gray-700 hover:text-gray-900 font-medium transition-colors duration-150 relative group">
+            <Link href="/" className="px-3.5 py-2 text-[15px] text-white hover:text-white/80 font-medium transition-colors duration-150 relative group">
               Home
               <span className="absolute inset-x-3 -bottom-px h-0.5 bg-[#00b5ff] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-center rounded-full"></span>
             </Link>
@@ -51,7 +48,7 @@ export default function Navbar() {
               onMouseEnter={() => handleDropdownEnter("solutions")}
               onMouseLeave={handleDropdownLeave}
             >
-              <button className={`px-3.5 py-2 text-[15px] text-gray-700 hover:text-gray-900 font-medium flex items-center gap-1 transition-colors duration-150 relative group ${activeDropdown === "solutions" ? "text-gray-900" : ""}`}>
+              <button className={`px-3.5 py-2 text-[15px] text-white hover:text-white/80 font-medium flex items-center gap-1 transition-colors duration-150 relative group ${activeDropdown === "solutions" ? "text-white" : ""}`}>
                 {navbarData.solutions.title}
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === "solutions" ? "rotate-180" : ""}`} />
                 <span className={`absolute inset-x-3 -bottom-px h-0.5 bg-[#00b5ff] transition-transform duration-200 origin-center rounded-full ${activeDropdown === "solutions" ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}></span>
@@ -132,7 +129,7 @@ export default function Navbar() {
               onMouseEnter={() => handleDropdownEnter("company")}
               onMouseLeave={handleDropdownLeave}
             >
-              <button className={`px-3.5 py-2 text-[15px] text-gray-700 hover:text-gray-900 font-medium flex items-center gap-1 transition-colors duration-150 relative group ${activeDropdown === "company" ? "text-gray-900" : ""}`}>
+              <button className={`px-3.5 py-2 text-[15px] text-white hover:text-white/80 font-medium flex items-center gap-1 transition-colors duration-150 relative group ${activeDropdown === "company" ? "text-white" : ""}`}>
                 {navbarData.company.title}
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === "company" ? "rotate-180" : ""}`} />
                 <span className={`absolute inset-x-3 -bottom-px h-0.5 bg-[#00b5ff] transition-transform duration-200 origin-center rounded-full ${activeDropdown === "company" ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}></span>
@@ -181,7 +178,7 @@ export default function Navbar() {
               onMouseEnter={() => handleDropdownEnter("resources")}
               onMouseLeave={handleDropdownLeave}
             >
-              <button className={`px-3.5 py-2 text-[15px] text-gray-700 hover:text-gray-900 font-medium flex items-center gap-1 transition-colors duration-150 relative group ${activeDropdown === "resources" ? "text-gray-900" : ""}`}>
+              <button className={`px-3.5 py-2 text-[15px] text-white hover:text-white/80 font-medium flex items-center gap-1 transition-colors duration-150 relative group ${activeDropdown === "resources" ? "text-white" : ""}`}>
                 {navbarData.resources.title}
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === "resources" ? "rotate-180" : ""}`} />
                 <span className={`absolute inset-x-3 -bottom-px h-0.5 bg-[#00b5ff] transition-transform duration-200 origin-center rounded-full ${activeDropdown === "resources" ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}></span>
@@ -230,7 +227,7 @@ export default function Navbar() {
               onMouseEnter={() => handleDropdownEnter("connect")}
               onMouseLeave={handleDropdownLeave}
             >
-              <button className={`px-3.5 py-2 text-[15px] text-gray-700 hover:text-gray-900 font-medium flex items-center gap-1 transition-colors duration-150 relative group ${activeDropdown === "connect" ? "text-gray-900" : ""}`}>
+              <button className={`px-3.5 py-2 text-[15px] text-white hover:text-white/80 font-medium flex items-center gap-1 transition-colors duration-150 relative group ${activeDropdown === "connect" ? "text-white" : ""}`}>
                 {navbarData.connect.title}
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === "connect" ? "rotate-180" : ""}`} />
                 <span className={`absolute inset-x-3 -bottom-px h-0.5 bg-[#00b5ff] transition-transform duration-200 origin-center rounded-full ${activeDropdown === "connect" ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}></span>
@@ -280,7 +277,7 @@ export default function Navbar() {
               href="/connect/book-call"
               variant="primary"
               size="sm"
-              className="text-[15px] whitespace-nowrap"
+              className="text-[15px] whitespace-nowrap !bg-[#00b5ff] hover:!bg-[#0099dd]"
               icon={
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -294,7 +291,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 text-gray-700 transition-colors"
+            className="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/10 text-white transition-colors"
             aria-label="Toggle menu"
           >
             <Menu className="w-6 h-6" />

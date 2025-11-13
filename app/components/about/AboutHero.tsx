@@ -27,7 +27,7 @@ export default function AboutHero() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[600px] md:min-h-[700px] lg:min-h-screen flex items-center justify-center bg-white overflow-hidden"
+      className="relative flex items-center justify-center bg-white overflow-hidden"
     >
       <div className="relative xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 md:py-20">
         <div className="max-w-5xl">
@@ -40,19 +40,19 @@ export default function AboutHero() {
 
             {/* Headline */}
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
-              Transforming Marketing Through{" "}
+              Algo Vision Aspires To Make Certainty The New Standard In{" "}
               <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00d4ff] to-[#00b5ff] bg-clip-text text-transparent">
-                AI-Powered Intelligence
+                Digital Transformation
               </span>
             </h1>
 
-            {/* Description */}
+            {/* Description
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl">
               Since 2010, we've been pioneering the future of marketing technology—helping enterprise brands unify
               their data, optimize their campaigns, and drive measurable results at scale.
-            </p>
+            </p> */}
 
-            {/* CTA Buttons */}
+            {/* CTA Buttons
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-2 md:pt-4">
               <Button
                 href="/company/contact"
@@ -75,7 +75,7 @@ export default function AboutHero() {
               </Button>
             </div>
 
-            {/* Trust Badge */}
+            Trust Badge
             <div className="flex items-center gap-3 pt-2 md:pt-4">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
@@ -88,7 +88,7 @@ export default function AboutHero() {
               <div className="text-sm text-gray-600">
                 <span className="font-bold text-gray-900">500+ enterprises</span> trust Algo Vision
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

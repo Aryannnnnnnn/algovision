@@ -6,7 +6,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function SolutionsFAQ() {
+interface SolutionsFAQProps {
+  serviceName?: string;
+}
+
+export default function SolutionsFAQ({ serviceName = "Our Solutions" }: SolutionsFAQProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -93,23 +97,46 @@ export default function SolutionsFAQ() {
       </div>
 
       <div className="relative xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        {/* Header */}
-        <div ref={headingRef} className="max-w-4xl mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-8 shadow-lg">
-            <span className="text-sm font-bold text-white">FAQ</span>
+        <div className="grid lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-16 items-start">
+
+          {/* Left Side - Content */}
+          <div ref={headingRef} className="lg:sticky lg:top-24">
+            <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-8 shadow-lg">
+              <span className="text-sm font-bold text-white">FAQ</span>
+            </div>
+
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 tracking-tight">
+              Learn More About{' '}
+              <span className="relative inline-block">
+                <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">
+                  {serviceName}
+                </span>
+              </span>
+            </h2>
+
+            <p className="text-xl text-gray-600 leading-relaxed mb-8">
+              Common questions about our solutions, implementation, and support.
+            </p>
+
+            {/* Bottom CTA */}
+            <div className="pt-4">
+              <p className="text-gray-600 mb-4">
+                Still have questions?
+              </p>
+              <a
+                href="/connect/book-call"
+                className="inline-flex items-center gap-2 text-[#00b5ff] font-semibold hover:underline"
+              >
+                <span>Schedule a call with our team</span>
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
           </div>
 
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 tracking-tight">
-            Questions? <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">We've Got Answers.</span>
-          </h2>
-
-          <p className="text-xl text-gray-600 leading-relaxed">
-            Common questions about our solutions, implementation, and support.
-          </p>
-        </div>
-
-        {/* FAQ Accordion */}
-        <div className="max-w-4xl mx-auto space-y-4">
+          {/* Right Side - FAQ Accordion */}
+          <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -148,22 +175,8 @@ export default function SolutionsFAQ() {
               </div>
             </div>
           ))}
-        </div>
+          </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-4">
-            Still have questions?
-          </p>
-          <a
-            href="/connect/book-call"
-            className="inline-flex items-center gap-2 text-[#00b5ff] font-semibold hover:underline"
-          >
-            <span>Schedule a call with our team</span>
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
         </div>
       </div>
     </section>

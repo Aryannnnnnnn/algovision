@@ -204,7 +204,7 @@ export const navbarData = {
     links: [
       { name: "Blogs", href: "/resources/blogs", description: "Industry insights and expert articles" },
       { name: "Case Studies", href: "/resources/case-studies", description: "Real success stories from our clients" },
-      { name: "E-Books & Guides", href: "/resources/ebooks-guides", description: "Downloadable resources and guides" },
+      // { name: "E-Books & Guides", href: "/resources/ebooks-guides", description: "Downloadable resources and guides" },
     ],
   },
   connect: {

@@ -146,7 +146,7 @@ export default function GlobalPresence() {
 
             {/* Headline */}
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Worldwide Team,{" "}
+              Global Presence,{" "}
               <span className="relative inline-block">
                 <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">
                   Local Expertise
@@ -156,23 +156,33 @@ export default function GlobalPresence() {
 
             {/* Description */}
             <p className="text-xl text-gray-600 leading-relaxed">
-              With offices across three continents, we're positioned to serve clients around the clock with local insights and global reach.
+              With operations spanning multiple continents and partnerships with the world's leading technology platforms, AlgoVision combines global scale with the attention and customization of a boutique consultancy.
             </p>
 
-            {/* Office Points */}
-            <div className="space-y-4 pt-4">
+            {/* Strategic Partnerships */}
+            <div className="pt-4">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Strategic Partnerships</h3>
+              <div className="space-y-4">
               {[
                 {
-                  title: "New York, USA",
-                  description: "Headquarters with 120+ team members driving innovation in AI and marketing technology."
+                  title: "Google Premier Partner",
+                  description: "Elite partnership providing advanced access to Google's marketing and cloud technologies."
                 },
                 {
-                  title: "Edinburgh, UK",
-                  description: "European hub serving 80+ clients across EMEA with strategic marketing expertise."
+                  title: "Meta Business Partner",
+                  description: "Strategic collaboration with Meta for cutting-edge social media and advertising solutions."
                 },
                 {
-                  title: "Dubai, UAE",
-                  description: "Middle East center with 60+ experts delivering 24/7 support and regional market insights."
+                  title: "Microsoft Elite Partner",
+                  description: "Top-tier partnership delivering enterprise solutions powered by Microsoft's ecosystem."
+                },
+                {
+                  title: "Exclusive OTT Platform Access",
+                  description: "Direct partnerships with Netflix, Disney+, Prime Video, Hulu, and Apple TV+ for premium content delivery."
+                },
+                {
+                  title: "650+ Integrated Platform Partners",
+                  description: "Extensive network of technology partners enabling seamless integrations across your entire tech stack."
                 }
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-4 group">
@@ -185,6 +195,7 @@ export default function GlobalPresence() {
                   </div>
                 </div>
               ))}
+              </div>
             </div>
           </div>
 

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, DM_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/layout/navbar";
+import Navbar from "./components/layout/Navbar";
 import Newsletter from "./components/layout/Newsletter";
 import Footer from "./components/layout/footer";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({
   variable: "--font-inter",

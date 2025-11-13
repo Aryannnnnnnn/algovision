@@ -287,7 +287,7 @@ export default function EnterpriseResults() {
             {/* CTA */}
             <div className="inline-block pt-6">
               <Button
-                href="/case-studies"
+                href="/resources/case-studies"
                 variant="primary"
                 size="md"
                 icon={

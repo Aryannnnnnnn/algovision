@@ -33,29 +33,19 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-gradient-to-b from-gray-50 to-white text-gray-700 overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-[0.02]">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `linear-gradient(to right, #00b5ff 1px, transparent 1px), linear-gradient(to bottom, #00b5ff 1px, transparent 1px)`,
-          backgroundSize: '80px 80px'
-        }}></div>
-      </div>
+    <footer className="relative bg-[#111111] text-white overflow-hidden">
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Logo & Social */}
           <div>
-            <Link href="/" className="inline-flex items-center gap-3 mb-4 group">
-              <div className="relative w-9 h-9">
-                <img src="/AlgoVisionLogo.png" alt="Algo Vision Logo" className="w-full h-full object-contain" />
+            <Link href="/" className="inline-block mb-4 group">
+              <div className="relative h-12">
+                <img src="/AlgoVisionLogo.png" alt="Algo Vision Logo" className="h-full object-contain group-hover:opacity-80 transition-opacity duration-300" />
               </div>
-              <h3 className="font-display text-2xl font-bold text-gray-900 group-hover:text-[#00b5ff] transition-colors duration-300">
-                {footerData.company.name}
-              </h3>
             </Link>
 
-            <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-xs">
+            <p className="text-sm text-white leading-relaxed mb-6 max-w-xs">
               {footerData.company.description}
             </p>
 
@@ -65,7 +55,7 @@ export default function Footer() {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-gray-600 hover:bg-[#00b5ff] hover:border-[#00b5ff] hover:text-white shadow-sm transition-all duration-300 ease-in hover:scale-105"
+                  className="w-10 h-10 bg-white/10 border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-[#00b5ff] hover:border-[#00b5ff] hover:text-white shadow-sm transition-all duration-300 ease-in hover:scale-105"
                   aria-label={social.name}
                 >
                   {socialIcons[social.name as keyof typeof socialIcons]}
@@ -76,13 +66,13 @@ export default function Footer() {
 
           {/* Company Column */}
           <div>
-            <h4 className="text-gray-900 font-bold mb-6 text-sm uppercase tracking-wider">Company</h4>
+            <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-wider">Company</h4>
             <ul className="space-y-3">
               {footerData.links.company.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="group relative text-gray-600 hover:text-[#00b5ff] transition-colors duration-300 ease-in text-sm inline-block"
+                    className="group relative text-white hover:text-[#00b5ff] transition-colors duration-300 ease-in text-sm inline-block"
                   >
                     {link.name}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#00b5ff] group-hover:w-full transition-all duration-300 ease-in"></span>
@@ -94,13 +84,13 @@ export default function Footer() {
 
           {/* Resources Column */}
           <div>
-            <h4 className="text-gray-900 font-bold mb-6 text-sm uppercase tracking-wider">Resources</h4>
+            <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-wider">Resources</h4>
             <ul className="space-y-3">
               {footerData.links.resources.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="group relative text-gray-600 hover:text-[#00b5ff] transition-colors duration-300 ease-in text-sm inline-block"
+                    className="group relative text-white hover:text-[#00b5ff] transition-colors duration-300 ease-in text-sm inline-block"
                   >
                     {link.name}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#00b5ff] group-hover:w-full transition-all duration-300 ease-in"></span>
@@ -112,13 +102,13 @@ export default function Footer() {
 
           {/* Connect Column */}
           <div>
-            <h4 className="text-gray-900 font-bold mb-6 text-sm uppercase tracking-wider">Connect</h4>
+            <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-wider">Connect</h4>
             <ul className="space-y-3">
               {footerData.links.connect.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="group relative text-gray-600 hover:text-[#00b5ff] transition-colors duration-300 ease-in text-sm inline-block"
+                    className="group relative text-white hover:text-[#00b5ff] transition-colors duration-300 ease-in text-sm inline-block"
                   >
                     {link.name}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#00b5ff] group-hover:w-full transition-all duration-300 ease-in"></span>
@@ -130,23 +120,23 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-200 pt-6">
-          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-xs text-gray-500">
+        <div className="border-t border-white/10 pt-6">
+          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-xs text-gray-400">
             <span>&copy; {new Date().getFullYear()} {footerData.company.name}</span>
             <span className="hidden sm:inline">|</span>
-            <Link href="/company/privacy" className="hover:text-[#00b5ff] transition-colors">
+            <Link href="/company/privacy" className="text-gray-400 hover:text-[#00b5ff] transition-colors">
               Your Privacy Choices
             </Link>
             <span className="hidden sm:inline">|</span>
-            <Link href="/company/cookie-policy" className="hover:text-[#00b5ff] transition-colors">
+            <Link href="/company/cookie-policy" className="text-gray-400 hover:text-[#00b5ff] transition-colors">
               Cookie Policy
             </Link>
             <span className="hidden sm:inline">|</span>
-            <Link href="/company/sitemap" className="hover:text-[#00b5ff] transition-colors">
+            <Link href="/company/sitemap" className="text-gray-400 hover:text-[#00b5ff] transition-colors">
               Sitemap
             </Link>
             <span className="hidden sm:inline">|</span>
-            <Link href="/company/terms" className="hover:text-[#00b5ff] transition-colors">
+            <Link href="/company/terms" className="text-gray-400 hover:text-[#00b5ff] transition-colors">
               Terms of Service
             </Link>
             <span className="hidden sm:inline">|</span>

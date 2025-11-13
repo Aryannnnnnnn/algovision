@@ -81,7 +81,7 @@ export default function HomeHero() {
           // Start stat animations after GSAP completes
           cleanupFunctions.push(animateValue('projects', 0, 500, 1800));
           cleanupFunctions.push(animateValue('satisfaction', 0, 98, 1800));
-          cleanupFunctions.push(animateValue('years', 0, 15, 1800));
+          cleanupFunctions.push(animateValue('years', 0, 4, 1800));
         }
       });
 
@@ -210,7 +210,7 @@ export default function HomeHero() {
                 Book a Strategy Call
               </Button>
               <Button
-                href="/services"
+                href="/solutions"
                 variant="secondary"
                 size="md"
               >

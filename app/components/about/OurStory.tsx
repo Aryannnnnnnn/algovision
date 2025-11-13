@@ -53,39 +53,45 @@ export default function OurStory() {
               <span className="text-sm font-bold text-white">Our Journey</span>
             </div>
 
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              The <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">Story</span> Behind Algo Vision
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+              The{' '}
+              <span className="relative inline-block">
+                <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">
+                  Story
+                </span>
+              </span>
+              {' '}Behind Algo Vision
             </h2>
 
             <div className="space-y-5 text-gray-600 leading-relaxed text-lg">
               <p>
-                Founded with a vision to revolutionize the digital landscape, Algo Vision has grown from a small startup to a trusted partner for businesses worldwide. Our journey began with a simple belief: <span className="font-semibold text-gray-900">technology should empower, not complicate.</span>
+               Founded in 2021, AlgoVision emerged from a singular conviction: <span className="font-semibold text-gray-900">every project in the digital and technological sector deserves to be executed with precision, completed without exception, and delivered with absolute certainty.</span>
               </p>
               <p>
-                Over the years, we've helped hundreds of companies transform their digital presence, streamline their operations, and achieve remarkable growth. Our secret? A relentless focus on innovation, a deep understanding of our clients' needs, and a team that's passionate about what they do.
+               Headquartered globally with operations spanning multiple continents, AlgoVision serves the world's most demanding leading enterprises, investment firms, healthcare organizations, and e-commerce giants. Our fully integrated methodology combines proprietary CRM systems, AI-powered solutions, and omnichannel expertise to deliver outcomes that transform businesses and redefine what's possible in digital marketing.
               </p>
               <p>
-                Today, we continue to push boundaries, explore new technologies, and deliver solutions that make a real difference. Because for us, success isn't just about completing projects—it's about <span className="font-semibold text-gray-900">building lasting partnerships</span> and creating value that endures.
+                What sets us apart is simple: <span className="font-semibold text-gray-900"> we don't onboard projects we can't guarantee.</span> Our selective approach, backed by a parameter-driven framework, has resulted in a 100% project completion rate since inception—a benchmark unmatched in the industry.
               </p>
             </div>
 
             {/* Stats highlights */}
             <div className="grid grid-cols-2 gap-4 mt-10">
               <div className="bg-[#00b5ff]/10 border border-[#00b5ff]/30 rounded-xl p-5">
-                <div className="text-4xl font-bold text-[#00b5ff] mb-1">500+</div>
-                <div className="text-sm text-gray-600 font-medium">Projects Delivered</div>
+                <div className="text-4xl font-bold text-[#00b5ff] mb-1">110+</div>
+                <div className="text-sm text-gray-600 font-medium">Team Members</div>
               </div>
               <div className="bg-[#00b5ff]/10 border border-[#00b5ff]/30 rounded-xl p-5">
                 <div className="text-4xl font-bold text-[#00b5ff] mb-1">98%</div>
                 <div className="text-sm text-gray-600 font-medium">Client Satisfaction</div>
               </div>
               <div className="bg-[#00b5ff]/10 border border-[#00b5ff]/30 rounded-xl p-5">
-                <div className="text-4xl font-bold text-[#00b5ff] mb-1">15+</div>
+                <div className="text-4xl font-bold text-[#00b5ff] mb-1">4+</div>
                 <div className="text-sm text-gray-600 font-medium">Years Experience</div>
               </div>
               <div className="bg-[#00b5ff]/10 border border-[#00b5ff]/30 rounded-xl p-5">
-                <div className="text-4xl font-bold text-[#00b5ff] mb-1">50+</div>
-                <div className="text-sm text-gray-600 font-medium">Team Members</div>
+                <div className="text-4xl font-bold text-[#00b5ff] mb-1">15+</div>
+                <div className="text-sm text-gray-600 font-medium">Industries</div>
               </div>
             </div>
           </div>

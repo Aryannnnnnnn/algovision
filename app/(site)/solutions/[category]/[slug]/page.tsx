@@ -3,8 +3,8 @@ import { getSolutionData, getAllSolutionPaths } from "@/app/constants/solution-d
 import SolutionHero from "@/app/components/solution-detail/SolutionHero";
 import SolutionFeatures from "@/app/components/solution-detail/SolutionFeatures";
 import SolutionHowItWorks from "@/app/components/solution-detail/SolutionHowItWorks";
-import SolutionUseCases from "@/app/components/solution-detail/SolutionUseCases";
-import SolutionStats from "@/app/components/solution-detail/SolutionStats";
+// import SolutionUseCases from "@/app/components/solution-detail/SolutionUseCases";
+// import SolutionStats from "@/app/components/solution-detail/SolutionStats";
 import SolutionIntegration from "@/app/components/solution-detail/SolutionIntegration";
 import SolutionFAQ from "@/app/components/solution-detail/SolutionFAQ";
 import SolutionRelatedSolutions from "@/app/components/solution-detail/SolutionRelatedSolutions";
@@ -61,19 +61,19 @@ export default function SolutionPage({ params }: SolutionPageProps) {
 
       <SolutionHowItWorks steps={solution.howItWorks} />
 
-      {solution.useCases && solution.useCases.length > 0 && (
+      {/* {solution.useCases && solution.useCases.length > 0 && (
         <SolutionUseCases useCases={solution.useCases} />
-      )}
+      )} */}
 
-      {solution.stats && solution.stats.length > 0 && (
+      {/* {solution.stats && solution.stats.length > 0 && (
         <SolutionStats stats={solution.stats} />
-      )}
+      )} */}
 
       {solution.integrations && solution.integrations.length > 0 && (
         <SolutionIntegration integrations={solution.integrations} />
       )}
 
-      <SolutionFAQ faqs={solution.faqs} />
+      <SolutionFAQ faqs={solution.faqs} serviceName={solution.title} />
 
       {solution.relatedSolutions && solution.relatedSolutions.length > 0 && (
         <SolutionRelatedSolutions solutions={solution.relatedSolutions} />

@@ -76,7 +76,7 @@ export default function CorePillars() {
           <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       ),
-      href: "/services/ai-solutions",
+      href: "/solutions/ai-solutions",
       gradient: "from-blue-500/10 to-cyan-500/10",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80",
     },
@@ -95,7 +95,7 @@ export default function CorePillars() {
           <path strokeLinecap="round" strokeLinejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
         </svg>
       ),
-      href: "/services/pr-communications",
+      href: "/solutions/pr-communications",
       gradient: "from-purple-500/10 to-pink-500/10",
       image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80",
     },
@@ -114,7 +114,7 @@ export default function CorePillars() {
           <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z" />
         </svg>
       ),
-      href: "/services/advertising",
+      href: "/solutions/advertising",
       gradient: "from-orange-500/10 to-red-500/10",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
     },
@@ -133,7 +133,7 @@ export default function CorePillars() {
           <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
         </svg>
       ),
-      href: "/services/growth-performance",
+      href: "/solutions/growth-performance",
       gradient: "from-green-500/10 to-emerald-500/10",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
     },
@@ -260,7 +260,7 @@ export default function CorePillars() {
         {/* Bottom CTA */}
         <div className="inline-block pt-8">
           <Button
-            href="/services"
+            href="/solutions"
             variant="primary"
             size="md"
             icon={

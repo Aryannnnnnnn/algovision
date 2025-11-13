@@ -39,75 +39,31 @@ export default function Timeline() {
   const milestones = [
     {
       number: "01",
-      year: "2010",
-      title: "Founded",
-      subtitle: "The Beginning",
-      description: "Algo Vision launched with a vision to unify marketing intelligence across all channels.",
-      achievements: ["3 Founders", "First Office", "Initial Product Launch"],
-      metric: "Year One",
+      title: "AI & Technology Solutions",
+      subtitle: "The Reality",
+      description: "We don't just implement AI—we architect intelligent systems that transform how enterprises interact with customers, process data, and make decisions at scale.",
+      achievements: ["Conversational AI & Intelligent Virtual Assistants", "AI-Enabled Web Assistants", "Applied AI & Product Engineering"],
     },
     {
       number: "02",
-      year: "2013",
-      title: "Series A Funding",
-      subtitle: "Growth Phase",
-      description: "Secured $15M in funding to expand platform capabilities and team.",
-      achievements: ["$15M Raised", "25 Team Members", "5 Enterprise Clients"],
-      metric: "3 Years",
+      title: "Strategic Communications",
+      subtitle: "The reality",
+      description: "We operate where traditional PR meets algorithmic distribution, ensuring your message reaches the right audience through the right channels at the right moment.",
+      achievements: ["Multi-Platform PR & Media Relations", "OTT Advertising (Netflix, Disney+, Prime Video, Hulu, Apple TV+)", "SEO 3.0 & Generative Search Optimization", "Crisis Management & Reputation Monitoring"],
     },
     {
       number: "03",
-      year: "2015",
-      title: "100 Clients Milestone",
-      subtitle: "Market Validation",
-      description: "Reached 100 enterprise clients across 15 industries worldwide.",
-      achievements: ["100+ Clients", "$5M ARR", "15 Industries"],
-      metric: "5 Years",
+      title: "Omnichannel Advertising",
+      subtitle: "The reality",
+      description: "We don't spread budgets thin across channels—we architect omnichannel symphonies where every dollar, every impression, and every interaction compounds toward your objectives.",
+      achievements: ["15+ Platform Expertise (Google, Meta, TikTok, LinkedIn, Reddit, Snapchat, X, Bluesky, Bing, Yahoo, Twitch, Kick, Discord, Rumble, Taboola)", "Advanced Programmatic & Retargeting", "Real-Time Optimization & Performance Tracking"],
     },
     {
       number: "04",
-      year: "2017",
-      title: "AI Integration",
-      subtitle: "Technology Leap",
-      description: "Launched industry-first AI-powered campaign optimization engine.",
-      achievements: ["AI Platform Launch", "200+ Clients", "Patent Filed"],
-      metric: "7 Years",
-    },
-    {
-      number: "05",
-      year: "2019",
-      title: "Global Expansion",
-      subtitle: "International Growth",
-      description: "Opened offices in London, Singapore, and Sydney.",
-      achievements: ["4 Global Offices", "150 Employees", "50+ Countries"],
-      metric: "9 Years",
-    },
-    {
-      number: "06",
-      year: "2021",
-      title: "Platform Evolution",
-      subtitle: "Unified System",
-      description: "Released unified command center integrating 21 marketing platforms.",
-      achievements: ["21 Integrations", "400+ Clients", "Enterprise Grade"],
-      metric: "11 Years",
-    },
-    {
-      number: "07",
-      year: "2023",
-      title: "Industry Leader",
-      subtitle: "Market Recognition",
-      description: "Recognized as Gartner Magic Quadrant Leader in Marketing Intelligence.",
-      achievements: ["500+ Clients", "$50M+ Managed", "Gartner Leader"],
-      metric: "13 Years",
-    },
-    {
-      number: "08",
-      year: "2025",
-      title: "Future Vision",
-      subtitle: "Next Generation",
-      description: "Pioneering next-generation predictive marketing with advanced AI models.",
-      achievements: ["Next-Gen AI", "Global Leader", "Innovation Hub"],
-      metric: "Ongoing",
+      title: "Growth & Performance",
+      subtitle: "The reality",
+      description: "We engineer growth systems, not growth hacks. Sustainable, scalable, predictable revenue generation backed by data and executed with precision.",
+      achievements: ["Enterprise Email & SMS Marketing", "LinkedIn & WhatsApp Campaigns", "High-Velocity Lead Generation", "Conversion Optimization"],
     },
   ];
 
@@ -134,9 +90,9 @@ export default function Timeline() {
                     <div className="flex-1 min-w-0 lg:ml-6">
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
                         <h3 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-[#00b5ff] transition-colors duration-500">
-                          {milestone.year}: {milestone.title}
+                          {milestone.title}
                         </h3>
-                        <span className="text-xs font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full w-fit">{milestone.metric}</span>
+                        
                       </div>
                       <p className="text-sm font-semibold text-[#00b5ff] mb-3">{milestone.subtitle}</p>
                       <p className="text-gray-600 leading-relaxed mb-4">
@@ -164,14 +120,19 @@ export default function Timeline() {
           {/* Heading - Right on desktop, top on mobile/tablet */}
           <div className="lg:sticky lg:top-24 max-w-2xl mx-auto order-1 lg:order-2">
             <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-6 shadow-lg">
-              <span className="text-sm font-bold text-white">Our Journey</span>
+              <span className="text-sm font-bold text-white">Our Capabilities</span>
             </div>
 
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              15 Years of <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">Innovation</span>
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+              Full-Spectrum{' '}
+              <span className="relative inline-block">
+                <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">
+                  Digital Solutions
+                </span>
+              </span>
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              From a startup with a vision to a global leader in marketing intelligence—here's how we got here.
+              From AI-powered technology to omnichannel advertising—we deliver integrated solutions that transform how enterprises connect with their audiences and achieve measurable growth.
             </p>
           </div>
         </div>

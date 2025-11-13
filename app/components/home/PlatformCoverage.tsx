@@ -237,7 +237,7 @@ export default function PlatformCoverage() {
         {/* CTA */}
         <div className="inline-block">
           <Button
-            href="/services"
+            href="/solutions"
             variant="primary"
             size="md"
             icon={

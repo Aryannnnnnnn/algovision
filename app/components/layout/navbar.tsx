@@ -6,7 +6,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { navbarData } from "@/app/constants/navbar-data";
 import Button from "@/app/components/ui/Button";
 
-export default function Navbar() {
+export default function navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileActiveSection, setMobileActiveSection] = useState<string | null>(null);

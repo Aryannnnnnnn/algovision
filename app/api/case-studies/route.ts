@@ -90,7 +90,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           error: 'Invalid input',
-          details: validation.error.errors.map(err => ({
+          details: validation.error.issues.map((err: any) => ({
             field: err.path.join('.'),
             message: err.message
           }))

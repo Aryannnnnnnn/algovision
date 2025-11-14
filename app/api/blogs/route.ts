@@ -10,9 +10,7 @@ const blogSchema = z.object({
     .regex(/^[a-z0-9-]+$/, 'Slug must contain only lowercase letters, numbers, and hyphens'),
   content: z.string().min(1, 'Content is required').max(100000, 'Content is too long'),
   excerpt: z.string().min(1, 'Excerpt is required').max(500, 'Excerpt must be less than 500 characters'),
-  category: z.enum(['AI & Technology', 'Marketing', 'Business Growth', 'Case Studies', 'Industry Insights'], {
-    errorMap: () => ({ message: 'Invalid category' })
-  }).optional(),
+  category: z.enum(['AI & Technology', 'Marketing', 'Business Growth', 'Case Studies', 'Industry Insights']).optional(),
   status: z.enum(['draft', 'published']).optional(),
   featured_image: z.string().url('Invalid image URL').optional().or(z.literal('')),
 });
@@ -74,7 +72,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           error: 'Invalid input',
-          details: validation.error.errors.map(err => ({
+          details: validation.error.issues.map((err: any) => ({
             field: err.path.join('.'),
             message: err.message
           }))

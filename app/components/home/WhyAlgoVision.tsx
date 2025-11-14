@@ -55,7 +55,7 @@ export default function WhyAlgoVision() {
     {
       title: "Unified Intelligence Foundation",
       subtitle: "Own your growth trajectory",
-      description: "Consolidate 25+ fragmented solutions into one self-optimizing ecosystem. Connect AI, advertising, PR, and performance marketing through a single intelligence layer that learns from every interaction.",
+      description: "Consolidate 25 fragmented solutions into one self-optimizing ecosystem. Connect AI, advertising, PR, and performance marketing through a single intelligence layer that learns from every interaction.",
       icon: (
         <svg className="w-full h-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
@@ -65,7 +65,7 @@ export default function WhyAlgoVision() {
     {
       title: "Cross-Channel Orchestration",
       subtitle: "Execute with precision",
-      description: "Activate across 15+ advertising platforms, 8 communication channels, and PR networks—all synchronized in real-time. Your entire system responds as one, whether managing routine optimization or navigating unexpected challenges.",
+      description: "Activate across 15+ advertising platforms, 8 communication channels, and PR networksall synchronized in real-time. Your entire system responds as one, whether managing routine optimization or navigating unexpected challenges.",
       icon: (
         <svg className="w-full h-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" />
@@ -105,12 +105,8 @@ export default function WhyAlgoVision() {
             Why do <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">enterprise leaders</span> choose Algo Vision?
           </h2>
 
-          <p className="text-xl text-gray-600 leading-relaxed mb-4">
-            Trusted by global innovators and enterprise leaders shaping the next era of marketing intelligence.
-          </p>
-
           <p className="text-lg text-gray-500 leading-relaxed">
-            100+ brands trust Algo Vision to unify their marketing intelligence—from Fortune 500s to category-defining disruptors.
+            100+ brands trust AlgoVision to unify their marketing intelligence from Fortune 500s partners to category-defining disruptors.
           </p>
         </div>
 

@@ -204,7 +204,7 @@ export default function EnterpriseResults() {
               </div>
 
               {/* Case Study Card */}
-              <a href="/case-studies" className="block bg-white rounded-2xl border-2 border-transparent shadow-[0_8px_30px_-8px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] hover:border-[#1e293b] transition-all duration-500 overflow-hidden group cursor-pointer">
+              <a href="/resources/case-studies" className="block bg-white rounded-2xl border-2 border-transparent shadow-[0_8px_30px_-8px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] hover:border-[#1e293b] transition-all duration-500 overflow-hidden group cursor-pointer">
                 {/* Header with gradient background */}
                 <div className="bg-gradient-to-br from-[#f8fafc] to-white p-6 border-b border-gray-100">
                   <div className="flex items-center gap-4">

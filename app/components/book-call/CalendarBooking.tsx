@@ -36,9 +36,42 @@ export default function CalendarBooking() {
     return () => ctx.revert();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Booking submitted:", { ...formData, selectedDate, selectedTime });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/bookings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          selected_date: selectedDate,
+          selected_time: selectedTime,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to book call');
+      }
+
+      // Success! Show confirmation
+      setShowSuccess(true);
+
+      // Reset form
+      setFormData({ name: '', email: '', company: '', phone: '' });
+      setSelectedDate(null);
+      setSelectedTime(null);
+    } catch (error: any) {
+      alert(error.message || 'Failed to book call. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -83,7 +116,31 @@ export default function CalendarBooking() {
       </div>
 
       <div className="relative xl:max-w-[90vw] max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div ref={contentRef} className="bg-white p-8 md:p-12">
+        {showSuccess ? (
+          <div ref={contentRef} className="bg-white p-8 md:p-12 text-center">
+            <div className="max-w-2xl mx-auto">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Booking Confirmed! 🎉
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We've sent a confirmation email with all the details and a calendar invite.
+                Check your inbox!
+              </p>
+              <button
+                onClick={() => setShowSuccess(false)}
+                className="px-8 py-3 bg-[#00b5ff] text-white rounded-lg font-semibold hover:bg-[#0099dd] transition-colors"
+              >
+                Book Another Call
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div ref={contentRef} className="bg-white p-8 md:p-12">
           <div className="mb-10">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Choose Your Time
@@ -222,20 +279,25 @@ export default function CalendarBooking() {
 
                 <button
                   type="submit"
-                  disabled={!selectedDate || !selectedTime}
+                  disabled={!selectedDate || !selectedTime || isSubmitting}
                   className="w-full group relative bg-[#00011f] text-white hover:scale-[1.02] font-semibold transition-all duration-500 ease-out flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 px-10 py-5 text-lg"
                 >
-                  <span className="relative">Confirm Booking</span>
-                  <span className="relative group-hover:translate-x-1 transition-transform duration-500 ease-out">
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
+                  <span className="relative">
+                    {isSubmitting ? 'Booking...' : 'Confirm Booking'}
                   </span>
+                  {!isSubmitting && (
+                    <span className="relative group-hover:translate-x-1 transition-transform duration-500 ease-out">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                  )}
                 </button>
               </form>
             </div>
           </div>
         </div>
+        )}
       </div>
     </section>
   );

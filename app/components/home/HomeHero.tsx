@@ -192,11 +192,11 @@ export default function HomeHero() {
               </div>
 
               <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.05] mb-6 tracking-tight">
-                Intelligence that <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent"> unites </span> your <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">data</span> marketing and <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">growth</span>
+                Premier marketing consultancy with complete <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">solutions delivery</span>
               </h1>
 
               <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-                Unifying every channel, insight, and interaction, we build intelligent end-to-end marketing ecosystems that connect data, creativity, and performance to drive measurable enterprise growth.
+                We provide strategic marketing consultancy backed by modern solutions infrastructure: AI-powered automation, full-spectrum advertising, integrated PR and communications, and multi-channel performance marketing unified under one accountable partner.
               </p>
             </div>
 
@@ -497,7 +497,7 @@ export default function HomeHero() {
             behavior: 'smooth'
           });
         }}
-        className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 animate-bounce cursor-pointer hover:text-[#00b5ff] transition-colors group"
+        className="hidden lg:flex absolute bottom-38 left-1/2 -translate-x-1/2 flex-col items-center gap-2 animate-bounce cursor-pointer hover:text-[#00b5ff] transition-colors group"
       >
         <span className="text-xs font-medium text-gray-500 uppercase tracking-wider group-hover:text-[#00b5ff]">Scroll</span>
         <svg className="w-5 h-5 text-[#00b5ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

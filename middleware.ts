@@ -1,11 +1,11 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
 const isPublicRoute = createRouteMatcher([
-  '/admin/sign-in(.*)',
+  '/algoadmin/sign-in(.*)',
 ]);
 
 const isProtectedRoute = createRouteMatcher([
-  '/admin/dashboard(.*)',
+  '/algoadmin/dashboard(.*)',
 ]);
 
 export default clerkMiddleware(async (auth, req) => {

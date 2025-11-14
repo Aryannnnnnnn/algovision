@@ -3,8 +3,28 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Save } from "lucide-react";
+import { ArrowLeft, Save, Loader2 } from "lucide-react";
+import toast from "react-hot-toast";
 import RichTextEditor from "@/app/components/RichTextEditor";
+import ImageUpload from "@/app/components/ImageUpload";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export default function NewBlogPage() {
   const router = useRouter();
@@ -16,6 +36,7 @@ export default function NewBlogPage() {
     excerpt: "",
     status: "draft",
     featured_image: "",
+    category: "",
   });
 
   const handleTitleChange = (title: string) => {
@@ -47,143 +68,198 @@ export default function NewBlogPage() {
         throw new Error(error.error || "Failed to create blog");
       }
 
-      router.push("/admin/dashboard/blogs");
+      toast.success("Blog post created successfully");
+      router.push("/algoadmin/dashboard/blogs");
       router.refresh();
     } catch (error: any) {
-      alert(error.message);
+      toast.error(error.message || "Failed to create blog post");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div>
-      <div className="mb-8">
-        <Link
-          href="/admin/dashboard/blogs"
-          className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-4"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Back to Blogs
-        </Link>
-        <h1 className="text-3xl font-bold text-gray-900">Create New Blog Post</h1>
+    <div className="space-y-6">
+      {/* Header */}
+      <div>
+        <Button variant="ghost" size="sm" asChild className="mb-4">
+          <Link href="/algoadmin/dashboard/blogs">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Blogs
+          </Link>
+        </Button>
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight">Create New Blog Post</h1>
+          <p className="text-muted-foreground mt-1">
+            Create and publish a new blog post
+          </p>
+        </div>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="bg-white rounded-lg shadow p-6 space-y-6">
-          {/* Title */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Title *
-            </label>
-            <input
-              type="text"
-              value={formData.title}
-              onChange={(e) => handleTitleChange(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00b5ff] focus:border-transparent"
-              placeholder="Enter blog title..."
-              required
-            />
-          </div>
+        {/* Basic Information */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Basic Information</CardTitle>
+            <CardDescription>
+              The title and URL slug for your blog post
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="title">Title *</Label>
+              <Input
+                id="title"
+                type="text"
+                value={formData.title}
+                onChange={(e) => handleTitleChange(e.target.value)}
+                placeholder="Enter blog title..."
+                required
+              />
+            </div>
 
-          {/* Slug */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Slug *
-            </label>
-            <input
-              type="text"
-              value={formData.slug}
-              onChange={(e) =>
-                setFormData({ ...formData, slug: e.target.value })
-              }
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00b5ff] focus:border-transparent"
-              placeholder="blog-post-url"
-              required
-            />
-            <p className="text-xs text-gray-500 mt-1">
-              URL: /blog/{formData.slug || "your-blog-slug"}
-            </p>
-          </div>
+            <div className="space-y-2">
+              <Label htmlFor="slug">Slug *</Label>
+              <Input
+                id="slug"
+                type="text"
+                value={formData.slug}
+                onChange={(e) =>
+                  setFormData({ ...formData, slug: e.target.value })
+                }
+                placeholder="blog-post-url"
+                required
+              />
+              <p className="text-xs text-muted-foreground">
+                URL: /blog/{formData.slug || "your-blog-slug"}
+              </p>
+            </div>
 
-          {/* Excerpt */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Excerpt *
-            </label>
-            <textarea
-              value={formData.excerpt}
-              onChange={(e) =>
-                setFormData({ ...formData, excerpt: e.target.value })
-              }
-              rows={3}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00b5ff] focus:border-transparent"
-              placeholder="Brief description of the blog post..."
-              required
-            />
-          </div>
+            <div className="space-y-2">
+              <Label htmlFor="excerpt">Excerpt *</Label>
+              <Textarea
+                id="excerpt"
+                value={formData.excerpt}
+                onChange={(e) =>
+                  setFormData({ ...formData, excerpt: e.target.value })
+                }
+                placeholder="Brief description of the blog post..."
+                rows={3}
+                required
+              />
+              <p className="text-xs text-muted-foreground">
+                Brief description shown in blog listings
+              </p>
+            </div>
+          </CardContent>
+        </Card>
 
-          {/* Content */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Content *
-            </label>
+        {/* Content */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Content *</CardTitle>
+            <CardDescription>
+              The main content of your blog post
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
             <RichTextEditor
               content={formData.content}
               onChange={(content) => setFormData({ ...formData, content })}
+              context="blogs"
             />
-          </div>
+          </CardContent>
+        </Card>
 
-          {/* Featured Image */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Featured Image URL
-            </label>
-            <input
-              type="url"
+        {/* Media */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Featured Image</CardTitle>
+            <CardDescription>
+              Upload a cover image for your blog post
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ImageUpload
               value={formData.featured_image}
-              onChange={(e) =>
-                setFormData({ ...formData, featured_image: e.target.value })
+              onChange={(url) =>
+                setFormData({ ...formData, featured_image: url })
               }
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00b5ff] focus:border-transparent"
-              placeholder="https://example.com/image.jpg"
+              folder="blogs"
             />
-          </div>
+          </CardContent>
+        </Card>
 
-          {/* Status */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Status
-            </label>
-            <select
-              value={formData.status}
-              onChange={(e) =>
-                setFormData({ ...formData, status: e.target.value })
-              }
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00b5ff] focus:border-transparent"
-            >
-              <option value="draft">Draft</option>
-              <option value="published">Published</option>
-            </select>
-          </div>
-        </div>
+        {/* Settings */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Settings</CardTitle>
+            <CardDescription>
+              Category and publication status
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="category">Category *</Label>
+              <Select
+                value={formData.category}
+                onValueChange={(value) =>
+                  setFormData({ ...formData, category: value })
+                }
+              >
+                <SelectTrigger id="category">
+                  <SelectValue placeholder="Select a category" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="AI & Technology">AI & Technology</SelectItem>
+                  <SelectItem value="Marketing">Marketing</SelectItem>
+                  <SelectItem value="Business Growth">Business Growth</SelectItem>
+                  <SelectItem value="Case Studies">Case Studies</SelectItem>
+                  <SelectItem value="Industry Insights">Industry Insights</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="status">Status</Label>
+              <Select
+                value={formData.status}
+                onValueChange={(value) =>
+                  setFormData({ ...formData, status: value })
+                }
+              >
+                <SelectTrigger id="status">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="draft">Draft</SelectItem>
+                  <SelectItem value="published">Published</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Actions */}
         <div className="flex items-center justify-end gap-4">
-          <Link
-            href="/admin/dashboard/blogs"
-            className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
-          >
-            Cancel
-          </Link>
-          <button
-            type="submit"
-            disabled={loading}
-            className="flex items-center gap-2 px-6 py-2 bg-[#00b5ff] text-white rounded-lg hover:bg-[#0099dd] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            <Save className="w-4 h-4" />
-            {loading ? "Saving..." : "Save Blog Post"}
-          </button>
+          <Button variant="outline" type="button" asChild>
+            <Link href="/algoadmin/dashboard/blogs">
+              Cancel
+            </Link>
+          </Button>
+          <Button type="submit" disabled={loading}>
+            {loading ? (
+              <>
+                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                Saving...
+              </>
+            ) : (
+              <>
+                <Save className="w-4 h-4 mr-2" />
+                Save Blog Post
+              </>
+            )}
+          </Button>
         </div>
       </form>
     </div>

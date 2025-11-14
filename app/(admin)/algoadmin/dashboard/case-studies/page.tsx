@@ -7,7 +7,7 @@ export default async function CaseStudiesPage() {
   const user = await currentUser();
 
   if (!user) {
-    redirect("/admin/sign-in");
+    redirect("/algoadmin/sign-in");
   }
 
   // Fetch case studies from database

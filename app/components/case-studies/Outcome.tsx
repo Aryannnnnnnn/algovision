@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useMemo } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { Target } from "lucide-react";
+import { sanitizeHTML } from "@/lib/utils/sanitize";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -15,6 +16,7 @@ interface OutcomeProps {
 
 export default function Outcome({ content }: OutcomeProps) {
   const sectionRef = useRef<HTMLElement>(null);
+  const sanitizedContent = useMemo(() => sanitizeHTML(content), [content]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -50,7 +52,7 @@ export default function Outcome({ content }: OutcomeProps) {
         <div
           className="prose prose-lg max-w-none text-gray-700 leading-relaxed"
           style={{ fontSize: '17px', lineHeight: '1.9' }}
-          dangerouslySetInnerHTML={{ __html: content }}
+          dangerouslySetInnerHTML={{ __html: sanitizedContent }}
         />
 
         {/* Dashed separator */}

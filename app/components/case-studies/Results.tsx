@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useMemo } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { sanitizeHTML } from "@/lib/utils/sanitize";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -14,6 +15,7 @@ interface ResultsProps {
 
 export default function Results({ results }: ResultsProps) {
   const sectionRef = useRef<HTMLElement>(null);
+  const sanitizedResults = useMemo(() => sanitizeHTML(results), [results]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -49,7 +51,7 @@ export default function Results({ results }: ResultsProps) {
         <div
           className="prose prose-lg max-w-none text-gray-700 leading-relaxed [&_img]:w-full [&_img]:max-w-2xl [&_img]:h-auto [&_img]:mx-auto [&_img]:rounded-lg [&_img]:my-8"
           style={{ fontSize: '17px', lineHeight: '1.9' }}
-          dangerouslySetInnerHTML={{ __html: results }}
+          dangerouslySetInnerHTML={{ __html: sanitizedResults }}
         />
 
         {/* Dashed separator */}

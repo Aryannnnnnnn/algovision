@@ -1,14 +1,5 @@
-"use client";
-
-import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ArrowRight, Building2, Tag } from "lucide-react";
-
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
 
 interface CaseStudy {
   id: string;
@@ -20,37 +11,11 @@ interface CaseStudy {
   featured_image?: string;
 }
 
-export default function CaseStudiesGrid() {
-  const [caseStudies, setCaseStudies] = useState<CaseStudy[]>([]);
-  const [loading, setLoading] = useState(true);
-  const gridRef = useRef<HTMLDivElement>(null);
+interface CaseStudiesGridProps {
+  caseStudies: CaseStudy[];
+}
 
-  useEffect(() => {
-    fetchCaseStudies();
-  }, []);
-
-  const fetchCaseStudies = async () => {
-    try {
-      const response = await fetch("/api/case-studies?status=published");
-      const data = await response.json();
-      setCaseStudies(data.caseStudies || []);
-    } catch (error) {
-      console.error("Failed to fetch case studies:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  if (loading) {
-    return (
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center text-gray-600">Loading case studies...</div>
-        </div>
-      </section>
-    );
-  }
-
+export default function CaseStudiesGrid({ caseStudies }: CaseStudiesGridProps) {
   if (caseStudies.length === 0) {
     return (
       <section className="py-16 md:py-24 bg-gray-50">
@@ -64,15 +29,12 @@ export default function CaseStudiesGrid() {
   return (
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          ref={gridRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {caseStudies.map((caseStudy) => (
             <Link
               key={caseStudy.id}
               href={`/resources/case-studies/${caseStudy.slug}`}
-              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="group bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200 hover:shadow-xl hover:border-[#00b5ff] transition-all duration-300"
             >
               {/* Featured Image */}
               {caseStudy.featured_image && (
@@ -87,7 +49,7 @@ export default function CaseStudiesGrid() {
               )}
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-6 bg-white">
                 {/* Meta */}
                 <div className="flex flex-wrap items-center gap-3 mb-4 text-xs text-gray-500">
                   <div className="flex items-center gap-1">

@@ -7,7 +7,7 @@ export default async function BlogsPage() {
   const user = await currentUser();
 
   if (!user) {
-    redirect("/admin/sign-in");
+    redirect("/algoadmin/sign-in");
   }
 
   // Fetch blogs from database

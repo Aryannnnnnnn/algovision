@@ -12,6 +12,7 @@ export async function POST(request: NextRequest) {
 
     const formData = await request.formData();
     const file = formData.get('file') as File;
+    const context = formData.get('context') as string || 'general'; // blogs, case-studies, or general
 
     if (!file) {
       return NextResponse.json({ error: 'No file provided' }, { status: 400 });
@@ -35,7 +36,7 @@ export async function POST(request: NextRequest) {
     const randomString = Math.random().toString(36).substring(7);
     const fileExt = file.name.split('.').pop();
     const fileName = `${timestamp}-${randomString}.${fileExt}`;
-    const filePath = `editor-images/${fileName}`;
+    const filePath = `editor-images/${context}/${fileName}`;
 
     // Convert file to buffer
     const arrayBuffer = await file.arrayBuffer();
@@ -43,7 +44,7 @@ export async function POST(request: NextRequest) {
 
     // Upload to Supabase Storage
     const { data, error } = await supabaseAdmin.storage
-      .from('case-studies')
+      .from('images')
       .upload(filePath, buffer, {
         contentType: file.type,
         upsert: false,
@@ -59,7 +60,7 @@ export async function POST(request: NextRequest) {
 
     // Get public URL
     const { data: { publicUrl } } = supabaseAdmin.storage
-      .from('case-studies')
+      .from('images')
       .getPublicUrl(filePath);
 
     return NextResponse.json({ url: publicUrl });

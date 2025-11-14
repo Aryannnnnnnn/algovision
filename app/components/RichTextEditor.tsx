@@ -39,9 +39,10 @@ import {
 interface Props {
   content: string;
   onChange: (content: string) => void;
+  context?: string; // 'blogs', 'case-studies', or 'general'
 }
 
-export default function RichTextEditor({ content, onChange }: Props) {
+export default function RichTextEditor({ content, onChange, context = 'general' }: Props) {
   const [uploading, setUploading] = React.useState(false);
 
   const editor = useEditor({
@@ -100,6 +101,7 @@ export default function RichTextEditor({ content, onChange }: Props) {
     try {
       const formData = new FormData();
       formData.append('file', file);
+      formData.append('context', context);
 
       const response = await fetch('/api/upload-image', {
         method: 'POST',

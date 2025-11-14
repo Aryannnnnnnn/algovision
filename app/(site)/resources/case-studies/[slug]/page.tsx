@@ -7,6 +7,7 @@ import Outcome from "@/app/components/case-studies/Outcome";
 import Results from "@/app/components/case-studies/Results";
 import TableOfContents from "@/app/components/case-studies/TableOfContents";
 import CaseStudiesCarousel from "@/app/components/case-studies/CaseStudiesCarousel";
+import ViewTracker from "@/app/components/ViewTracker";
 
 async function getCaseStudy(slug: string) {
   try {
@@ -39,6 +40,7 @@ export default async function CaseStudyPage({
 
   return (
     <main className="min-h-screen bg-gray-50">
+      <ViewTracker type="case-study" id={caseStudy.id} />
       <CaseStudyHero caseStudy={caseStudy} />
 
       {/* Content Container with Table of Contents */}

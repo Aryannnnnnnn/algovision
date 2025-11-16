@@ -62,7 +62,7 @@ export default function CaseStudyHero({ caseStudy }: CaseStudyHeroProps) {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-white overflow-hidden"
+      className="relative bg-gradient-to-br from-gray-50 via-white to-blue-50 overflow-hidden"
     >
       <div className="relative xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -70,60 +70,60 @@ export default function CaseStudyHero({ caseStudy }: CaseStudyHeroProps) {
           <div ref={contentRef} className="space-y-6">
             {/* Industry Badge */}
             <div className="inline-flex">
-              <span className="px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-full">
+              <span className="px-4 py-2 bg-[#1e293b] text-white text-sm font-bold rounded-full shadow-lg">
                 {caseStudy.industry.toUpperCase()} BRAND
               </span>
             </div>
 
             {/* Breadcrumb */}
-            <div className="flex items-center gap-2 text-sm text-blue-600">
-              <a href="/" className="hover:underline">Home</a>
-              <span>/</span>
-              <a href="/resources/case-studies" className="hover:underline">Case studies</a>
-              <span>/</span>
+            <div className="flex items-center gap-2 text-sm font-medium text-gray-600">
+              <a href="/" className="hover:text-[#00b5ff] transition-colors">Home</a>
+              <span className="text-gray-400">/</span>
+              <a href="/resources/case-studies" className="hover:text-[#00b5ff] transition-colors">Case studies</a>
+              <span className="text-gray-400">/</span>
             </div>
 
             {/* Title */}
-            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent leading-tight">
               {caseStudy.title}
             </h1>
 
             {/* Divider Line */}
-            <div className="w-full h-px bg-gray-900"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#00b5ff] to-[#0095d9] rounded-full"></div>
 
             {/* Date */}
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-              <Calendar className="w-4 h-4" />
-              <span>{formatDate(caseStudy.published_at)}</span>
+            <div className="flex items-center gap-2 text-sm text-gray-600 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full w-fit border border-gray-200">
+              <Calendar className="w-4 h-4 text-[#00b5ff]" />
+              <span className="font-medium">{formatDate(caseStudy.published_at)}</span>
             </div>
 
-            {/* Results Box - 3D Cuboid */}
-            <div className="relative" style={{ perspective: '1500px' }}>
-              <div
-                className="bg-white rounded-2xl p-6 relative border-2 border-blue-600"
-                style={{
-                  transform: 'rotateX(8deg) rotateY(-2deg)',
-                  transformStyle: 'preserve-3d',
-                  boxShadow: '12px 12px 0px #6366f1, 0 25px 50px -12px rgba(99, 102, 241, 0.5)',
-                }}
-              >
-                <div className="inline-block px-4 py-1 bg-blue-600 text-white text-sm font-bold rounded-md mb-4">
-                  Results
+            {/* Results Box - Modern Glassmorphism */}
+            <div className="relative">
+              <div className="bg-white/80 backdrop-blur-xl rounded-3xl p-8 relative border border-gray-200 shadow-2xl shadow-blue-500/10">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#00b5ff] via-blue-400 to-indigo-500 rounded-t-3xl"></div>
+
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#1e293b] text-white text-xs font-bold rounded-full mb-6 shadow-md">
+                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                    <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                  </svg>
+                  <span>RESULTS</span>
                 </div>
-                <div className="flex flex-wrap justify-between gap-8">
-                  <div>
-                    <div className="text-4xl font-bold text-gray-900 mb-1">
+
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <div className="text-5xl font-black bg-gradient-to-br from-[#00b5ff] to-[#0095d9] bg-clip-text text-transparent">
                       {metric1Value}
                     </div>
-                    <div className="text-sm text-gray-600">
+                    <div className="text-sm text-gray-700 font-medium leading-tight">
                       {metric1Label}
                     </div>
                   </div>
-                  <div>
-                    <div className="text-4xl font-bold text-gray-900 mb-1">
+                  <div className="space-y-2">
+                    <div className="text-5xl font-black bg-gradient-to-br from-indigo-500 to-purple-600 bg-clip-text text-transparent">
                       {metric2Value}
                     </div>
-                    <div className="text-sm text-gray-600">
+                    <div className="text-sm text-gray-700 font-medium leading-tight">
                       {metric2Label}
                     </div>
                   </div>
@@ -136,15 +136,18 @@ export default function CaseStudyHero({ caseStudy }: CaseStudyHeroProps) {
 
             {/* Services */}
             <div className="space-y-4">
-              <h3 className="text-lg font-bold text-blue-600">Services</h3>
+              <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2">
+                <span className="w-1.5 h-6 bg-gradient-to-b from-[#00b5ff] to-[#0095d9] rounded-full"></span>
+                Services
+              </h3>
               <div className="flex flex-wrap gap-3">
                 {services.map((service, index) => (
                   <span
                     key={index}
-                    className={`px-4 py-2 rounded-full text-sm font-medium ${
+                    className={`px-4 py-2 rounded-full text-sm font-semibold ${
                       index === 0
-                        ? "bg-gray-900 text-white"
-                        : "border border-gray-900 text-gray-900 bg-white"
+                        ? "bg-gradient-to-r from-gray-900 to-gray-800 text-white"
+                        : "border-2 border-gray-900 text-gray-900 bg-white"
                     }`}
                   >
                     {service}
@@ -154,23 +157,15 @@ export default function CaseStudyHero({ caseStudy }: CaseStudyHeroProps) {
             </div>
           </div>
 
-          {/* Right Column - Image with C-shaped border */}
+          {/* Right Column - Image with Modern Border */}
           <div className="relative lg:mt-20 flex justify-center lg:justify-end">
             {caseStudy.featured_image && (
               <div className="relative max-w-2xl w-full">
-                {/* C-shaped border - wrapping tightly around image */}
-                <div
-                  className="absolute -left-6 top-8 -bottom-8 w-[calc(100%-2rem)]"
-                  style={{
-                    borderLeft: '2px solid #6366f1',
-                    borderTop: '2px solid #6366f1',
-                    borderBottom: '2px solid #6366f1',
-                    borderTopLeftRadius: '2rem',
-                    borderTopRightRadius: '3rem',
-                    borderBottomLeftRadius: '2rem',
-                    borderBottomRightRadius: '3rem',
-                  }}
-                ></div>
+                {/* Decorative gradient border elements */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-[#00b5ff] via-blue-400 to-indigo-500 rounded-3xl opacity-20 blur-2xl"></div>
+
+                {/* Accent border */}
+                <div className="absolute -left-4 top-4 -bottom-4 right-8 border-4 border-[#00b5ff] rounded-3xl"></div>
 
                 {/* Image */}
                 <div className="relative rounded-3xl overflow-hidden z-10 aspect-square">
@@ -179,6 +174,8 @@ export default function CaseStudyHero({ caseStudy }: CaseStudyHeroProps) {
                     alt={caseStudy.title}
                     className="w-full h-full object-cover"
                   />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 via-transparent to-indigo-600/10 pointer-events-none"></div>
                 </div>
               </div>
             )}

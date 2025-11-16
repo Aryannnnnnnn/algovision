@@ -1,12 +1,37 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { navbarData } from "@/app/constants/navbar-data";
 import Button from "@/app/components/ui/Button";
 
 export default function navbar() {
+  // Create a mapping of solution names to SVG numbers (1-33)
+  const solutionIconMap = useMemo(() => {
+    const allSolutions: string[] = [];
+    navbarData.solutions.categories.forEach(category => {
+      category.links.forEach(link => {
+        allSolutions.push(link.name);
+      });
+    });
+
+    // Shuffle array of numbers 1-33
+    const svgNumbers = Array.from({ length: 33 }, (_, i) => i + 1);
+    for (let i = svgNumbers.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [svgNumbers[i], svgNumbers[j]] = [svgNumbers[j], svgNumbers[i]];
+    }
+
+    // Map each solution to an SVG number
+    const mapping: Record<string, number> = {};
+    allSolutions.forEach((name, index) => {
+      mapping[name] = svgNumbers[index];
+    });
+
+    return mapping;
+  }, []);
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileActiveSection, setMobileActiveSection] = useState<string | null>(null);
@@ -98,12 +123,14 @@ export default function navbar() {
                             <Link
                               key={link.href}
                               href={link.href}
-                              className="group flex items-start gap-3 p-3 rounded-lg hover:bg-[#00b5ff]/10 transition-all duration-300"
+                              className="group flex items-center gap-3 p-3 rounded-lg hover:bg-[#00b5ff]/10 transition-all duration-300"
                             >
-                              <div className="flex-shrink-0 w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-[#00b5ff]/20 transition-colors duration-300">
-                                <svg className="w-5 h-5 text-gray-600 group-hover:text-[#00b5ff] transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                                </svg>
+                              <div className="flex-shrink-0 w-16 h-16 flex items-center justify-center">
+                                <img
+                                  src={`/NavbarSVGS/${solutionIconMap[link.name]}.svg`}
+                                  alt={link.name}
+                                  className="w-16 h-16 object-contain"
+                                />
                               </div>
                               <div className="flex-1 min-w-0">
                                 <div className="text-sm font-semibold text-gray-900 group-hover:text-[#00b5ff] transition-colors duration-300 mb-0.5">

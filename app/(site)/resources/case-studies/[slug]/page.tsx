@@ -6,6 +6,7 @@ import Solutions from "@/app/components/case-studies/Solutions";
 import Outcome from "@/app/components/case-studies/Outcome";
 import Results from "@/app/components/case-studies/Results";
 import TableOfContents from "@/app/components/case-studies/TableOfContents";
+import CaseStudyCTA from "@/app/components/case-studies/CaseStudyCTA";
 import CaseStudiesCarousel from "@/app/components/case-studies/CaseStudiesCarousel";
 import ViewTracker from "@/app/components/ViewTracker";
 
@@ -66,6 +67,7 @@ export default async function CaseStudyPage({
         </div>
       </div>
 
+      <CaseStudyCTA />
       <CaseStudiesCarousel currentSlug={slug} />
     </main>
   );

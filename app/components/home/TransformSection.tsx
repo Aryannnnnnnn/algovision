@@ -58,46 +58,46 @@ export default function TransformSection() {
         }}></div>
       </div>
 
-      <div className="relative xl:max-w-[95vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="relative xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-center">
 
           {/* Left Side - Content */}
           <div ref={rightRef} className="order-1 space-y-6">
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-              <span className="text-sm font-bold text-white">Our Methodology</span>
+              <span className="text-sm font-bold text-white">How We Work</span>
             </div>
 
             {/* Headline */}
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Data-driven{" "}
+              Consulting meets{" "}
               <span className="relative inline-block">
                 <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">
-                  methodology
+                  execution
                 </span>
               </span>
-              {" "}that delivers results
+              {" "}for real results
             </h2>
 
             {/* Description */}
             <p className="text-xl text-gray-600 leading-relaxed">
-              Our approach combines artificial intelligence, predictive analytics, and human expertise to create a unified growth engine that adapts in real-time.
+              We combine strategic business consulting with AI-powered marketing execution. From growth strategy to campaign management, we deliver both the plan and the results.
             </p>
 
             {/* Methodology Points */}
             <div className="space-y-4 pt-4">
               {[
                 {
-                  title: "Unified Intelligence Layer",
-                  description: "Connect every data source into a single, self-optimizing system that learns and improves continuously."
+                  title: "Strategic Planning & Analysis",
+                  description: "We assess your business goals, market position, and growth opportunities to create a comprehensive strategy."
                 },
                 {
-                  title: "Real-Time Orchestration",
-                  description: "Synchronize campaigns across 15+ platforms with automated optimization based on live performance data."
+                  title: "Marketing Execution Across All Channels",
+                  description: "Launch and manage campaigns across 15+ platforms with coordinated messaging and real-time optimization."
                 },
                 {
-                  title: "Enterprise-Grade Execution",
-                  description: "Deploy with the infrastructure and security standards trusted by Fortune 500 companies."
+                  title: "Continuous Optimization & Reporting",
+                  description: "Track performance, identify what's working, and adjust strategy based on data—not guesswork."
                 }
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-4 group">
@@ -119,12 +119,12 @@ export default function TransformSection() {
                 variant="primary"
                 size="md"
                 icon={
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
                 }
               >
-                Explore Our Methodology
+                Learn More About Our Process
               </Button>
             </div>
           </div>

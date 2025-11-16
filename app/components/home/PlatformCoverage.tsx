@@ -97,111 +97,113 @@ export default function PlatformCoverage() {
         ></div>
       </div>
 
-      <div className="relative xl:max-w-[95vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="relative xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Header */}
         <div ref={headingRef} className="mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-8 shadow-lg">
-            <span className="text-sm font-bold text-white">Platform Coverage</span>
+            <span className="text-sm font-bold text-white">Marketing Platforms</span>
           </div>
 
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-2 tracking-tight">
-            Every Channel That Matters.
+            Works With All Your Marketing Tools
           </h2>
           <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 tracking-tight">
             <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">
-              One Command Center.
+              Managed from One Dashboard
             </span>
           </h3>
 
           <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mb-4">
-            From Google to Bluesky, email to WhatsApp—we're platform-agnostic and results-obsessed.
+            We integrate with 21+ platforms including Google, Meta, LinkedIn, TikTok, email, SMS, and more—all controlled from a single interface.
           </p>
         </div>
+      </div>
 
-        {/* 3-Row Zigzag Infinite Sliding Platform Logos */}
-        <div className="relative mb-16">
-          <div className="relative overflow-hidden py-8 space-y-6">
-            {/* Gradient Overlays */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+      {/* 3-Row Zigzag Infinite Sliding Platform Logos */}
+      <div className="relative mb-16 w-[95vw] mx-auto">
+        <div className="relative overflow-hidden py-8 space-y-6">
+          {/* Gradient Overlays */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
-            {/* Row 1 */}
-            <div className="flex gap-20 animate-scroll" style={{ width: 'max-content' }}>
-              {[...Array(4)].map((_, setIndex) => (
-                row1.map((platform, index) => (
-                  <div
-                    key={`row1-${setIndex}-${index}`}
-                    className="flex-shrink-0 w-12 h-12 flex items-center justify-center cursor-pointer group transition-all duration-300 hover:scale-110"
-                  >
-                    <img
-                      src={platform.logo}
-                      alt={platform.name}
-                      className="w-full h-full object-contain transition-all duration-300"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                ))
-              ))}
-            </div>
-
-            {/* Row 2 - Offset position for zigzag */}
-            <div className="flex gap-20 animate-scroll" style={{ width: 'max-content', marginLeft: '46px' }}>
-              {[...Array(4)].map((_, setIndex) => (
-                row2.map((platform, index) => (
-                  <div
-                    key={`row2-${setIndex}-${index}`}
-                    className="flex-shrink-0 w-12 h-12 flex items-center justify-center cursor-pointer group transition-all duration-300 hover:scale-110"
-                  >
-                    <img
-                      src={platform.logo}
-                      alt={platform.name}
-                      className="w-full h-full object-contain transition-all duration-300"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                ))
-              ))}
-            </div>
-
-            {/* Row 3 - Offset position for zigzag */}
-            <div className="flex gap-20 animate-scroll" style={{ width: 'max-content', marginLeft: '0px' }}>
-              {[...Array(4)].map((_, setIndex) => (
-                row3.map((platform, index) => (
-                  <div
-                    key={`row3-${setIndex}-${index}`}
-                    className="flex-shrink-0 w-12 h-12 flex items-center justify-center cursor-pointer group transition-all duration-300 hover:scale-110"
-                  >
-                    <img
-                      src={platform.logo}
-                      alt={platform.name}
-                      className="w-full h-full object-contain transition-all duration-300"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                ))
-              ))}
-            </div>
+          {/* Row 1 */}
+          <div className="flex gap-20 animate-scroll" style={{ width: 'max-content' }}>
+            {[...Array(4)].map((_, setIndex) => (
+              row1.map((platform, index) => (
+                <div
+                  key={`row1-${setIndex}-${index}`}
+                  className="flex-shrink-0 w-12 h-12 flex items-center justify-center cursor-pointer group transition-all duration-300 hover:scale-110"
+                >
+                  <img
+                    src={platform.logo}
+                    alt={platform.name}
+                    className="w-full h-full object-contain transition-all duration-300"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              ))
+            ))}
           </div>
 
-          {/* Add CSS animations */}
-          <style jsx>{`
-            @keyframes scroll {
-              0% {
-                transform: translateX(0);
-              }
-              100% {
-                transform: translateX(-50%);
-              }
-            }
-            .animate-scroll {
-              animation: scroll 80s linear infinite;
-            }
-          `}</style>
+          {/* Row 2 - Offset position for zigzag */}
+          <div className="flex gap-20 animate-scroll" style={{ width: 'max-content', marginLeft: '46px' }}>
+            {[...Array(4)].map((_, setIndex) => (
+              row2.map((platform, index) => (
+                <div
+                  key={`row2-${setIndex}-${index}`}
+                  className="flex-shrink-0 w-12 h-12 flex items-center justify-center cursor-pointer group transition-all duration-300 hover:scale-110"
+                >
+                  <img
+                    src={platform.logo}
+                    alt={platform.name}
+                    className="w-full h-full object-contain transition-all duration-300"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              ))
+            ))}
+          </div>
+
+          {/* Row 3 - Offset position for zigzag */}
+          <div className="flex gap-20 animate-scroll" style={{ width: 'max-content', marginLeft: '0px' }}>
+            {[...Array(4)].map((_, setIndex) => (
+              row3.map((platform, index) => (
+                <div
+                  key={`row3-${setIndex}-${index}`}
+                  className="flex-shrink-0 w-12 h-12 flex items-center justify-center cursor-pointer group transition-all duration-300 hover:scale-110"
+                >
+                  <img
+                    src={platform.logo}
+                    alt={platform.name}
+                    className="w-full h-full object-contain transition-all duration-300"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              ))
+            ))}
+          </div>
         </div>
 
+        {/* Add CSS animations */}
+        <style jsx>{`
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+          .animate-scroll {
+            animation: scroll 80s linear infinite;
+          }
+        `}</style>
+      </div>
+
+      <div className="relative xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Bottom Stats Banner */}
         <div className="relative bg-gradient-to-br from-[#0a1628] to-[#1e293b] rounded-3xl p-8 sm:p-12 mb-12 overflow-hidden">
           {/* Background decoration */}
@@ -213,23 +215,23 @@ export default function PlatformCoverage() {
           <div className="relative grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12">
             {/* Stat 1 */}
             <div className="text-center group">
-              <div className="text-5xl font-bold text-white mb-2">21</div>
-              <div className="text-lg font-semibold text-gray-200 mb-1">Platforms</div>
-              <div className="text-sm text-gray-400">Connected & integrated</div>
+              <div className="text-5xl font-bold text-white mb-2">21+</div>
+              <div className="text-lg font-semibold text-gray-200 mb-1">Connected Platforms</div>
+              <div className="text-sm text-gray-400">All major marketing tools</div>
             </div>
 
             {/* Stat 2 */}
             <div className="text-center group">
               <div className="text-5xl font-bold text-white mb-2">1</div>
-              <div className="text-lg font-semibold text-gray-200 mb-1">Command Center</div>
-              <div className="text-sm text-gray-400">Unified dashboard</div>
+              <div className="text-lg font-semibold text-gray-200 mb-1">Single Dashboard</div>
+              <div className="text-sm text-gray-400">Control everything in one place</div>
             </div>
 
             {/* Stat 3 */}
             <div className="text-center group">
               <div className="text-5xl font-bold text-white mb-2">100%</div>
-              <div className="text-lg font-semibold text-gray-200 mb-1">Platform Agnostic</div>
-              <div className="text-sm text-gray-400">Results-obsessed</div>
+              <div className="text-lg font-semibold text-gray-200 mb-1">Data Synced</div>
+              <div className="text-sm text-gray-400">Real-time updates across all tools</div>
             </div>
           </div>
         </div>
@@ -241,12 +243,12 @@ export default function PlatformCoverage() {
             variant="primary"
             size="md"
             icon={
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
               </svg>
             }
           >
-            View All Solutions
+            See All Integrations
           </Button>
         </div>
       </div>

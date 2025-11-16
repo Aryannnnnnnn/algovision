@@ -53,29 +53,26 @@ export default function WhyAlgoVision() {
 
   const pillars = [
     {
-      title: "Unified Intelligence Foundation",
-      subtitle: "Own your growth trajectory",
-      description: "Consolidate 25 fragmented solutions into one self-optimizing ecosystem. Connect AI, advertising, PR, and performance marketing through a single intelligence layer that learns from every interaction.",
+      title: "Strategic Consulting & Marketing Execution",
+      description: "We provide strategic business consulting alongside full-service marketing execution. From growth strategy to campaign management, we handle both the planning and the doing.",
       icon: (
         <svg className="w-full h-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
         </svg>
       ),
     },
     {
-      title: "Cross-Channel Orchestration",
-      subtitle: "Execute with precision",
-      description: "Activate across 15+ advertising platforms, 8 communication channels, and PR networksall synchronized in real-time. Your entire system responds as one, whether managing routine optimization or navigating unexpected challenges.",
+      title: "Coordinated Campaigns Across All Channels",
+      description: "Run campaigns on Google, Meta, LinkedIn, email, SMS, and 15+ other platforms—all coordinated from a single dashboard. Changes sync instantly across every channel.",
       icon: (
         <svg className="w-full h-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
         </svg>
       ),
     },
     {
-      title: "Enterprise-Grade Scale",
-      subtitle: "Deliver results that matter",
-      description: "Deploy campaigns across Google, Meta, TikTok, Bluesky, LinkedIn, and emerging platforms through the industry's most comprehensive growth network. Achieve 3.2x industry-average growth with infrastructure built for Fortune 500 demands.",
+      title: "Built for Large-Scale Operations",
+      description: "Launch campaigns across every major platform—Google, Meta, TikTok, LinkedIn, and more. Our clients grow 3.2x faster than industry average with infrastructure trusted by Fortune 500 companies.",
       icon: (
         <svg className="w-full h-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
@@ -98,15 +95,15 @@ export default function WhyAlgoVision() {
         {/* Header */}
         <div ref={headingRef} className="max-w-4xl mb-20">
           <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-8 shadow-lg">
-            <span className="text-sm font-bold text-white">Why Enterprise Leaders Choose Us</span>
+            <span className="text-sm font-bold text-white">Why Leading Companies Choose Us</span>
           </div>
 
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 tracking-tight">
-            Why do <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">enterprise leaders</span> choose Algo Vision?
+            Marketing that <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">actually drives growth</span>
           </h2>
 
           <p className="text-lg text-gray-500 leading-relaxed">
-            100+ brands trust AlgoVision to unify their marketing intelligence from Fortune 500s partners to category-defining disruptors.
+            Over 100 companies trust AlgoVision to manage their complete marketing operations—from Fortune 500 enterprises to fast-growing startups.
           </p>
         </div>
 
@@ -124,9 +121,6 @@ export default function WhyAlgoVision() {
                 <h3 className="font-display text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">
                   {pillar.title}
                 </h3>
-                <p className="text-base sm:text-lg font-semibold text-[#00b5ff]">
-                  → {pillar.subtitle}
-                </p>
                 <p className="text-base text-gray-600 leading-relaxed">
                   {pillar.description}
                 </p>
@@ -142,12 +136,12 @@ export default function WhyAlgoVision() {
             variant="primary"
             size="md"
             icon={
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
               </svg>
             }
           >
-            Explore Our Methodology
+            See How We Work
           </Button>
         </div>
       </div>

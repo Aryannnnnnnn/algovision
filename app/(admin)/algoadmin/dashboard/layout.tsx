@@ -10,7 +10,6 @@ import {
   Settings,
   Menu,
   ExternalLink,
-  CalendarCheck,
 } from "lucide-react";
 import { useState } from "react";
 import { Toaster } from "react-hot-toast";
@@ -28,7 +27,6 @@ const navigation = [
   { name: "Dashboard", href: "/algoadmin/dashboard", icon: LayoutDashboard },
   { name: "Blog Posts", href: "/algoadmin/dashboard/blogs", icon: FileText },
   { name: "Case Studies", href: "/algoadmin/dashboard/case-studies", icon: FolderOpen },
-  { name: "Bookings", href: "/algoadmin/dashboard/bookings", icon: CalendarCheck },
   { name: "Settings", href: "/algoadmin/dashboard/settings", icon: Settings },
 ];
 

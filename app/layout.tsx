@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, DM_Sans } from "next/font/google";
+import { Inter, Raleway, Syne } from "next/font/google";
 import "./globals.css";
+import UtilityBar from "./components/layout/UtilityBar";
 import Navbar from "./components/layout/navbar";
 import Newsletter from "./components/layout/Newsletter";
 import Footer from "./components/layout/footer";
@@ -11,9 +12,16 @@ const inter = Inter({
   display: "swap",
 });
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+const raleway = Raleway({
+  variable: "--font-raleway",
   weight: ["400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const syne = Syne({
+  variable: "--font-syne",
+  weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -31,8 +39,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${dmSans.variable} antialiased`}
+        className={`${inter.variable} ${raleway.variable} ${syne.variable} antialiased`}
       >
+        <UtilityBar />
         <Navbar />
         {children}
         <Newsletter />

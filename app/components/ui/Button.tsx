@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 
-type ButtonVariant = "primary" | "secondary";
+type ButtonVariant = "primary" | "secondary" | "accent";
 type ButtonSize = "sm" | "md" | "lg";
 
 interface ButtonProps {
@@ -25,11 +25,12 @@ export default function Button({
   className = "",
   disabled = false,
 }: ButtonProps) {
-  const baseStyles = "font-semibold transition-all duration-500 ease-out flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed";
+  const baseStyles = "font-semibold transition-all duration-500 ease-out flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed rounded-lg";
 
   const variants = {
-    primary: "group relative bg-[#00011f] text-white hover:scale-[1.02] overflow-hidden",
+    primary: "group relative bg-[#00011f] text-white overflow-hidden",
     secondary: "group relative bg-white border-2 border-gray-900 text-gray-900 hover:border-[#00011f] hover:text-white overflow-hidden",
+    accent: "group relative bg-[#00b5ff] text-white overflow-hidden rounded-lg",
   };
 
   const sizes = {
@@ -47,7 +48,7 @@ export default function Button({
       )}
       <span className="relative">{children}</span>
       {icon && (
-        <span className="relative group-hover:translate-x-1 transition-transform duration-500 ease-out">
+        <span className="relative group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-500 ease-out">
           {icon}
         </span>
       )}

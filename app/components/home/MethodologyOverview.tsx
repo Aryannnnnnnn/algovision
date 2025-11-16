@@ -100,10 +100,10 @@ export default function MethodologyOverview() {
 
             {/* Headline */}
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight">
-              Built on{" "}
+              Consulting & Marketing{" "}
               <span className="relative inline-block">
                 <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">
-                  proven intelligence
+                  driven by data
                 </span>
               </span>
             </h2>
@@ -111,22 +111,22 @@ export default function MethodologyOverview() {
             {/* Methodology Overview */}
             <div className="space-y-4">
               <p className="text-xl text-gray-600 leading-relaxed">
-                Our proprietary framework combines AI-driven insights, real-time optimization, and cross-channel orchestration to deliver measurable enterprise results.
+                We combine strategic business consulting with data-driven marketing execution. Our approach integrates market intelligence, performance analytics, and continuous optimization to maximize your return on investment.
               </p>
 
               <div className="space-y-3 pt-4">
                 {[
                   {
-                    title: "Data-Driven Intelligence",
-                    description: "Unified analytics across 25+ platforms powering strategic decisions",
+                    title: "Business Consulting",
+                    description: "Strategic planning and market analysis to identify growth opportunities",
                   },
                   {
-                    title: "Continuous Optimization",
-                    description: "Real-time AI adjustments maximizing performance 24/7",
+                    title: "Marketing Execution",
+                    description: "Data-driven campaigns across all channels with real-time optimization",
                   },
                   {
-                    title: "Scalable Infrastructure",
-                    description: "Enterprise-grade systems built for Fortune 500 demands",
+                    title: "Scalable Solutions",
+                    description: "Technology and processes that grow with your business needs",
                   },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
@@ -151,8 +151,8 @@ export default function MethodologyOverview() {
                 variant="primary"
                 size="md"
                 icon={
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
                 }
               >

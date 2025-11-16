@@ -68,52 +68,52 @@ export default function CorePillarsNew() {
   const pillars = [
     {
       id: "01",
-      title: "AI Solutions",
-      tagline: "Intelligent automation that scales",
-      description: "Advanced AI systems that work 24/7 to automate customer interactions and drive engagement.",
-      features: ["Chatbots", "Virtual Assistants", "Web VA"],
+      title: "AI-Powered Customer Service",
+      tagline: "Automated support that never sleeps",
+      description: "AI chatbots and virtual assistants that handle customer questions 24/7, improving response times and customer satisfaction.",
+      features: ["AI Chatbots", "Virtual Assistants", "Website Support"],
       stats: [
-        { value: "5+", label: "AI Systems" },
-        { value: "24/7", label: "Active" },
+        { value: "5+", label: "AI Tools" },
+        { value: "24/7", label: "Available" },
       ],
       href: "/solutions/ai-solutions",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80",
     },
     {
       id: "02",
-      title: "PR & Communications",
-      tagline: "Reputation engineered, not managed",
-      description: "Strategic public relations that builds trust, manages crises, and amplifies your brand voice.",
-      features: ["Crisis Management", "Brand Monitoring", "SEO 3.0", "Media Relations"],
+      title: "Public Relations & Brand Management",
+      tagline: "Build and protect your reputation",
+      description: "Manage your public image, handle media relations, respond to crises, and improve your online visibility.",
+      features: ["Crisis Response", "Brand Monitoring", "SEO Strategy", "Media Outreach"],
       stats: [
-        { value: "10+", label: "PR Tools" },
-        { value: "98%", label: "Coverage" },
+        { value: "10+", label: "PR Services" },
+        { value: "98%", label: "Media Coverage" },
       ],
       href: "/solutions/pr-communications",
       image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80",
     },
     {
       id: "03",
-      title: "Omnichannel Advertising",
-      tagline: "Every channel, one brain",
-      description: "Unified advertising strategy across 15+ platforms, orchestrated by intelligent automation.",
-      features: ["Google Ads", "Meta", "TikTok", "LinkedIn", "15+ Platforms"],
+      title: "Multi-Platform Advertising",
+      tagline: "Reach customers wherever they are",
+      description: "Run coordinated ad campaigns across Google, Meta, TikTok, LinkedIn, and 15+ other platforms from one central dashboard.",
+      features: ["Google Ads", "Meta Ads", "TikTok", "LinkedIn", "15+ Platforms"],
       stats: [
-        { value: "15+", label: "Platforms" },
-        { value: "95%", label: "Reach" },
+        { value: "15+", label: "Ad Platforms" },
+        { value: "95%", label: "Audience Reach" },
       ],
       href: "/solutions/advertising",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
     },
     {
       id: "04",
-      title: "Growth & Performance",
-      tagline: "Compounding growth across touchpoints",
-      description: "Multi-channel growth marketing that drives measurable results across every customer touchpoint.",
-      features: ["Email", "SMS", "WhatsApp", "LinkedIn", "Telegram"],
+      title: "Performance Marketing & Growth",
+      tagline: "Direct response campaigns that convert",
+      description: "Drive sales and leads through targeted email, SMS, WhatsApp, and social media campaigns with measurable ROI.",
+      features: ["Email Marketing", "SMS Campaigns", "WhatsApp", "LinkedIn", "Telegram"],
       stats: [
-        { value: "3.2x", label: "ROAS" },
-        { value: "5+", label: "Channels" },
+        { value: "3.2x", label: "Avg ROI" },
+        { value: "5+", label: "Active Channels" },
       ],
       href: "/solutions/growth-performance",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
@@ -140,20 +140,18 @@ export default function CorePillarsNew() {
             <div className="relative max-w-[90vw] mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-3xl">
                 <div className="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full mb-6 border border-blue-100">
-                  <span className="text-sm font-bold text-[#00b5ff] uppercase tracking-wider">Our Core Solutions</span>
+                  <span className="text-sm font-bold text-[#00b5ff] uppercase tracking-wider">What We Offer</span>
                 </div>
 
                 <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-3">
-                  4 Core Pillars
-                </h2>
-                <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+                  Complete Business{" "}
                   <span className="bg-gradient-to-r from-[#00b5ff] via-[#0099dd] to-[#00b5ff] bg-clip-text text-transparent">
-                    One Intelligence Layer
+                    Solutions
                   </span>
-                </h3>
+                </h2>
 
                 <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                  A unified ecosystem connecting AI, advertising, PR, and performance marketing through one intelligent platform.
+                  Strategic consulting, AI-powered customer service, public relations, advertising, and performance marketing—all integrated to drive your business growth.
                 </p>
               </div>
             </div>
@@ -175,35 +173,35 @@ export default function CorePillarsNew() {
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
                     {/* Content - Always on left */}
-                    <div className="space-y-3">
+                    <div className="space-y-2">
                     {/* Category tag with animation */}
                     <div className="inline-block">
-                      <div className="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full border border-blue-100 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300">
-                        <span className="text-xs font-bold text-[#00b5ff] uppercase tracking-widest">SOLUTION</span>
+                      <div className="inline-flex items-center px-3 py-1 bg-blue-50 rounded-full border border-blue-100 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300">
+                        <span className="text-xs font-bold text-[#00b5ff] uppercase tracking-widest">SERVICE</span>
                       </div>
                     </div>
 
                       {/* Title */}
-                      <h3 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
+                      <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
                         {pillar.title}
                       </h3>
 
                       {/* Tagline */}
-                      <p className="text-lg sm:text-xl lg:text-2xl font-medium text-gray-600">
+                      <p className="text-base sm:text-lg lg:text-xl font-medium text-gray-600">
                         {pillar.tagline}
                       </p>
 
                       {/* Description */}
-                      <p className="text-base sm:text-lg text-gray-500 leading-relaxed">
+                      <p className="text-sm sm:text-base text-gray-500 leading-relaxed">
                         {pillar.description}
                       </p>
 
                       {/* Features */}
-                      <div className="flex flex-wrap gap-2 pt-2">
+                      <div className="flex flex-wrap gap-1.5 pt-1">
                         {pillar.features.map((feature, idx) => (
                           <span
                             key={idx}
-                            className="px-3 py-1.5 bg-blue-50 text-[#00b5ff] rounded-full text-sm font-medium border border-blue-100"
+                            className="px-2.5 py-1 bg-blue-50 text-[#00b5ff] rounded-full text-xs font-medium border border-blue-100"
                           >
                             {feature}
                           </span>
@@ -211,10 +209,10 @@ export default function CorePillarsNew() {
                       </div>
 
                       {/* Stats */}
-                      <div className="grid grid-cols-2 gap-3 pt-3">
+                      <div className="grid grid-cols-2 gap-2 pt-2">
                         {pillar.stats.map((stat, idx) => (
-                          <div key={idx} className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-3 border border-blue-100">
-                            <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#00b5ff] to-[#0099dd] bg-clip-text text-transparent mb-1">
+                          <div key={idx} className="bg-gradient-to-br from-blue-50 to-white rounded-lg p-2 border border-blue-100">
+                            <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#00b5ff] to-[#0099dd] bg-clip-text text-transparent mb-0.5">
                               {stat.value}
                             </div>
                             <div className="text-xs font-semibold text-gray-600 uppercase tracking-wider">
@@ -225,14 +223,14 @@ export default function CorePillarsNew() {
                       </div>
 
                       {/* CTA */}
-                      <div className="pt-2">
+                      <div className="pt-1">
                         <a
                           href={pillar.href}
-                          className="inline-flex items-center gap-2 px-4 py-2 bg-[#1e293b] hover:bg-[#00b5ff] text-white rounded-full font-semibold text-sm transition-all duration-300 group shadow-md hover:shadow-lg hover:shadow-[#00b5ff]/50"
+                          className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#1e293b] hover:bg-[#00b5ff] text-white rounded-full font-semibold text-xs transition-all duration-300 group shadow-md hover:shadow-lg hover:shadow-[#00b5ff]/50"
                         >
-                          <span>Explore Solution</span>
-                          <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                          <span>Learn More</span>
+                          <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                           </svg>
                         </a>
                       </div>
@@ -268,12 +266,12 @@ export default function CorePillarsNew() {
                           variant="primary"
                           size="md"
                           icon={
-                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                             </svg>
                           }
                         >
-                          Explore All Solutions
+                          See All Services
                         </Button>
                       </div>
                     </div>

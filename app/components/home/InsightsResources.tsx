@@ -56,44 +56,44 @@ export default function InsightsResources() {
 
   const resources = [
     {
-      type: "Latest Blog",
-      title: "The Future of Omnichannel Marketing",
-      description: "Discover how AI-driven strategies are reshaping customer engagement across every platform.",
-      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
-      link: "/blog",
-      badge: "5 min read",
+      type: "Report",
+      title: "AI Marketing Tools: What Actually Works in 2024",
+      description: "Our analysis of current AI marketing technology and which tools deliver real business value.",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+      link: "/resources",
+      badge: "Industry Report",
     },
     {
       type: "Case Study",
-      title: "How DataFlow Systems Achieved 340% ROI",
-      description: "See how we transformed stagnant ad spend into exponential revenue growth in just 6 months.",
+      title: "How DataFlow Systems Grew ROI by 340%",
+      description: "Read how we helped this SaaS company turn around their marketing performance in 6 months.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
       link: "/case-studies",
-      badge: "Success Story",
+      badge: "Client Story",
     },
     {
-      type: "Resource",
-      title: "Enterprise Marketing Playbook 2024",
-      description: "Download our comprehensive guide to scaling marketing operations for high-growth companies.",
+      type: "Guide",
+      title: "Marketing Operations Guide for Growing Companies",
+      description: "Free download: Our complete guide to building scalable marketing systems that actually work.",
       image: "https://images.unsplash.com/photo-1512314889357-e157c22f938d?w=800&q=80",
       link: "/resources",
       badge: "Free Download",
     },
     {
       type: "Webinar",
-      title: "Mastering Multi-Platform Attribution",
-      description: "Join our experts to learn advanced techniques for tracking customer journeys across channels.",
+      title: "Tracking Customer Journeys Across Marketing Channels",
+      description: "Watch our expert webinar on attribution and understanding which channels drive your best results.",
       image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80",
       link: "/webinars",
-      badge: "Live Session",
+      badge: "On-Demand",
     },
     {
-      type: "White Paper",
-      title: "AI in Marketing: 2024 Trends",
-      description: "Explore cutting-edge AI applications transforming the marketing landscape.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
-      link: "/resources",
-      badge: "Research",
+      type: "Blog Post",
+      title: "How to Coordinate Marketing Across Multiple Platforms",
+      description: "Learn practical strategies for managing campaigns on Google, Meta, LinkedIn, and more from a single dashboard.",
+      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
+      link: "/blog",
+      badge: "5 min read",
     },
   ];
 
@@ -110,19 +110,19 @@ export default function InsightsResources() {
         ></div>
       </div>
 
-      <div className="relative xl:max-w-[95vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="relative xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Header */}
         <div ref={headingRef} className="mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-8 shadow-lg">
-            <span className="text-sm font-bold text-white">Insights & Resources</span>
+            <span className="text-sm font-bold text-white">Resources & Insights</span>
           </div>
 
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight mb-2">
-            Intelligence You Can Use
+            Learn From Our Experience
           </h2>
 
           <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mb-4">
-            Stay ahead with insights, strategies, and proven frameworks from our marketing experts.
+            Access consulting insights, case studies, and expert advice to improve your business strategy and marketing performance.
           </p>
         </div>
 
@@ -185,9 +185,9 @@ export default function InsightsResources() {
 
                 {/* Read More Arrow */}
                 <div className="flex items-center gap-2 text-white group-hover:text-[#00b5ff] transition-colors">
-                  <span className="text-sm font-bold uppercase tracking-wider">Explore</span>
-                  <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <span className="text-sm font-bold uppercase tracking-wider">Read More</span>
+                  <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
                 </div>
               </div>
@@ -202,12 +202,12 @@ export default function InsightsResources() {
             variant="primary"
             size="md"
             icon={
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
               </svg>
             }
           >
-            Visit Resource Center
+            Browse All Resources
           </Button>
         </div>
       </div>

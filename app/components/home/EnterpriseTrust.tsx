@@ -87,40 +87,40 @@ export default function EnterpriseTrust() {
 
   const trustPillars = [
     {
-      title: "Data Ethics First",
-      description: "SOC 2, GDPR compliant, transparent reporting",
+      title: "Enterprise-Grade Security",
+      description: "Your data is protected with industry-leading security standards and full compliance",
       icon: (
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
       ),
-      badges: ["SOC 2 Type II", "GDPR", "ISO 27001"],
+      badges: ["SOC 2 Certified", "GDPR Compliant", "ISO 27001"],
     },
     {
-      title: "Dedicated Intelligence Teams",
-      description: "Strategic partners, not order-takers",
+      title: "Dedicated Support Team",
+      description: "Your success team provides strategic guidance and fast response times",
       icon: (
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       ),
-      badges: ["5-8 Team Members", "<2hr Response", "24/7 Support"],
+      badges: ["5-8 Person Team", "Under 2hr Response", "24/7 Available"],
     },
     {
-      title: "Proven at Scale",
-      description: "100+ brands, $50M+ managed, Fortune 500 trusted",
+      title: "Track Record at Scale",
+      description: "Trusted by major enterprises to manage millions in marketing spend",
       icon: (
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
         </svg>
       ),
-      badges: ["100+ Brands", "$50M+ Managed", "Fortune 500"],
+      badges: ["100+ Companies", "$50M+ Managed", "Fortune 500 Clients"],
     },
   ];
   const metrics = [
-    { label: "Enterprise Brands", value: "100+", trend: "+12", color: "blue" },
-    { label: "Ad Spend Managed", value: "$50M+", trend: "+28%", color: "green" },
-    { label: "Client Retention", value: "98%", trend: "+5%", color: "purple" },
+    { label: "Active Clients", value: "100+", trend: "+12", color: "blue" },
+    { label: "Marketing Budget Managed", value: "$50M+", trend: "+28%", color: "green" },
+    { label: "Client Retention Rate", value: "98%", trend: "+5%", color: "purple" },
   ];
 
   return (
@@ -130,20 +130,20 @@ export default function EnterpriseTrust() {
         {/* Header */}
         <div ref={headingRef} className="mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-white/10 rounded-full mb-8 shadow-lg">
-            <span className="text-sm font-bold text-white">Enterprise Trust</span>
+            <span className="text-sm font-bold text-white">Why Companies Trust Us</span>
           </div>
 
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-2 tracking-tight">
-            Built for Enterprises
+            Built for Serious Businesses
           </h2>
           <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 tracking-tight">
             <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">
-              That Demand More.
+              Ready for Growth
             </span>
           </h3>
 
           <p className="text-xl text-gray-300 leading-relaxed max-w-3xl">
-            Trusted by Fortune 500 companies and scaling enterprises worldwide
+            Trusted by Fortune 500 companies and growing businesses worldwide for strategic consulting and secure, reliable marketing execution.
           </p>
         </div>
 
@@ -192,10 +192,10 @@ export default function EnterpriseTrust() {
 
               <div className="relative">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-sm font-bold text-gray-200 uppercase tracking-wide">Live Metrics</h3>
+                <h3 className="text-sm font-bold text-gray-200 uppercase tracking-wide">Performance Metrics</h3>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-xs font-semibold text-gray-300">Real-time</span>
+                  <span className="text-xs font-semibold text-gray-300">Updated Daily</span>
                 </div>
               </div>
 

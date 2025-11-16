@@ -6,8 +6,8 @@ import Button from "@/app/components/ui/Button";
 
 // Memoized SVG icons to prevent re-renders
 const ArrowIcon = () => (
-  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
   </svg>
 );
 
@@ -170,7 +170,7 @@ export default function HomeHero() {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-x-hidden overflow-y-visible bg-white">
+    <section ref={heroRef} className="relative min-h-screen pt-24 lg:pt-0 lg:min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-x-hidden overflow-y-visible bg-white">
 
       {/* Animated grid background */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
@@ -181,8 +181,8 @@ export default function HomeHero() {
       </div>
 
 
-      <div className="relative xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 pb-24 lg:pb-32">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[calc(100vh-8rem)]">
 
           {/* Left Content */}
           <div ref={leftRef} className="space-y-8">
@@ -191,12 +191,17 @@ export default function HomeHero() {
                 <span className="text-sm font-bold text-white">Your Digital Partner</span>
               </div>
 
-              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.05] mb-6 tracking-tight">
-                Premier marketing consultancy with complete <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">solutions delivery</span>
+              <h1 className="hero-heading text-5xl sm:text-6xl lg:text-7xl font-normal text-black leading-[1.05] mb-6 tracking-tight">
+                Drive Growth with Strategy & Execution
               </h1>
+              <style jsx>{`
+                .hero-heading {
+                  font-family: var(--font-syne), sans-serif !important;
+                }
+              `}</style>
 
               <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-                We provide strategic marketing consultancy backed by modern solutions infrastructure: AI-powered automation, full-spectrum advertising, integrated PR and communications, and multi-channel performance marketing unified under one accountable partner.
+                We combine strategic business consulting with comprehensive marketing execution across all channels. From developing your growth strategy to managing AI-powered campaigns, multi-platform advertising, and public relations—we deliver integrated solutions that drive measurable results for your business.
               </p>
             </div>
 
@@ -216,23 +221,6 @@ export default function HomeHero() {
               >
                 Explore Our Solutions
               </Button>
-            </div>
-
-            {/* Stats with subtle interaction and glow */}
-            <div className="grid grid-cols-3 gap-8 pt-10 border-t border-gray-200">
-              {statsData.map((stat, idx) => (
-                <div key={idx} className="group cursor-pointer">
-                  <div className="relative transition-all duration-500 ease-out group-hover:scale-105">
-                    <div className="absolute inset-0 bg-[#00b5ff]/0 group-hover:bg-[#00b5ff]/10 rounded-lg blur-xl transition-all duration-500 ease-out"></div>
-                    <div className="relative">
-                      <div className="text-4xl font-bold text-gray-900 group-hover:text-[#00b5ff] transition-colors duration-500 ease-out mb-1 group-hover:drop-shadow-[0_0_8px_rgba(0,181,255,0.3)]">
-                        {stat.num}{stat.suffix}
-                      </div>
-                      <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
 
@@ -489,21 +477,6 @@ export default function HomeHero() {
 
     </div>
 
-      {/* Scroll Indicator - Hidden on mobile */}
-      <button
-        onClick={() => {
-          window.scrollTo({
-            top: window.innerHeight - 64, // Scroll to next section (minus navbar height)
-            behavior: 'smooth'
-          });
-        }}
-        className="hidden lg:flex absolute bottom-38 left-1/2 -translate-x-1/2 flex-col items-center gap-2 animate-bounce cursor-pointer hover:text-[#00b5ff] transition-colors group"
-      >
-        <span className="text-xs font-medium text-gray-500 uppercase tracking-wider group-hover:text-[#00b5ff]">Scroll</span>
-        <svg className="w-5 h-5 text-[#00b5ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
     </section>
   );
 }

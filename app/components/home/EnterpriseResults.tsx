@@ -12,33 +12,33 @@ const caseStudies = [
     id: 0,
     industry: "Healthcare Technology",
     company: "MediCore Solutions",
-    challenge: "Legacy marketing unable to scale with rapid product expansion",
+    challenge: "Marketing systems couldn't keep up with rapid growth and new product launches",
     results: [
-      { value: 425, label: "ROI Increase", suffix: "%" },
-      { value: 2.1, label: "M Revenue Growth", suffix: "M", prefix: "$" },
-      { value: 36, label: "hrs Launch Time", suffix: "hrs" },
+      { value: 425, label: "ROI Growth", suffix: "%" },
+      { value: 2.1, label: "M Added Revenue", suffix: "M", prefix: "$" },
+      { value: 36, label: "hrs to Launch", suffix: "hrs" },
     ],
   },
   {
     id: 1,
     industry: "Financial Services",
     company: "Quantum Capital",
-    challenge: "Brand reputation crisis following regulatory scrutiny",
+    challenge: "Damaged reputation and negative media coverage after regulatory issues",
     results: [
-      { value: 280, label: "Positive Sentiment", suffix: "%" },
-      { value: 94, label: "Media Coverage", suffix: "%" },
-      { value: 18, label: "hrs Response Time", suffix: "hrs" },
+      { value: 280, label: "Sentiment Increase", suffix: "%" },
+      { value: 94, label: "Positive Coverage", suffix: "%" },
+      { value: 18, label: "hrs Crisis Response", suffix: "hrs" },
     ],
   },
   {
     id: 2,
     industry: "Enterprise SaaS",
     company: "DataFlow Systems",
-    challenge: "Stagnant growth with $800K monthly ad spend",
+    challenge: "Spending $800K per month on ads with minimal revenue growth",
     results: [
-      { value: 340, label: "ROI Improvement", suffix: "%" },
+      { value: 340, label: "ROI Growth", suffix: "%" },
       { value: 4.2, label: "M Monthly Revenue", suffix: "M", prefix: "$" },
-      { value: 52, label: "% Cost Reduction", suffix: "%" },
+      { value: 52, label: "% Cost Savings", suffix: "%" },
     ],
   },
 ];
@@ -143,22 +143,22 @@ export default function EnterpriseResults() {
           <div ref={rightRef} className="order-1 space-y-6">
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-              <span className="text-sm font-bold text-white">Proven Performance</span>
+              <span className="text-sm font-bold text-white">Real Results</span>
             </div>
 
             {/* Headline */}
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Enterprise Results,{" "}
+              Results You Can{" "}
               <span className="relative inline-block">
                 <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">
-                  Engineered
+                  Count On
                 </span>
               </span>
             </h2>
 
             {/* Description */}
             <p className="text-xl text-gray-600 leading-relaxed">
-              Real outcomes from organizations that demand measurable performance and enterprise-grade execution.
+              See how our consulting and marketing services have helped companies achieve measurable growth and solve real business challenges.
             </p>
 
             {/* Key Metrics Grid */}
@@ -180,15 +180,15 @@ export default function EnterpriseResults() {
             {/* Featured Case Studies Section */}
             <div className="pt-8">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-bold text-gray-900">Featured Case Studies</h3>
+                <h3 className="text-lg font-bold text-gray-900">Client Success Stories</h3>
                 <div className="flex gap-2">
                   <button
                     onClick={() => setActiveCase((prev) => (prev - 1 + caseStudies.length) % caseStudies.length)}
                     className="w-9 h-9 rounded-full bg-[#1e293b] hover:bg-[#00b5ff] flex items-center justify-center transition-all duration-300 hover:scale-110 cursor-pointer"
                     aria-label="Previous case"
                   >
-                    <svg className="w-5 h-5 text-white rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    <svg className="w-6 h-6 text-white rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
                   </button>
                   <button
@@ -196,8 +196,8 @@ export default function EnterpriseResults() {
                     className="w-9 h-9 rounded-full bg-[#1e293b] hover:bg-[#00b5ff] flex items-center justify-center transition-all duration-300 hover:scale-110 cursor-pointer"
                     aria-label="Next case"
                   >
-                    <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
                   </button>
                 </div>
@@ -218,8 +218,8 @@ export default function EnterpriseResults() {
                       <div className="text-xl font-bold text-gray-900 group-hover:text-[#00b5ff] transition-colors duration-300">{currentCase.company}</div>
                     </div>
                     <div className="w-10 h-10 rounded-full bg-[#1e293b] group-hover:bg-[#00b5ff] flex items-center justify-center transition-all duration-300 group-hover:scale-110 flex-shrink-0">
-                      <svg className="w-5 h-5 text-white group-hover:translate-x-0.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      <svg className="w-6 h-6 text-white group-hover:translate-x-0.5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                       </svg>
                     </div>
                   </div>
@@ -235,7 +235,7 @@ export default function EnterpriseResults() {
                           <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                         </svg>
                       </div>
-                      <span className="text-xs font-bold text-red-700 uppercase tracking-wider">Challenge</span>
+                      <span className="text-xs font-bold text-red-700 uppercase tracking-wider">The Problem</span>
                     </div>
                     <p className="text-sm text-gray-800 leading-relaxed font-medium">{currentCase.challenge}</p>
                   </div>
@@ -247,7 +247,7 @@ export default function EnterpriseResults() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
-                    <span className="text-xs font-bold text-green-700 uppercase tracking-wider">Results Delivered</span>
+                    <span className="text-xs font-bold text-green-700 uppercase tracking-wider">What We Achieved</span>
                   </div>
 
                   {/* Stats Grid */}
@@ -291,12 +291,12 @@ export default function EnterpriseResults() {
                 variant="primary"
                 size="md"
                 icon={
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
                 }
               >
-                View All Case Studies
+                See More Success Stories
               </Button>
             </div>
           </div>

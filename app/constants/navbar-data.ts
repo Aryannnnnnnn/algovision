@@ -6,19 +6,24 @@ export const navbarData = {
         title: "AI Solutions",
         links: [
           {
-            name: "Chatbot",
+            name: "Conversational AI",
             href: "/solutions/ai/chatbot",
             description: "Intelligent conversational AI for customer support"
           },
           {
-            name: "VA",
+            name: "Intelligent Virtual Assistants (IVA)",
             href: "/solutions/ai/va",
             description: "Virtual assistants to streamline operations"
           },
           {
-            name: "Web VA",
+            name: "AI-Enabled Web Assistants",
             href: "/solutions/ai/web-va",
             description: "Web-based virtual assistant solutions"
+          },
+          {
+            name: "Applied AI & Product Engineering",
+            href: "/solutions/ai/product-engineering",
+            description: "Custom AI solutions and product development"
           },
         ],
       },
@@ -51,7 +56,7 @@ export const navbarData = {
             description: "Affiliate marketing on TikTok"
           },
           {
-            name: "SEO 3.0",
+            name: "SEO 3.0 (Generative Search)",
             href: "/solutions/pr/seo-3",
             description: "Next-gen search optimization strategies"
           },

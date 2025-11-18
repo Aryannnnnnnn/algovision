@@ -127,6 +127,18 @@ export default function SolutionIntegration({
     "Amazon Associates": "https://img.icons8.com/color/96/amazon.png",
     "Amazon Prime Video": "https://img.icons8.com/color/96/amazon-prime-video.png",
     "Google Podcasts": "https://img.icons8.com/color/96/google-podcasts.png",
+    "AWS": "https://img.icons8.com/color/96/amazon-web-services.png",
+    "Google Cloud": "https://img.icons8.com/color/96/google-cloud.png",
+    "Microsoft Azure": "https://img.icons8.com/fluency/96/azure-1.png",
+    "TensorFlow": "https://img.icons8.com/color/96/tensorflow.png",
+    "PyTorch": "https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg",
+    "OpenAI": "https://cdn.worldvectorlogo.com/logos/openai-2.svg",
+    "Hugging Face": "https://huggingface.co/front/assets/huggingface_logo.svg",
+    "Docker": "https://img.icons8.com/color/96/docker.png",
+    "Kubernetes": "https://img.icons8.com/color/96/kubernetes.png",
+    "PostgreSQL": "https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg",
+    "MongoDB": "https://img.icons8.com/color/96/mongodb.png",
+    "Redis": "https://img.icons8.com/color/96/redis.png",
   };
 
   // Add logos to integrations

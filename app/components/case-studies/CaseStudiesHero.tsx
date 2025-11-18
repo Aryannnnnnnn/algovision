@@ -27,7 +27,7 @@ export default function CaseStudiesHero() {
       ref={sectionRef}
       className="relative flex items-center justify-center bg-gradient-to-br from-gray-50 to-white overflow-hidden"
     >
-      <div className="relative xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 md:py-32">
+      <div className="relative xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12">
         <div className="max-w-5xl">
           <div ref={contentRef} className="space-y-6 md:space-y-8">
             {/* Badge */}

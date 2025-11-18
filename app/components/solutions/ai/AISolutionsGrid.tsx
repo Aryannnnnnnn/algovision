@@ -35,7 +35,7 @@ export default function AISolutionsGrid() {
 
   const solutions = [
     {
-      title: "Chatbot",
+      title: "Conversational AI",
       description: "Intelligent conversational AI that handles customer inquiries 24/7, reduces response times, and scales effortlessly.",
       features: ["24/7 Support", "Multi-Language", "Smart Escalation"],
       icon: (
@@ -47,7 +47,7 @@ export default function AISolutionsGrid() {
       gradient: "from-blue-500 to-cyan-500",
     },
     {
-      title: "VA",
+      title: "Intelligent Virtual Assistants (IVA)",
       description: "AI-powered virtual assistants that manage tasks, schedule appointments, and handle routine operations automatically.",
       features: ["Task Automation", "Calendar Management", "Email Processing"],
       icon: (
@@ -59,7 +59,7 @@ export default function AISolutionsGrid() {
       gradient: "from-cyan-500 to-teal-500",
     },
     {
-      title: "Web VA",
+      title: "AI-Enabled Web Assistants",
       description: "Web-based virtual assistants that guide visitors, answer questions, and drive conversions on your website.",
       features: ["Lead Qualification", "Product Recommendations", "User Guidance"],
       icon: (
@@ -69,6 +69,18 @@ export default function AISolutionsGrid() {
       ),
       href: "/solutions/ai/web-va",
       gradient: "from-teal-500 to-green-500",
+    },
+    {
+      title: "Applied AI & Product Engineering",
+      description: "Custom AI solutions and product development tailored to your specific business needs and technical requirements.",
+      features: ["Custom Development", "AI Integration", "Product Strategy"],
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+        </svg>
+      ),
+      href: "/solutions/ai/product-engineering",
+      gradient: "from-green-500 to-emerald-500",
     },
   ];
 
@@ -86,7 +98,7 @@ export default function AISolutionsGrid() {
         </div>
 
         {/* Solutions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {solutions.map((solution, index) => (
             <Link
               key={index}

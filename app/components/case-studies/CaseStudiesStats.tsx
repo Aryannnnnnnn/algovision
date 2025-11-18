@@ -54,7 +54,7 @@ export default function CaseStudiesStats() {
   ];
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-20 bg-white">
+    <section ref={sectionRef} className=" bg-white">
       <div className="xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           ref={statsRef}

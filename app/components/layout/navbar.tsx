@@ -1,37 +1,50 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { navbarData } from "@/app/constants/navbar-data";
 import Button from "@/app/components/ui/Button";
 
+// Fixed mapping of solution names to SVG file names (does not change on reload)
+const solutionIconMap: Record<string, string> = {
+  "Conversational AI": "Frame 2",
+  "Intelligent Virtual Assistants (IVA)": "Frame 4",
+  "AI-Enabled Web Assistants": "Frame 5",
+  "Applied AI & Product Engineering": "Frame 6",
+  "Magazines": "Frame 7",
+  "Online Media": "Frame 8",
+  "OTT Platform Ads": "Frame 9",
+  "Podcast and Influencer Collaborations": "Frame 11",
+  "TikTok Affiliates": "Frame 12",
+  "SEO 3.0 (Generative Search)": "Frame 13",
+  "Crisis Management": "Frame 14",
+  "Brand Reputation Monitoring": "Frame 15",
+  "Google Ads / Google Ad Sense / YouTube Ads": "Frame 16",
+  "Meta Ads": "Frame 17",
+  "Taboola Ads": "Frame 18",
+  "Reddit Ads": "Frame 19",
+  "TikTok Ads": "Frame 20",
+  "Snapchat Ads": "Frame 21",
+  "LinkedIn Ads": "Frame 22",
+  "X Ads": "Frame 23",
+  "Bluesky": "Frame 24",
+  "Bing Ads": "Frame 25",
+  "Yahoo Ads": "Frame 26",
+  "Twitch Ads": "Frame 28",
+  "Kick Ads": "Frame 29",
+  "Discord Ads": "Frame 30",
+  "Rumble Ads": "Frame 31",
+  "Search Engine Blogs": "Frame 32",
+  "WhatsApp Campaigns": "Frame 33",
+  "LinkedIn Outreach": "Frame 34",
+  "SMS Marketing": "Frame 35",
+  "Telegram Ads": "Frame 36",
+  "Email Marketing": "Frame 11",
+  "InMail Marketing": "Frame 12",
+};
+
 export default function navbar() {
-  // Create a mapping of solution names to SVG numbers (1-33)
-  const solutionIconMap = useMemo(() => {
-    const allSolutions: string[] = [];
-    navbarData.solutions.categories.forEach(category => {
-      category.links.forEach(link => {
-        allSolutions.push(link.name);
-      });
-    });
-
-    // Shuffle array of numbers 1-33
-    const svgNumbers = Array.from({ length: 33 }, (_, i) => i + 1);
-    for (let i = svgNumbers.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [svgNumbers[i], svgNumbers[j]] = [svgNumbers[j], svgNumbers[i]];
-    }
-
-    // Map each solution to an SVG number
-    const mapping: Record<string, number> = {};
-    allSolutions.forEach((name, index) => {
-      mapping[name] = svgNumbers[index];
-    });
-
-    return mapping;
-  }, []);
-
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileActiveSection, setMobileActiveSection] = useState<string | null>(null);
@@ -125,11 +138,11 @@ export default function navbar() {
                               href={link.href}
                               className="group flex items-center gap-3 p-3 rounded-lg hover:bg-[#00b5ff]/10 transition-all duration-300"
                             >
-                              <div className="flex-shrink-0 w-16 h-16 flex items-center justify-center">
+                              <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center">
                                 <img
                                   src={`/NavbarSVGS/${solutionIconMap[link.name]}.svg`}
                                   alt={link.name}
-                                  className="w-16 h-16 object-contain"
+                                  className="w-12 h-12 object-contain"
                                 />
                               </div>
                               <div className="flex-1 min-w-0">

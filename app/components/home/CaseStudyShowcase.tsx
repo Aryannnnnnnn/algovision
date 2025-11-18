@@ -317,7 +317,7 @@ export default function CaseStudyShowcase() {
         <div className="pt-8 border-t border-gray-800">
           <div className="inline-block">
             <Button
-              href="/case-studies"
+              href="/resources/case-studies"
               variant="accent"
               size="md"
               icon={

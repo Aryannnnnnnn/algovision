@@ -105,16 +105,16 @@ export default function PlatformCoverage() {
           </div>
 
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-2 tracking-tight">
-            Works With All Your Marketing Tools
+            A service built on platform intelligence
           </h2>
           <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 tracking-tight">
             <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">
-              Managed from One Dashboard
+              and seamless execution
             </span>
           </h3>
 
           <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mb-4">
-            We integrate with 21+ platforms including Google, Meta, LinkedIn, TikTok, email, SMS, and more—all controlled from a single interface.
+            Our operations layer connects directly to your existing marketing and data infrastructure.
           </p>
         </div>
       </div>

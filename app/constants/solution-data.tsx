@@ -854,6 +854,150 @@ export const solutionData: Record<string, Record<string, SolutionData>> = {
         }
       ]
     },
+    "product-engineering": {
+      category: "AI Solutions",
+      slug: "product-engineering",
+      title: "Applied AI & Product Engineering",
+      description: "Transform your business with custom AI solutions and cutting-edge product engineering. We build intelligent applications tailored to your specific needs, from concept to deployment.",
+      benefits: [
+        "Custom AI models trained on your specific data and use cases",
+        "End-to-end product development from strategy to deployment",
+        "Scalable architecture designed for enterprise-grade performance",
+        "Integration with existing systems and workflows",
+        "Ongoing support and continuous improvement"
+      ],
+      features: [
+        {
+          title: "Custom AI Development",
+          subtitle: "Built for your needs",
+          description: "We develop custom machine learning models, neural networks, and AI algorithms tailored to solve your unique business challenges.",
+          icon: defaultIcons.automation,
+        },
+        {
+          title: "Product Strategy & Design",
+          subtitle: "Start with clarity",
+          description: "Work with our team to define product vision, user experience, technical architecture, and go-to-market strategy.",
+          icon: defaultIcons.analytics,
+        },
+        {
+          title: "Full-Stack Development",
+          subtitle: "End-to-end solutions",
+          description: "From frontend interfaces to backend infrastructure, we build complete products using modern tech stacks and best practices.",
+          icon: defaultIcons.integration,
+        },
+        {
+          title: "Model Training & Optimization",
+          subtitle: "Maximum accuracy",
+          description: "Train AI models on your proprietary data, optimize for performance, and fine-tune for production deployment.",
+          icon: defaultIcons.performance,
+        },
+        {
+          title: "Cloud Infrastructure",
+          subtitle: "Scale with confidence",
+          description: "Deploy on AWS, Azure, or GCP with auto-scaling, monitoring, and security built in from day one.",
+          icon: defaultIcons.security,
+        },
+        {
+          title: "Continuous Innovation",
+          subtitle: "Always improving",
+          description: "Regular feature updates, model retraining, performance optimization, and adaptation to new technologies.",
+          icon: defaultIcons.support,
+        },
+      ],
+      howItWorks: [
+        {
+          title: "Discovery & Requirements",
+          description: "Deep dive into your business goals, technical requirements, data assets, and constraints to define project scope and success criteria."
+        },
+        {
+          title: "Strategy & Architecture",
+          description: "Design the technical architecture, select optimal tech stack, plan data pipelines, and create detailed development roadmap."
+        },
+        {
+          title: "Development & Training",
+          description: "Build the application, develop and train AI models, integrate systems, and conduct rigorous testing throughout."
+        },
+        {
+          title: "Deployment & Launch",
+          description: "Deploy to production with monitoring, security, and performance optimization. Provide training and documentation."
+        },
+        {
+          title: "Support & Evolution",
+          description: "Ongoing maintenance, feature enhancements, model retraining, and scaling as your business grows."
+        }
+      ],
+      faqs: [
+        {
+          question: "What types of AI solutions can you build?",
+          answer: "We build a wide range of AI applications including computer vision systems, natural language processing tools, predictive analytics platforms, recommendation engines, automated decision systems, and custom ML models for specific business use cases."
+        },
+        {
+          question: "How long does a typical project take?",
+          answer: "Project timelines vary based on complexity. Simple AI integrations can take 6-8 weeks, while complex custom solutions may take 3-6 months. We provide detailed timelines during the discovery phase."
+        },
+        {
+          question: "Do we need to have our own data scientists?",
+          answer: "No, our team includes experienced data scientists, ML engineers, and product managers who will handle all aspects of development. We can also work alongside your internal team if you prefer."
+        },
+        {
+          question: "What happens to the IP and code?",
+          answer: "You own all intellectual property, code, models, and data. We can provide full source code access and transfer upon project completion."
+        },
+        {
+          question: "Can you work with our existing tech stack?",
+          answer: "Yes! We're technology-agnostic and can work with your existing infrastructure, databases, and tools. We'll recommend the best approach during the discovery phase."
+        }
+      ],
+      integrations: [
+        { name: "AWS", category: "Cloud Platform" },
+        { name: "Google Cloud", category: "Cloud Platform" },
+        { name: "Microsoft Azure", category: "Cloud Platform" },
+        { name: "TensorFlow", category: "ML Framework" },
+        { name: "PyTorch", category: "ML Framework" },
+        { name: "OpenAI", category: "AI Platform" },
+        { name: "Hugging Face", category: "ML Models" },
+        { name: "Docker", category: "DevOps" },
+        { name: "Kubernetes", category: "Orchestration" },
+        { name: "PostgreSQL", category: "Database" },
+        { name: "MongoDB", category: "Database" },
+        { name: "Redis", category: "Caching" },
+      ],
+      relatedSolutions: [
+        {
+          title: "Conversational AI",
+          description: "Intelligent conversational AI for customer support",
+          category: "ai",
+          slug: "chatbot",
+          benefits: [
+            "24/7 automated support",
+            "Multi-language capability",
+            "Seamless escalation"
+          ]
+        },
+        {
+          title: "Intelligent Virtual Assistants (IVA)",
+          description: "Virtual assistants to streamline operations",
+          category: "ai",
+          slug: "va",
+          benefits: [
+            "Task automation",
+            "Smart scheduling",
+            "Process optimization"
+          ]
+        },
+        {
+          title: "AI-Enabled Web Assistants",
+          description: "Web-based virtual assistant solutions",
+          category: "ai",
+          slug: "web-va",
+          benefits: [
+            "Enhanced user experience",
+            "Personalized recommendations",
+            "24/7 engagement"
+          ]
+        }
+      ]
+    },
   },
   ads: {
     meta: {

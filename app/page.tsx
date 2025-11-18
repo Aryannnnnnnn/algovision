@@ -11,13 +11,15 @@ import InsightsResources from "./components/home/InsightsResources";
 import WorkingWith from "./components/home/WorkingWith";
 import ServicesGrid from "./components/home/ServicesGrid";
 import CaseStudyShowcase from "./components/home/CaseStudyShowcase";
+import PainToSolution from "./components/home/PainToSolution";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <HomeHero />
-      <ROIShowcase />
       <WorkingWith />
+      <ROIShowcase />
+      <PainToSolution />
       <MethodologyOverview />
       <WhyAlgoVision />
       <ServicesGrid />

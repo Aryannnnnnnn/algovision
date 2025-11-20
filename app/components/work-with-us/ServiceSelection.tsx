@@ -153,8 +153,8 @@ export default function ServiceSelection() {
       <div className="relative max-w-[90vw] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div ref={headingRef} className="mb-16 lg:mb-20">
-          <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-8 shadow-lg">
-            <span className="text-sm font-bold text-white">Our Services</span>
+          <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full mb-8 shadow-lg">
+            <span className="text-xs font-bold text-white">Our Services</span>
           </div>
 
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight mb-4">
@@ -238,7 +238,7 @@ export default function ServiceSelection() {
                     </span>
                     <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#1e293b] group-hover:bg-[#00b5ff] flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-lg">
                       <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                       </svg>
                     </div>
                   </div>
@@ -256,7 +256,7 @@ export default function ServiceSelection() {
             size="md"
             icon={
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
               </svg>
             }
           >

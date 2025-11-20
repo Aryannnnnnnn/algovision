@@ -269,7 +269,7 @@ export default function AdvertisingGrid() {
               <div className="flex items-center text-blue-600 font-semibold text-sm group-hover:gap-2 transition-all">
                 Learn More
                 <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                 </svg>
               </div>
             </Link>

@@ -20,7 +20,7 @@ export default function UtilityBar() {
             <span className="hidden sm:inline">Explore our 2025 Growth Report</span>
             <span className="sm:hidden">2025 Growth Report</span>
             <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
             </svg>
           </a>
         </div>

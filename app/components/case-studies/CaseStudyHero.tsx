@@ -70,7 +70,7 @@ export default function CaseStudyHero({ caseStudy }: CaseStudyHeroProps) {
           <div ref={contentRef} className="space-y-6">
             {/* Industry Badge */}
             <div className="inline-flex">
-              <span className="px-4 py-2 bg-[#1e293b] text-white text-sm font-bold rounded-full shadow-lg">
+              <span className="px-3 py-1.5 bg-[#1e293b] text-white text-xs font-bold rounded-full shadow-lg">
                 {caseStudy.industry.toUpperCase()} BRAND
               </span>
             </div>

@@ -162,8 +162,8 @@ export default function CaseStudyShowcase() {
         {/* Header */}
         <div className="mb-16">
           <div className="flex items-start justify-between gap-4 mb-6">
-            <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-              <span className="text-sm font-bold text-white">Client Success Story</span>
+            <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+              <span className="text-xs font-bold text-white">Client Success Story</span>
             </div>
 
             {/* Navigation Buttons */}
@@ -179,7 +179,7 @@ export default function CaseStudyShowcase() {
               </button>
 
               <div className="px-4 py-2 bg-gray-800/80 rounded-full border border-gray-700">
-                <span className="text-sm font-bold text-white">{currentIndex + 1}</span>
+                <span className="text-xs font-bold text-white">{currentIndex + 1}</span>
                 <span className="text-sm text-gray-400 mx-1.5">/</span>
                 <span className="text-sm text-gray-400">{caseStudies.length}</span>
               </div>
@@ -190,7 +190,7 @@ export default function CaseStudyShowcase() {
                 aria-label="Next case study"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                 </svg>
               </button>
             </div>

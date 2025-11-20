@@ -73,8 +73,8 @@ export default function CookiePolicyContent() {
           <div className="max-w-5xl">
             <div ref={heroContentRef} className="space-y-6 md:space-y-8">
               {/* Badge */}
-              <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-                <span className="text-sm font-bold text-white">Cookie Policy</span>
+              <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+                <span className="text-xs font-bold text-white">Cookie Policy</span>
               </div>
 
               {/* Headline */}
@@ -100,7 +100,7 @@ export default function CookiePolicyContent() {
                   size="lg"
                   icon={
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
                   }
                 >
@@ -143,8 +143,8 @@ export default function CookiePolicyContent() {
 
           {/* What Are Cookies */}
           <div className="content-section space-y-6">
-            <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-              <span className="text-sm font-bold text-white">What Are Cookies</span>
+            <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+              <span className="text-xs font-bold text-white">What Are Cookies</span>
             </div>
 
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
@@ -173,8 +173,8 @@ export default function CookiePolicyContent() {
 
           {/* Types of Cookies */}
           <div id="cookie-types" className="content-section space-y-6">
-            <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-              <span className="text-sm font-bold text-white">Cookie Categories</span>
+            <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+              <span className="text-xs font-bold text-white">Cookie Categories</span>
             </div>
 
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
@@ -355,8 +355,8 @@ export default function CookiePolicyContent() {
 
           {/* How to Control Cookies */}
           <div className="content-section space-y-6">
-            <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-              <span className="text-sm font-bold text-white">Your Control</span>
+            <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+              <span className="text-xs font-bold text-white">Your Control</span>
             </div>
 
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
@@ -461,8 +461,8 @@ export default function CookiePolicyContent() {
 
           {/* Updates to Cookie Policy */}
           <div className="content-section space-y-6">
-            <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-              <span className="text-sm font-bold text-white">Policy Updates</span>
+            <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+              <span className="text-xs font-bold text-white">Policy Updates</span>
             </div>
 
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">

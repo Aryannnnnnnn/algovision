@@ -105,7 +105,7 @@ export default function ROIShowcase() {
                   {formatROI(animatedROI)}<span className="text-[#00b5ff] text-sm align-top ml-0.5">+</span>
                 </div>
                 <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  Return on Investment for clients.
+                  measured ROI delivered
                 </p>
               </div>
 
@@ -139,7 +139,7 @@ export default function ROIShowcase() {
                     {animatedGrowth}<span className="text-[#00b5ff] text-xl align-top">%</span><span className="text-[#00b5ff] text-sm align-top ml-0.5">+</span>
                   </div>
                   <div className="text-xs font-semibold text-gray-600">
-                    Average Growth
+                    average growth for core cohorts
                   </div>
                 </div>
 
@@ -149,7 +149,7 @@ export default function ROIShowcase() {
                     {animatedClients}<span className="text-[#00b5ff] text-sm align-top ml-0.5">+</span>
                   </div>
                   <div className="text-xs font-semibold text-gray-600">
-                    Clients Served
+                    clients across 10+ industries
                   </div>
                 </div>
 
@@ -159,7 +159,7 @@ export default function ROIShowcase() {
                     {animatedPartners}<span className="text-[#00b5ff] text-sm align-top ml-0.5">+</span>
                   </div>
                   <div className="text-xs font-semibold text-gray-600">
-                    Partners
+                   strategic media, AI & analytics partners
                   </div>
                 </div>
               </div>

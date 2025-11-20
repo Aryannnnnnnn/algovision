@@ -88,7 +88,7 @@ export default function WorkingWithEnterprises() {
         <div ref={sectionRef}>
           {/* Badge */}
           <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full mb-6 shadow-lg">
-            <span className="text-sm font-bold text-white">Our Clients</span>
+            <span className="text-xs font-bold text-white">Our Clients</span>
           </div>
 
           {/* Heading */}

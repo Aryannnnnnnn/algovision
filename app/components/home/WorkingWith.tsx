@@ -85,8 +85,8 @@ export default function WorkingWith() {
         {/* Section Header */}
         <div ref={headingRef} className="mb-12 lg:mb-16">
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg mb-6">
-            <span className="text-sm font-bold text-white">Our Clients</span>
+          <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg mb-6">
+            <span className="text-xs font-bold text-white">Our Clients</span>
           </div>
 
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight mb-4">

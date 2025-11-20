@@ -29,7 +29,7 @@ export default function Newsletter() {
             {/* Left - Content */}
             <div>
               <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full mb-6 shadow-lg">
-                <span className="text-sm font-bold text-white">Stay Connected</span>
+                <span className="text-xs font-bold text-white">Stay Connected</span>
               </div>
 
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
@@ -59,7 +59,7 @@ export default function Newsletter() {
                   className="w-full"
                   icon={
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
                   }
                 >

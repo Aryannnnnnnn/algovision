@@ -47,8 +47,8 @@ export default function CareersCTA() {
       <div className="relative xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div ref={contentRef} className="max-w-4xl space-y-8">
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-            <span className="text-sm font-bold text-white">Ready to Join?</span>
+          <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+            <span className="text-xs font-bold text-white">Ready to Join?</span>
           </div>
 
           {/* Headline */}
@@ -100,7 +100,7 @@ export default function CareersCTA() {
               size="lg"
               icon={
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                 </svg>
               }
             >

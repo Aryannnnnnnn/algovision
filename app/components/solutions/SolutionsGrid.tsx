@@ -136,7 +136,7 @@ export default function SolutionsGrid() {
                     <div className="flex items-center gap-2 text-[#00b5ff] text-sm font-semibold">
                       <span>Learn more</span>
                       <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                       </svg>
                     </div>
 

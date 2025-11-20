@@ -63,8 +63,8 @@ export default function AccessibilityContent() {
           <div className="max-w-5xl">
             <div ref={heroContentRef} className="space-y-6 md:space-y-8">
               {/* Badge */}
-              <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-                <span className="text-sm font-bold text-white">Accessibility Statement</span>
+              <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+                <span className="text-xs font-bold text-white">Accessibility Statement</span>
               </div>
 
               {/* Headline */}
@@ -88,7 +88,7 @@ export default function AccessibilityContent() {
                   size="lg"
                   icon={
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
                   }
                 >
@@ -147,8 +147,8 @@ export default function AccessibilityContent() {
 
             {/* Our Commitment */}
             <div id="commitment" className="content-block space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-                <span className="text-sm font-bold text-white">Our Commitment</span>
+              <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+                <span className="text-xs font-bold text-white">Our Commitment</span>
               </div>
 
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
@@ -170,8 +170,8 @@ export default function AccessibilityContent() {
 
             {/* WCAG Compliance */}
             <div className="content-block space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-                <span className="text-sm font-bold text-white">Standards Compliance</span>
+              <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+                <span className="text-xs font-bold text-white">Standards Compliance</span>
               </div>
 
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
@@ -219,8 +219,8 @@ export default function AccessibilityContent() {
 
             {/* Accessibility Features */}
             <div className="content-block space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-                <span className="text-sm font-bold text-white">Features</span>
+              <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+                <span className="text-xs font-bold text-white">Features</span>
               </div>
 
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
@@ -326,8 +326,8 @@ export default function AccessibilityContent() {
 
             {/* Known Limitations */}
             <div className="content-block space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-                <span className="text-sm font-bold text-white">Transparency</span>
+              <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+                <span className="text-xs font-bold text-white">Transparency</span>
               </div>
 
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
@@ -373,8 +373,8 @@ export default function AccessibilityContent() {
 
             {/* Feedback and Contact */}
             <div className="content-block space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-                <span className="text-sm font-bold text-white">Get in Touch</span>
+              <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+                <span className="text-xs font-bold text-white">Get in Touch</span>
               </div>
 
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
@@ -437,8 +437,8 @@ export default function AccessibilityContent() {
 
             {/* Third-party Content */}
             <div className="content-block space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-                <span className="text-sm font-bold text-white">Important Information</span>
+              <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+                <span className="text-xs font-bold text-white">Important Information</span>
               </div>
 
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
@@ -460,8 +460,8 @@ export default function AccessibilityContent() {
 
             {/* Ongoing Improvements */}
             <div className="content-block space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-                <span className="text-sm font-bold text-white">Continuous Progress</span>
+              <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+                <span className="text-xs font-bold text-white">Continuous Progress</span>
               </div>
 
               <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
@@ -544,7 +544,7 @@ export default function AccessibilityContent() {
                   size="lg"
                   icon={
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
                   }
                 >

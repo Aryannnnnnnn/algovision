@@ -3,8 +3,8 @@ import ROIShowcase from "./components/home/ROIShowcase";
 import WhyAlgoVision from "./components/home/WhyAlgoVision";
 import TransformSection from "./components/home/TransformSection";
 // import EnterpriseResults from "./components/home/EnterpriseResults";
-import HowWeWork from "./components/home/HowWeWork";
-import PlatformCoverage from "./components/home/PlatformCoverage";
+// import HowWeWork from "./components/home/HowWeWork";
+// import PlatformCoverage from "./components/home/PlatformCoverage";
 // import EnterpriseTrust from "./components/home/EnterpriseTrust";
 import MethodologyOverview from "./components/home/MethodologyOverview";
 import InsightsResources from "./components/home/InsightsResources";
@@ -12,6 +12,7 @@ import WorkingWith from "./components/home/WorkingWith";
 import ServicesGrid from "./components/home/ServicesGrid";
 import CaseStudyShowcase from "./components/home/CaseStudyShowcase";
 import PainToSolution from "./components/home/PainToSolution";
+import FinalCTA from "./components/home/FinalCTA";
 
 export default function Home() {
   return (
@@ -19,17 +20,18 @@ export default function Home() {
       <HomeHero />
       <WorkingWith />
       <ROIShowcase />
-      <PainToSolution />
       <MethodologyOverview />
+      <PainToSolution />
       <WhyAlgoVision />
       <ServicesGrid />
-      <TransformSection />
       <CaseStudyShowcase />
+      <TransformSection />
       {/* <EnterpriseResults /> */}
-      <HowWeWork />
-      <PlatformCoverage />
+      {/* <HowWeWork /> */}
+      {/* <PlatformCoverage /> */}
       {/* <EnterpriseTrust /> */}
       <InsightsResources />
+      <FinalCTA />
     </div>
   );
 }

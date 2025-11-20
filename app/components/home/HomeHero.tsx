@@ -13,7 +13,7 @@ const ArrowIcon = () => (
 
 const ChevronIcon = () => (
   <svg className="w-3 h-3 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
   </svg>
 );
 
@@ -187,8 +187,8 @@ export default function HomeHero() {
           {/* Left Content */}
           <div ref={leftRef} className="space-y-8">
             <div>
-              <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-6 shadow-lg">
-                <span className="text-sm font-bold text-white">Your Digital Partner</span>
+              <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full mb-6 shadow-lg">
+                <span className="text-xs font-bold text-white">Your Digital Partner</span>
               </div>
 
               <h1 className="hero-heading text-5xl sm:text-6xl lg:text-7xl font-normal text-black leading-[1.05] mb-6 tracking-tight">

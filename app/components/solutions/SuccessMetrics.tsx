@@ -115,8 +115,8 @@ export default function SuccessMetrics() {
           {/* Left Side - Content */}
           <div ref={rightRef} className="order-1 space-y-6">
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-              <span className="text-sm font-bold text-white">Proven Results</span>
+            <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+              <span className="text-xs font-bold text-white">Proven Results</span>
             </div>
 
             {/* Headline */}
@@ -157,7 +157,7 @@ export default function SuccessMetrics() {
                 size="md"
                 icon={
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
                 }
               >

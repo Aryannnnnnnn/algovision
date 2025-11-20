@@ -142,8 +142,8 @@ export default function EnterpriseResults() {
           {/* Left Side - Text Content */}
           <div ref={rightRef} className="order-1 space-y-6">
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-              <span className="text-sm font-bold text-white">Real Results</span>
+            <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+              <span className="text-xs font-bold text-white">Real Results</span>
             </div>
 
             {/* Headline */}

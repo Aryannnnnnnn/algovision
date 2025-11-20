@@ -75,8 +75,8 @@ export default function SolutionFAQ({ faqs, serviceName = "This Solution" }: Sol
 
           {/* Left Side - Content */}
           <div ref={headingRef} className="lg:sticky lg:top-24">
-            <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-8 shadow-lg">
-              <span className="text-sm font-bold text-white">Learn More</span>
+            <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full mb-8 shadow-lg">
+              <span className="text-xs font-bold text-white">Learn More</span>
             </div>
 
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 tracking-tight">
@@ -101,7 +101,7 @@ export default function SolutionFAQ({ faqs, serviceName = "This Solution" }: Sol
               >
                 <span>Schedule a call with our team</span>
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                 </svg>
               </a>
             </div>

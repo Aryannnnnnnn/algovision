@@ -64,8 +64,8 @@ export default function PainToSolution() {
       <div className="relative xl:max-w-[90vw] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Header */}
         <div ref={headingRef} className="max-w-4xl mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-8 shadow-lg">
-            <span className="text-sm font-bold text-white">Why We're Different</span>
+          <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full mb-8 shadow-lg">
+            <span className="text-xs font-bold text-white">Why We're Different</span>
           </div>
 
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 tracking-tight">
@@ -93,7 +93,7 @@ export default function PainToSolution() {
                   </svg>
                 </div>
                 <p className="text-base text-gray-700 leading-relaxed">
-                  <strong className="text-gray-900">Fragmented campaigns</strong> — Google Ads here, social media there, PR somewhere else
+                  <strong className="text-gray-900">Great efforts, but isolated</strong> — Ads, social, PR, and content all do their job, but rarely share data or momentum
                 </p>
               </div>
 
@@ -104,7 +104,7 @@ export default function PainToSolution() {
                   </svg>
                 </div>
                 <p className="text-base text-gray-700 leading-relaxed">
-                  <strong className="text-gray-900">Channels work in silos</strong> — each burning budget without amplifying the others
+                  <strong className="text-gray-900">Teams operate independently</strong> — each channel performs, but can’t amplify the others
                 </p>
               </div>
 
@@ -115,7 +115,7 @@ export default function PainToSolution() {
                   </svg>
                 </div>
                 <p className="text-base text-gray-700 leading-relaxed">
-                  <strong className="text-gray-900">Wasted budgets</strong> — no coordination means missed opportunities
+                  <strong className="text-gray-900">Growth plateaus</strong> — opportunities get missed simply because the system isn’t connected
                 </p>
               </div>
             </div>
@@ -135,7 +135,7 @@ export default function PainToSolution() {
                   </svg>
                 </div>
                 <p className="text-base text-gray-700 leading-relaxed">
-                  <strong className="text-gray-900">Orchestrated campaigns</strong> — all channels work as one integrated strategy
+                  <strong className="text-gray-900">Everything works together</strong> — your existing platforms stay, we just connect the dots
                 </p>
               </div>
 
@@ -146,7 +146,7 @@ export default function PainToSolution() {
                   </svg>
                 </div>
                 <p className="text-base text-gray-700 leading-relaxed">
-                  <strong className="text-gray-900">Channels amplify each other</strong> — when PR creates buzz, ads capitalize on it instantly
+                  <strong className="text-gray-900">Every channel boosts the next</strong> — PR fuels search; ads convert interest; content deepens trust
                 </p>
               </div>
 
@@ -157,7 +157,7 @@ export default function PainToSolution() {
                   </svg>
                 </div>
                 <p className="text-base text-gray-700 leading-relaxed">
-                  <strong className="text-gray-900">3-5x better ROI</strong> — every dollar works harder because every channel reinforces the others
+                  <strong className="text-gray-900">Performance compounds</strong> — instead of linear growth, results accelerate as channels support each other
                 </p>
               </div>
             </div>

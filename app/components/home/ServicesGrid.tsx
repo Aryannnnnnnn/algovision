@@ -41,8 +41,8 @@ export default function ServicesGrid() {
       <div className="relative max-w-[90vw] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-6 shadow-lg">
-            <span className="text-sm font-bold text-white uppercase tracking-wider">Our Services</span>
+          <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full mb-6 shadow-lg">
+            <span className="text-xs font-bold text-white uppercase tracking-wider">Our Services</span>
           </div>
 
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
@@ -70,7 +70,7 @@ export default function ServicesGrid() {
             <span className="inline-flex items-center text-sm font-semibold text-gray-900 group-hover:text-[#00b5ff] transition-colors duration-300">
               Explore
               <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
               </svg>
             </span>
           </a>
@@ -86,7 +86,7 @@ export default function ServicesGrid() {
             <span className="inline-flex items-center text-sm font-semibold text-gray-900 group-hover:text-[#00b5ff] transition-colors duration-300">
               Explore
               <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
               </svg>
             </span>
           </a>
@@ -110,7 +110,7 @@ export default function ServicesGrid() {
               <span className="inline-flex items-center text-sm font-semibold text-gray-900 group-hover:text-[#00b5ff] transition-colors duration-300">
                 Explore
                 <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                 </svg>
               </span>
             </div>
@@ -135,7 +135,7 @@ export default function ServicesGrid() {
               <span className="inline-flex items-center text-sm font-semibold text-gray-900 group-hover:text-[#00b5ff] transition-colors duration-300">
                 Explore
                 <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                 </svg>
               </span>
             </div>

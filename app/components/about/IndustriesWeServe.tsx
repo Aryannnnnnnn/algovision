@@ -119,8 +119,8 @@ export default function IndustriesWeServe() {
       <div className="relative max-w-[90vw] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Badge */}
         <div className="mb-8">
-          <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-            <span className="text-sm font-bold text-white">
+          <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+            <span className="text-xs font-bold text-white">
               Industries We Transform
             </span>
           </div>

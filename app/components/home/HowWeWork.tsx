@@ -129,8 +129,8 @@ export default function HowWeWork() {
 
           {/* Heading - Right on desktop, top on mobile/tablet */}
           <div className="lg:sticky lg:top-24 max-w-2xl mx-auto order-1 lg:order-1">
-            <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-6 shadow-lg">
-              <span className="text-sm font-bold text-white">Our Process</span>
+            <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full mb-6 shadow-lg">
+              <span className="text-xs font-bold text-white">Our Process</span>
             </div>
 
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">

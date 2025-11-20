@@ -50,7 +50,7 @@ export default function OurStory() {
           {/* Right - Content */}
           <div>
             <div className="inline-flex items-center px-5 py-2.5 bg-[#1e293b] rounded-full mb-6 shadow-lg">
-              <span className="text-sm font-bold text-white">Our Journey</span>
+              <span className="text-xs font-bold text-white">Our Journey</span>
             </div>
 
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">

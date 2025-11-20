@@ -130,7 +130,7 @@ export default function EnterpriseTrust() {
         {/* Header */}
         <div ref={headingRef} className="mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-white/10 rounded-full mb-8 shadow-lg">
-            <span className="text-sm font-bold text-white">Why Companies Trust Us</span>
+            <span className="text-xs font-bold text-white">Why Companies Trust Us</span>
           </div>
 
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-2 tracking-tight">

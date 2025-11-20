@@ -174,8 +174,8 @@ export default function SitemapContent() {
         <div className="max-w-5xl">
           <div ref={contentRef} className="space-y-6 md:space-y-8">
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-              <span className="text-sm font-bold text-white">Site Navigation</span>
+            <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+              <span className="text-xs font-bold text-white">Site Navigation</span>
             </div>
 
             {/* Headline */}
@@ -239,7 +239,7 @@ export default function SitemapContent() {
                   <h2 className="text-2xl font-bold text-white">
                     {category.title}
                   </h2>
-                  <span className="ml-2 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold text-white">
+                  <span className="ml-2 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold text-white">
                     {category.links.length}
                   </span>
                 </div>
@@ -306,7 +306,7 @@ export default function SitemapContent() {
                           <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            d="M9 5l7 7-7 7"
+                            d="M7 17L17 7M17 7H7M17 7V17"
                           />
                         </svg>
                       </div>

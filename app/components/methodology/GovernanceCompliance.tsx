@@ -224,8 +224,8 @@ export default function GovernanceCompliance() {
 
           {/* Heading - Right on desktop, top on mobile/tablet */}
           <div className="lg:sticky lg:top-24 max-w-2xl mx-auto order-1 lg:order-2">
-            <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full mb-6 shadow-lg">
-              <span className="text-sm font-bold text-white">The AlgoVision Process</span>
+            <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full mb-6 shadow-lg">
+              <span className="text-xs font-bold text-white">The AlgoVision Process</span>
             </div>
 
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -256,7 +256,7 @@ export default function GovernanceCompliance() {
                 size="md"
                 icon={
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
                   </svg>
                 }
               >

@@ -94,16 +94,16 @@ export default function MethodologyOverview() {
           {/* Right Side - Content */}
           <div ref={rightRef} className="space-y-6">
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-              <span className="text-sm font-bold text-white">Our Methodology</span>
+            <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+              <span className="text-xs font-bold text-white">Our Methodology</span>
             </div>
 
             {/* Headline */}
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight">
-              Consulting & Marketing{" "}
+              A single partner for strategy and{" "}
               <span className="relative inline-block">
                 <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">
-                  driven by data
+                  full-stack execution
                 </span>
               </span>
             </h2>
@@ -111,22 +111,22 @@ export default function MethodologyOverview() {
             {/* Methodology Overview */}
             <div className="space-y-4">
               <p className="text-xl text-gray-600 leading-relaxed">
-                We combine strategic business consulting with data-driven marketing execution. Our approach integrates market intelligence, performance analytics, and continuous optimization to maximize your return on investment.
+                Algo Vision designs growth systems combining business consulting, AI automation, omnichannel campaigns, and reputation strategy so outcomes are predictable and scalable.
               </p>
 
               <div className="space-y-3 pt-4">
                 {[
                   {
-                    title: "Business Consulting",
-                    description: "Strategic planning and market analysis to identify growth opportunities",
+                    title: "Clarity that guides every decision",
+                    description: "Simple, clear signals that help teams focus on the highest-impact opportunities.",
                   },
                   {
-                    title: "Marketing Execution",
-                    description: "Data-driven campaigns across all channels with real-time optimization",
+                    title: "Execution built for uptime",
+                    description: "Omnichannel systems that deliver consistent performance under any scale.",
                   },
                   {
-                    title: "Scalable Solutions",
-                    description: "Technology and processes that grow with your business needs",
+                    title: "Systems that evolve with you",
+                    description: "Flexible, modular frameworks that compound results over time.",
                   },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">

@@ -42,8 +42,8 @@ export default function TermsHero() {
         <div className="max-w-5xl">
           <div ref={contentRef} className="space-y-6 md:space-y-8">
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-              <span className="text-sm font-bold text-white">Legal</span>
+            <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+              <span className="text-xs font-bold text-white">Legal</span>
             </div>
 
             {/* Headline */}

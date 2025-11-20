@@ -164,8 +164,8 @@ export default function EnterpriseInfrastructure() {
           {/* Right Side - Content */}
           <div className="space-y-6">
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-[#1e293b] rounded-full shadow-lg">
-              <span className="text-sm font-bold text-white">Enterprise Infrastructure</span>
+            <div className="inline-flex items-center px-3 py-1.5 bg-[#1e293b] rounded-full shadow-lg">
+              <span className="text-xs font-bold text-white">Enterprise Infrastructure</span>
             </div>
 
             {/* Headline */}

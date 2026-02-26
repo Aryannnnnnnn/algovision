@@ -57,7 +57,7 @@ export default function ReadyForCertainty() {
 
             <div className="space-y-4 text-gray-600 text-lg leading-relaxed max-w-4xl">
               <p>
-                Enterprises partner with AlgoVision because they value precision executed at speed, depth of insight, and a standard of delivery where every commitment is fulfilled.
+                Enterprises partner with Algo Vision because they value precision executed at speed, depth of insight, and a standard of delivery where every commitment is fulfilled.
               </p>
               <p className="font-semibold text-gray-900">
                 We don't chase volume—we guarantee outcomes.

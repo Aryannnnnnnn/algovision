@@ -82,7 +82,7 @@ export default function OurCommitments() {
       number: "04",
       title: "To The Future",
       description:
-        "We're building AlgoVision not for what digital marketing is today, but for what it will become tomorrow—and we're ensuring our clients are positioned to lead that future.",
+        "We're building Algo Vision not for what digital marketing is today, but for what it will become tomorrow—and we're ensuring our clients are positioned to lead that future.",
     },
   ];
 
@@ -119,7 +119,7 @@ export default function OurCommitments() {
           <p className="text-xl text-gray-600 leading-relaxed max-w-3xl">
             These aren't aspirational values posted on a wall—they're the
             non-negotiable principles that guide every decision, every project,
-            and every relationship at AlgoVision.
+            and every relationship at Algo Vision.
           </p>
         </div>
 

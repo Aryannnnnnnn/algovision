@@ -156,7 +156,7 @@ export default function GlobalPresence() {
 
             {/* Description */}
             <p className="text-xl text-gray-600 leading-relaxed">
-              With operations spanning multiple continents and partnerships with the world's leading technology platforms, AlgoVision combines global scale with the attention and customization of a boutique consultancy.
+              With operations spanning multiple continents and partnerships with the world's leading technology platforms, Algo Vision combines global scale with the attention and customization of a boutique consultancy.
             </p>
 
             {/* Strategic Partnerships */}

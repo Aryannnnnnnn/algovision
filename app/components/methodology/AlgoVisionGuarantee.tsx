@@ -50,7 +50,7 @@ export default function AlgoVisionGuarantee() {
               <span className="text-xs font-bold text-white">Our Commitment</span>
             </div>
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight">
-              The AlgoVision{' '}
+              The Algo Vision{' '}
               <span className="relative inline-block">
                 <span className="relative z-10 bg-gradient-to-r from-[#00b5ff] via-[#00b5ff] to-[#00b5ff] bg-clip-text text-transparent">
                   Guarantee

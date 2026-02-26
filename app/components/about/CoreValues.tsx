@@ -110,7 +110,7 @@ export default function CoreValues() {
           </h2>
 
           <p className="text-xl text-gray-600 leading-relaxed">
-            AlgoVision operates at the intersection of artificial intelligence, data intelligence, and human expertise to make growth predictable and transformation inevitable.
+            Algo Vision operates at the intersection of artificial intelligence, data intelligence, and human expertise to make growth predictable and transformation inevitable.
           </p>
         </div>
 

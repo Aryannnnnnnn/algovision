@@ -60,7 +60,7 @@ export default function InsightsResources() {
       title: "AI Marketing Tools: What Actually Works in 2024",
       description: "Our analysis of current AI marketing technology and which tools deliver real business value.",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
-      link: "/resources",
+      link: "/",
       badge: "Industry Report",
     },
     {
@@ -68,7 +68,7 @@ export default function InsightsResources() {
       title: "How DataFlow Systems Grew ROI by 340%",
       description: "Read how we helped this SaaS company turn around their marketing performance in 6 months.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-      link: "/case-studies",
+      link: "/",
       badge: "Client Story",
     },
     {
@@ -76,7 +76,7 @@ export default function InsightsResources() {
       title: "Marketing Operations Guide for Growing Companies",
       description: "Free download: Our complete guide to building scalable marketing systems that actually work.",
       image: "https://images.unsplash.com/photo-1512314889357-e157c22f938d?w=800&q=80",
-      link: "/resources",
+      link: "/",
       badge: "Free Download",
     },
     {
@@ -84,7 +84,7 @@ export default function InsightsResources() {
       title: "Tracking Customer Journeys Across Marketing Channels",
       description: "Watch our expert webinar on attribution and understanding which channels drive your best results.",
       image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80",
-      link: "/webinars",
+      link: "/",
       badge: "On-Demand",
     },
     {
@@ -92,7 +92,7 @@ export default function InsightsResources() {
       title: "How to Coordinate Marketing Across Multiple Platforms",
       description: "Learn practical strategies for managing campaigns on Google, Meta, LinkedIn, and more from a single dashboard.",
       image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
-      link: "/blog",
+      link: "/",
       badge: "5 min read",
     },
   ];

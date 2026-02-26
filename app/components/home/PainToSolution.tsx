@@ -124,7 +124,7 @@ export default function PainToSolution() {
           {/* The Solution */}
           <div className="relative bg-gradient-to-br from-blue-50 to-white border-2 border-[#00b5ff] rounded-3xl p-8 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300">
             <div className="absolute -top-4 left-8 px-4 py-1.5 bg-gradient-to-r from-[#00b5ff] to-[#0095d9] text-white text-sm font-bold rounded-full shadow-lg">
-              AlgoVision Approach
+              Algo Vision Approach
             </div>
 
             <div className="mt-4 space-y-4">

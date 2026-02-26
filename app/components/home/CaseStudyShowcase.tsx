@@ -31,7 +31,7 @@ export default function CaseStudyShowcase() {
         "Retargeting strategy for cart abandoners, website visitors, and video viewers",
         "15% off incentive for first-time buyers integrated with email and SMS campaigns",
       ],
-      link: "/case-studies/organic-supplements-meta-ads",
+      link: "/",
     },
     {
       client: "SaaS Tech Platform",
@@ -52,7 +52,7 @@ export default function CaseStudyShowcase() {
         "Created interactive ROI calculators and product comparison tools",
         "Implemented automated nurture sequences for lead qualification",
       ],
-      link: "/case-studies/saas-b2b-leads",
+      link: "/",
     },
     {
       client: "Fashion Retail Brand",
@@ -73,7 +73,7 @@ export default function CaseStudyShowcase() {
         "VIP loyalty program with exclusive early access and rewards",
         "User-generated content campaigns to build social proof",
       ],
-      link: "/case-studies/fashion-brand-loyalty",
+      link: "/",
     },
   ];
 

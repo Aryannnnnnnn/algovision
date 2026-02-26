@@ -116,7 +116,7 @@ export default function WhyWeStarted() {
               </p>
 
               <p className="text-xl font-bold text-gray-900">
-                We started AlgoVision to change that reality.
+                We started Algo Vision to change that reality.
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed">

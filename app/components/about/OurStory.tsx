@@ -65,10 +65,10 @@ export default function OurStory() {
 
             <div className="space-y-5 text-gray-600 leading-relaxed text-lg">
               <p>
-               Founded in 2021, AlgoVision emerged from a singular conviction: <span className="font-semibold text-gray-900">every project in the digital and technological sector deserves to be executed with precision, completed without exception, and delivered with absolute certainty.</span>
+               Founded in 2021, Algo Vision emerged from a singular conviction: <span className="font-semibold text-gray-900">every project in the digital and technological sector deserves to be executed with precision, completed without exception, and delivered with absolute certainty.</span>
               </p>
               <p>
-               Headquartered globally with operations spanning multiple continents, AlgoVision serves the world's most demanding leading enterprises, investment firms, healthcare organizations, and e-commerce giants. Our fully integrated methodology combines proprietary CRM systems, AI-powered solutions, and omnichannel expertise to deliver outcomes that transform businesses and redefine what's possible in digital marketing.
+               Headquartered globally with operations spanning multiple continents, Algo Vision serves the world's most demanding leading enterprises, investment firms, healthcare organizations, and e-commerce giants. Our fully integrated methodology combines proprietary CRM systems, AI-powered solutions, and omnichannel expertise to deliver outcomes that transform businesses and redefine what's possible in digital marketing.
               </p>
               <p>
                 What sets us apart is simple: <span className="font-semibold text-gray-900"> we don't onboard projects we can't guarantee.</span> Our selective approach, backed by a parameter-driven framework, has resulted in a 100% project completion rate since inception—a benchmark unmatched in the industry.

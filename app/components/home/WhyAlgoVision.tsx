@@ -103,7 +103,7 @@ export default function WhyAlgoVision() {
           </h2>
 
           <p className="text-lg text-gray-500 leading-relaxed">
-            Over 100 companies trust AlgoVision to manage their complete marketing operations—from Fortune 500 enterprises to fast-growing startups.
+            Over 100 companies trust Algo Vision to manage their complete marketing operations—from Fortune 500 enterprises to fast-growing startups.
           </p>
         </div>
 

@@ -53,7 +53,7 @@ export default function MethodologyHero() {
             </p>
 
             <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl">
-              Enterprises work with AlgoVision when they want certainty in execution, measurable business outcomes, and a partner who treats project completion as non-negotiable.
+              Enterprises work with Algo Vision when they want certainty in execution, measurable business outcomes, and a partner who treats project completion as non-negotiable.
             </p>
           </div>
         </div>

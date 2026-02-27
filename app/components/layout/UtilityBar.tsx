@@ -13,12 +13,12 @@ export default function UtilityBar() {
 
           {/* Right Side */}
           <a
-            href="/resources/2025-growth-report"
+            href="/resources/2026-growth-report"
             className="flex items-center gap-2 text-gray-900 hover:text-[#00b5ff] transition-colors font-medium"
           >
             <span className="px-1.5 py-0.5 bg-[#00b5ff] text-white text-[10px] font-bold rounded uppercase tracking-wide flex-shrink-0">New</span>
-            <span className="hidden sm:inline">Explore our 2025 Growth Report</span>
-            <span className="sm:hidden">2025 Growth Report</span>
+            <span className="hidden sm:inline">Explore our 2026 Growth Report</span>
+            <span className="sm:hidden">2026 Growth Report</span>
             <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
             </svg>

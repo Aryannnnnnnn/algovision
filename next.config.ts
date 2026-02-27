@@ -26,7 +26,7 @@ const nextConfig: NextConfig = {
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: https: blob:",
               "font-src 'self' data:",
-              "connect-src 'self' https://*.supabase.co https://*.clerk.accounts.dev https://*.clerk.com",
+              "connect-src 'self' https://*.supabase.co https://*.clerk.accounts.dev https://*.clerk.com https://api.web3forms.com",
               "frame-src 'self' https://*.clerk.accounts.dev https://*.clerk.com",
               "object-src 'none'",
               "base-uri 'self'",

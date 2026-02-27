@@ -5,12 +5,29 @@ import Button from "@/app/components/ui/Button";
 
 export default function Newsletter() {
   const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle newsletter signup
-    console.log("Newsletter signup:", email);
-    setEmail("");
+    setStatus("loading");
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          subject: "Newsletter Subscription - Algo Vision",
+          from_name: "Newsletter Subscriber",
+          email,
+        }),
+      });
+      const result = await res.json();
+      if (!result.success) throw new Error();
+      setStatus("success");
+      setEmail("");
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -44,28 +61,41 @@ export default function Newsletter() {
 
             {/* Right - Form */}
             <div>
-              <form onSubmit={handleSubmit} className="space-y-3">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email address"
-                  required
-                  className="w-full px-6 py-4 text-gray-900 bg-white border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#00b5ff] focus:ring-4 focus:ring-[#00b5ff]/10 transition-all duration-300 placeholder:text-gray-400"
-                />
-                <Button
-                  variant="primary"
-                  size="md"
-                  className="w-full"
-                  icon={
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                  }
-                >
-                  Subscribe Now
-                </Button>
-              </form>
+              {status === "success" ? (
+                <div className="bg-green-50 border border-green-200 rounded-xl p-5 flex items-center gap-2 text-green-700 font-semibold">
+                  <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  You're subscribed! Check your inbox.
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-3">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email address"
+                    required
+                    disabled={status === "loading"}
+                    className="w-full px-6 py-4 text-gray-900 bg-white border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#00b5ff] focus:ring-4 focus:ring-[#00b5ff]/10 transition-all duration-300 placeholder:text-gray-400 disabled:opacity-50"
+                  />
+                  <Button
+                    variant="primary"
+                    size="md"
+                    className="w-full"
+                    icon={
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+                      </svg>
+                    }
+                  >
+                    {status === "loading" ? "Subscribing..." : "Subscribe Now"}
+                  </Button>
+                  {status === "error" && (
+                    <p className="text-xs text-red-500">Something went wrong. Please try again.</p>
+                  )}
+                </form>
+              )}
 
               <p className="text-xs text-gray-500 mt-4">
                 No spam, unsubscribe anytime. We respect your privacy.

@@ -18,6 +18,7 @@ export default function ContactForm() {
     budget: "",
     timeline: "",
   });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -37,10 +38,32 @@ export default function ContactForm() {
     return () => ctx.revert();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic here
-    console.log("Form submitted:", formData);
+    setStatus("loading");
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          subject: "Contact Form Inquiry - Algo Vision",
+          from_name: formData.name,
+          email: formData.email,
+          company: formData.company || "Not provided",
+          phone: formData.phone || "Not provided",
+          message: formData.message,
+          budget: formData.budget || "Not selected",
+          timeline: formData.timeline || "Not selected",
+        }),
+      });
+      const result = await res.json();
+      if (!result.success) throw new Error();
+      setStatus("success");
+      setFormData({ name: "", email: "", company: "", phone: "", message: "", budget: "", timeline: "" });
+    } catch {
+      setStatus("error");
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -206,20 +229,35 @@ export default function ContactForm() {
 
             {/* Submit Button */}
             <div className="pt-4">
-              <button
-                type="submit"
-                className="group relative bg-[#00011f] text-white hover:scale-[1.02] font-semibold transition-all duration-500 ease-out flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed px-10 py-5 text-lg"
-              >
-                <span className="relative">Send Message</span>
-                <span className="relative group-hover:translate-x-1 transition-transform duration-500 ease-out">
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+              {status === "success" ? (
+                <div className="bg-green-50 border border-green-200 rounded-xl p-5 flex items-center gap-2 text-green-700 font-semibold">
+                  <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                </span>
-              </button>
-              <p className="text-sm text-gray-500 mt-4">
-                We'll respond within 24 hours. For urgent matters, call us directly.
-              </p>
+                  Message sent! We'll get back to you within 24 hours.
+                </div>
+              ) : (
+                <>
+                  <button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="group relative bg-[#00011f] text-white hover:scale-[1.02] font-semibold transition-all duration-500 ease-out flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed px-10 py-5 text-lg"
+                  >
+                    <span className="relative">{status === "loading" ? "Sending..." : "Send Message"}</span>
+                    <span className="relative group-hover:translate-x-1 transition-transform duration-500 ease-out">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+                      </svg>
+                    </span>
+                  </button>
+                  {status === "error" && (
+                    <p className="text-sm text-red-500 mt-4">Something went wrong. Please try again.</p>
+                  )}
+                  <p className="text-sm text-gray-500 mt-4">
+                    We'll respond within 24 hours. For urgent matters, call us directly.
+                  </p>
+                </>
+              )}
             </div>
           </div>
         </form>
